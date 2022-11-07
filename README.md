@@ -28,9 +28,9 @@
 
 * [Interpretación de gráficos](#interpretación-de-gráficos)
 
-* [Ciencia de datos con python](#Ciencia-de-datos-con-python)
+* [Ciencia de datos con python](#ciencia-de-datos-con-python)
 
-* [Excel: funciones y consultas](#excel-:-funciones-y-consultas)
+* [Excel: funciones y consultas](#excel:-funciones-y-consultas)
 
 * [Conceptos de estadística](#conceptos-de-estadística)
 
