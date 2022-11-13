@@ -103,6 +103,61 @@ Recientemente has sido contratado como ayudante en una pequeña tienda de especi
 
 Tu tarea consiste en idear una forma de simplificar el proceso de cálculo del precio total de cada pedido y hacerlo más exacto y confiable.
 
+**Contexto temático**
+
+El propietario te ha proporcionado un pedido de uno de sus clientes más fieles y un computador con el cual podrás usar Microsoft Excel. Quiere que prepares una demostración de cómo va a funcionar el nuevo proceso. Este es el pedido:
+
+![descarga3](https://user-images.githubusercontent.com/87950040/201544206-f6259e54-aa76-4c13-8d38-bceb83378ac2.png)
+
+## Libros y hojas de cálculo
+
+Los archivos de Excel también se conocen como libros. Una vez que abras un libro de Excel, verás que contiene una o varias hojas de cálculo a las que puedes acceder desde las pestañas de la parte inferior de la pantalla:
+
+![excel](https://user-images.githubusercontent.com/87950040/201544263-24a4e8ac-50d8-4116-9936-c34c0d31c5d6.png)
+
+En cada hoja de cálculo, verás una fila horizontal de letras en el borde superior de la cuadrícula. Esas letras representan las columnas en las que se almacena la información. También hay una columna de números a la izquierda. Estos números representan las filas en las que se almacena la información. Para identificar una celda, utilizamos sus coordenadas de columna y fila. Así, esta celda. Cuando se selecciona una celda, su borde se vuelve verde y visualmente más grueso que los bordes de las celdas circundantes.
+
+En la parte superior de la pantalla verás varios menús que te permiten cambiar el tamaño y el color de la letra (similar a Microsoft Word), añadir o modificar bordes, insertar gráficos, y acceder a muchas otras funciones que trataremos en casos posteriores. Debajo de los menús, también verás la barra de fórmulas (indicada con $f_x$ a la izquierda), donde puedes ver el contenido de la celda que está seleccionada en ese momento (hemos resaltado la barra de fórmulas con un rectángulo rojo en la siguiente imagen):
+
+![excel](https://user-images.githubusercontent.com/87950040/201544451-33b131d8-ce26-4c34-b53b-300fa8612335.png)
+
+## Insertar datos
+
+Vamos a empezar a rellenar nuestra hoja de cálculo con los datos del pedido. Para insertar datos en una celda, simplemente selecciona la celda con un solo clic y empieza a escribir. Una vez que hayas terminado, puedes pulsar la tecla “Enter” (⏎) para pasar a la celda inmediatamente inferior.
+
+![descarga](https://user-images.githubusercontent.com/87950040/201544528-acb99b29-14d2-4c7d-bbad-b62366eeded8.gif)
+
+## Calcular el precio total del pedido
+
+Calculemos ahora el precio total del pedido. Para esto, será necesario:
+
+* Calcular el precio total por artículo.
+* Aplicar los descuentos a los artículos seleccionados.
+* Sumar todos los totales de los artículos para obtener el total general.
+* 
+**Precio total por artículo**
+
+Para obtener esta cifra, es necesario multiplicar la cantidad de cada artículo por su precio unitario. Por ejemplo, las bolsas de Doritos cuestan $10 cada una, y el cliente pidió dos bolsas, lo que significa que el precio total a cobrar por las bolsas Doritos es $10 x 2 = $20.
+
+Para realizar operaciones aritméticas como ésta, necesitamos conocer las fórmulas de Excel. Las fórmulas son nuestra forma de pedir a Excel que calcule algo. Si insertamos una fórmula en una celda, a diferencia de simplemente poner datos simples, le estamos diciendo a Excel que necesitamos que haga algo más que almacenar nuestros datos. Las fórmulas siempre empiezan con el signo de igualdad (=).
+
+![excel](https://user-images.githubusercontent.com/87950040/201544702-7db2b878-b1d7-471e-890a-11304b6ad096.gif)
+
+## Algunos atajos útiles
+
+Habrás notado que mientras resolvíamos el ejercicio anterior hicimos clic repetidamente en una nueva celda y pulsamos "Ctrl + V" nueve veces. Tuvimos suerte de que nuestra lista de elementos fuera relativamente pequeña. En muchas situaciones de la vida real, tendremos que trabajar con cientos, si no miles de filas. Por suerte, hay unos cuantos atajos de ratón y/o atajos de teclado que puedes utilizar para agilizar este proceso:
+
+* Haz clic con el botón izquierdo en la celda E4 y mantén pulsado el ratón mientras arrastras el cursor hacia abajo hasta la última celda en la que quieras pegar la fórmula (en este caso, la celda E12), y luego pulsa "Ctrl + V" una sola vez. (Esto se muestra al final del GIF anterior).
+* Después de seleccionar la celda E4, pulsa "Ctrl + Shift (Mayús) + ↓ " para resaltar todo lo que hay en la columna E a partir de la celda E4. A continuación, pulsa "Ctrl + V" una sola vez. (Sin embargo, ten en cuenta que esto pegará la fórmula más allá de la celda E12).
+* Haz clic con el botón izquierdo del ratón en el cuadrado verde de la esquina inferior derecha de celda E4 y mantén pulsado el ratón mientras arrastras el cursor hacia la celda E12. Suelta el ratón y ¡ya está! (Ni siquiera tienes que pulsar "Ctrl + V").
+
+## Conclusiones y tips para recordar
+
+Ahora tienes un demo para mostrarle al dueño de la tienda. Esperemos que le le gusten los resultados y abandone el método de la calculadora, papel y lápiz por este método más moderno, basado en Excel. Seguramente le gustará el hecho de que los errores son mucho más fáciles de corregir en Excel que con su proceso actual (basta con pulsar "Ctrl + Z" y volver a empezar). Otra ventaja es que los libros de Excel pueden guardarse para más tarde, lo que facilita mucho el seguimiento de los pedidos en el tiempo.
+
+Ahora bien, puede que pienses que tener que insertar los precios unitarios manualmente sigue siendo un poco propenso a errores, y eso es totalmente correcto. Para evitar el tener que hacerlo, Excel también tiene algunas funciones más avanzadas (no las hemos visto en este caso) que te permiten tener todos los precios unitarios en una hoja de cálculo específica, de la cual puedes extraer o utilizar los datos cuando se requieran en otras hojas de cálculo.
+
+
 # Interpretación de gráficos
 
 ## Caso 1: ¿Qué marcas y modelos de carros son los más populares en Estados Unidos?
