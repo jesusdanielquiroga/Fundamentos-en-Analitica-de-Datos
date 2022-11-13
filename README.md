@@ -137,6 +137,35 @@ Aquí está nuestra tabla de ventas de carros (hemos extraído sólo los 10 mode
 
 <img width="521" alt="tablacarros" src="https://user-images.githubusercontent.com/87950040/201538682-8f316aa2-35c2-4226-aa5b-777cc1b5ae93.png">
 
+## Gráficos de barras
+
+La tabla de frecuencias de ventas de coches también puede representarse visualmente mediante un gráfico de barras. Los gráficos de barras son una de las formas más populares de representar datos. En un gráfico de barras, tienes un conjunto de barras (una barra por cada fila de la tabla) cuyas alturas representan la frecuencia asociada a esa fila:
+
+<img width="514" alt="barrascarros" src="https://user-images.githubusercontent.com/87950040/201538817-83234812-77ed-4726-8f78-d64425fb5e7a.png">
+
+En primer lugar, tienes los títulos y las etiquetas de los ejes. Éstos proporcionan una información clave, ya que te indican lo que el gráfico está tratando de representar:
+
+<img width="517" alt="barrascarros2" src="https://user-images.githubusercontent.com/87950040/201538863-d6226e86-f992-4c51-8d62-d786cd068bb3.png">
+
+El eje vertical (Unidades vendidas) se conoce comúnmente como el eje $y$. El eje horizontal (modelo) es el eje $x$. Como habrás observado, este gráfico tiene un subtítulo que nos indica la fuente de los datos. Esto suele ser una buena práctica porque ayuda a los lectores a entender de dónde proceden los datos, lo que a su vez puede ayudarles a evaluar la calidad y la fiabilidad de la información transmitida en el gráfico.
+
+A continuación, tenemos las etiquetas de la cuadrícula en cada eje. Éstas indican lo que representa cada barra (en el caso de las etiquetas de la cuadrícula del eje $x$) y las magnitudes que representa el eje $y$ (en el caso de las etiquetas de la cuadrícula del eje $y$):
+
+<img width="523" alt="barrascarros3" src="https://user-images.githubusercontent.com/87950040/201539027-44b51e0c-ce17-4a55-ace1-1d608dbfe4ad.png">
+
+Por último, tenemos las barras, las etiquetas de las barras y la cuadrícula. La altura de cada barra es proporcional a la frecuencia asociada al modelo respectivo; es decir, cuanto más alta sea la barra, más unidades se vendieron de ese modelo concreto. A veces vemos etiquetas encima de cada barra que nos indican la frecuencia exacta de ese modelo. Esto no suele ser necesario, pero pueden ser útiles en muchas situaciones. También tenemos la cuadrícula (las líneas horizontales grises), que nos ayuda a comparar las alturas de las distintas barras:
+
+<img width="515" alt="barrascarros4" src="https://user-images.githubusercontent.com/87950040/201539114-2c344055-45e6-4b99-b883-c761de96cf75.png">
+
+
+
+
+
+
+
+
+
+
 
 # Herramientas y tecnologías
 
