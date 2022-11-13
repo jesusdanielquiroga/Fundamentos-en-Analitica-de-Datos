@@ -76,6 +76,11 @@ Una de las cosas más útiles de Excel es que puedes "mirar" tu conjunto de dato
 
 ![descarga](https://user-images.githubusercontent.com/87950040/201536939-bebb7891-e5d9-4716-9bf4-4ac429a9c5d4.png)
 
+**¿Cómo crear una cuenta de microsoft?**
+
+<a href="https://www.youtube.com/watch?v=YVVEtB36IXI">Ver tutorial</a>.  En este video, se explica cómo crear una cuenta de Microsoft para que puedas trabajar con Excel Online.
+ 
+ 
 # SQL
 
  **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una <a href="https://github.com/jesusdanielquiroga/Introduccion-Base-de-Datos.git">base de datos</a> que consta de cientos de miles de datos:
