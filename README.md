@@ -30,15 +30,7 @@
 
 * [Programación con python](#programación-con-python)
 
-
 * [Interpretación de gráficos](#interpretación-de-gráficos)
-
-* [Ciencia de datos con python](#ciencia-de-datos-con-python)
-
-* [Excel: funciones y consultas](#excel:-funciones-y-consultas)
-
-
-
 
 
 * [Herramientas y tecnologías](#herramientas-y-tecnologías)
@@ -158,12 +150,21 @@ Por último, tenemos las barras, las etiquetas de las barras y la cuadrícula. L
 <img width="515" alt="barrascarros4" src="https://user-images.githubusercontent.com/87950040/201539114-2c344055-45e6-4b99-b883-c761de96cf75.png">
 
 
+## Diagramas de torta
 
+Los gráficos de barras no son la única forma de representar datos de frecuencias. Hay una alternativa popular que a veces resulta útil: el diagrama de torta. Los diagramas de torta se parecen a las tortas de cumpleaños, de ahí su nombre. Cada categoría tiene una porción del pastel, y el tamaño de la porción es proporcional a la frecuencia de la categoría en la tabla de frecuencias, de modo que las categorías más frecuentes tienen una porción mayor.
 
+Los diagramas de torta son buenos para representar las frecuencias no sólo como números absolutos, sino también como porcentajes; es decir, lo que llamamos frecuencias relativas (en contraposición a las frecuencias absolutas que hemos estado visualizando hasta ahora). En un diagrama de torta de frecuencias relativas, se considera que el área total de la torta representa el número 100%.
 
+<img width="520" alt="torta carros" src="https://user-images.githubusercontent.com/87950040/201539307-0f6f15c5-2cd9-4380-a0d3-e08b7a7d6053.png">
 
+## Tips finales
 
-
+* Para leer una tabla, puedes empezar por localizar la(s) columna(s) correspondiente(s) y luego la(s) fila(s) correspondiente(s) o viceversa, según la información inicial que tengas
+* Las frecuencias absolutas son conteos, y las relativas son porcentajes
+* Las alturas de las barras en los gráficos de barras son proporcionales a las frecuencias
+* Los ejes  de los gráficos de barras deben empezar siempre en cero, a menos que haya una buena razón para no hacerlo
+* Los diagramas de torta pueden mostrar la misma información que los diagramas de barras, pero son más difíciles de leer cuando hay muchas categorías
 
 
 
