@@ -248,6 +248,9 @@ La ciencia de los datos está en auge en este momento, con muchas oportunidades 
 
 <a href="Jupyter_Notebook/introduccion_datos.ipynb">Más información...</a>
 
+![es_venn](https://user-images.githubusercontent.com/87950040/201545861-0749cc88-1d21-43ab-9d5b-8b50ad28e4f1.png)
+
+
 # SQL
 
  **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una <a href="https://github.com/jesusdanielquiroga/Introduccion-Base-de-Datos.git">base de datos</a> que consta de cientos de miles de datos:
