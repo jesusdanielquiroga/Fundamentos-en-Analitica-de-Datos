@@ -102,7 +102,8 @@ Durante el desarrollo del programa frecuentemente se usará algunas herramientas
 
 * Zoom y YouTube: (Software de Videoconferencias y Video de sesiones grabadas)
 * Slack: (Software de mensajería instantánea para comunicarse con otros compañeros, TAs y el personal de Correlation One para temas relacionados con el material del curso).
-* Sitio Web del Programa: (Donde el contenido del programa y los ejercicios de código serán publicados)
+* <a href="https://c1-learning.com/my-programs/1f3baeaa-66cd-440c-84a7-4a1bcbd02bcc/course-materials">Sitio Web del Programa</a>: (Donde el contenido del programa y los ejercicios de código serán publicados)
+* <a href="https://lookerstudio.google.com/gallery">Looker Studio</a>: Es una herramienta gratuita que convierte tus datos en informes y paneles claros, totalmente personalizables y fáciles de consultar y compartir.
 
 
 
