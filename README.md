@@ -26,11 +26,13 @@
 
 * [Introducción a excel y tablas básicas](#Introducción-a-excel-y-tablas-básicas)
 
+* [Interpretación de gráficos](#interpretación-de-gráficos)
+
 * [SQL](#sql)
 
 * [Programación con python](#programación-con-python)
 
-* [Interpretación de gráficos](#interpretación-de-gráficos)
+
 
 
 * [Herramientas y tecnologías](#herramientas-y-tecnologías)
@@ -82,16 +84,24 @@ Una de las cosas más útiles de Excel es que puedes "mirar" tu conjunto de dato
 
 <a href="https://scribehow.com/shared/Live_Workflow__nI-C4bfbRyuaXqOyAQuvew"> Instructivo en pdf</a>
  
+ ## Caso 0: Calculando los precios de los pedidos de una tienda de barrio
  
-# SQL
+ **Objetivos**
+ 
+ En este caso aprenderás los elementos básicos de Excel. En la medida en que avances, empezarás a descubrir sus increibles capacidades. En esta ocasión, aprenderás lo siguiente:
 
- **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una <a href="https://github.com/jesusdanielquiroga/Introduccion-Base-de-Datos.git">base de datos</a> que consta de cientos de miles de datos:
+* Cómo añadir datos a un archivo de Excel.
+* Cómo escribir fórmulas utilizando varias operaciones aritméticas como la multiplicación, la suma y la resta.
+* Cómo copiar y pegar valores y fórmulas.
+* Algunos atajos de teclado útiles para copiar, pegar y deshacer cambios.
 
-![sql](https://user-images.githubusercontent.com/87950040/201537149-9c8128b6-d888-47bf-b5ec-0d665c2ec478.png)
+**Contexto general**
 
-# Programación con python
+Recientemente has sido contratado como ayudante en una pequeña tienda de especializada en confitería. La tienda queda en Miami y tiene muchos clientes colombianos que acuden a ella para comprar golosinas y mecato. Para mantenerse al día con las tendencias de consumo actuales, el propietario de la tienda ha decidido empezar a ofrecer envíos a domicilio sobre los pedidos que los clientes hacen a través de WhatsApp. La semana pasada, varios pedidos inusualmente grandes fueron devueltos porque sus precios estaban mal calculados. Hasta ahora, este proceso se ha llevado a cabo manualmente con lápiz, papel y calculadora. Al parecer, el voz a voz hizo que la posibilidad de hacer pedidos a través de WhatsApp se difundiera muy rápidamente, y el propietario de la tienda está preocupado de no poder seguir el ritmo del creciente número de pedidos grandes que requieren cálculos largos y propensos a errores.
 
-Python es otra herramienta que te permite realizar análisis muy complejos de tus datos. Muchas aplicaciones de IA (inteligencia artificial), como los carros que se conducen solos o los modelos de predicción de los mercados de valores, se desarrollan con Python.
+**Problema a resolver**
+
+Tu tarea consiste en idear una forma de simplificar el proceso de cálculo del precio total de cada pedido y hacerlo más exacto y confiable.
 
 # Interpretación de gráficos
 
@@ -173,7 +183,15 @@ Los diagramas de torta son buenos para representar las frecuencias no sólo como
 * Los ejes  de los gráficos de barras deben empezar siempre en cero, a menos que haya una buena razón para no hacerlo
 * Los diagramas de torta pueden mostrar la misma información que los diagramas de barras, pero son más difíciles de leer cuando hay muchas categorías
 
+# SQL
 
+ **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una <a href="https://github.com/jesusdanielquiroga/Introduccion-Base-de-Datos.git">base de datos</a> que consta de cientos de miles de datos:
+
+![sql](https://user-images.githubusercontent.com/87950040/201537149-9c8128b6-d888-47bf-b5ec-0d665c2ec478.png)
+
+# Programación con python
+
+Python es otra herramienta que te permite realizar análisis muy complejos de tus datos. Muchas aplicaciones de IA (inteligencia artificial), como los carros que se conducen solos o los modelos de predicción de los mercados de valores, se desarrollan con Python.
 
 # Herramientas y tecnologías
 
