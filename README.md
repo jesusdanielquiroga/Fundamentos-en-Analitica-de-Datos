@@ -68,6 +68,8 @@ Podemos descibir estas 4 habilidades que componen la alfabetización en datos de
 * "Traducir" datos: comunicar los análisis de datos a públicos no técnicos
 * "Pensar" usando datos: comprender cómo se relacionan tus análisis con las las preguntas de negocio que son las que realmente para el público interesado
 
+<a href="https://www.youtube.com/watch?v=1LkmG5_FdZg">Ver recurso (video)</a>
+
 
 # Introducción a excel y tablas básicas
 
