@@ -26,15 +26,18 @@
 
 * [Introducción a excel y tablas básicas](#Introducción-a-excel-y-tablas-básicas)
 
+* [SQL](#sql)
+
+* [Programación con python](#programación-con-python)
+
+
 * [Interpretación de gráficos](#interpretación-de-gráficos)
 
 * [Ciencia de datos con python](#ciencia-de-datos-con-python)
 
 * [Excel: funciones y consultas](#excel:-funciones-y-consultas)
 
-* [Conceptos de estadística](#conceptos-de-estadística)
 
-* [Programación con python](#programación-con-python)
 
 
 
@@ -55,6 +58,41 @@ científicos de datos y +500 relaciones con universidades líderes en US, China,
 Nuestras soluciones son usadas por algunos de los empleadores élite alrededor del mundo en finanzas, tecnología, cuidado de la salud, seguros, consultoría y agencias de gobierno. Correlation One está comprometido en promocionar un ecosistema de AI más inclusivo a nivel global, incluyendo programas dedicados para hacer avanzar a más mujeres y poblaciones subrepresentadas en la comunidad de ciencia de datos.
 
 # Alfabetización de datos
+
+La capacidad de leer, escribir, traducir y pensar usando datos es una de las habilidades más importantes que se deben tener en el siglo XXI. Las personas con conocimientos en datos son capaces de tomar mejores decisiones financieras, consiguen trabajo con mayor facilidad y son generalmente ciudadanos más informados.
+
+Podemos descibir estas 4 habilidades que componen la alfabetización en datos de la siguiente manera:
+
+* "Leer" datos: ser capaz de leer representaciones de datos como gráficos, tablas y cifras estadísticas, lo que no sólo implica entender lo que significan por sí mismos, sino también comprender cómo forman parte de una historia coherente.
+* "Escribir" datos: ser capaz de producir gráficos, tablas, cantidades estadísticas y tableros de control para que los lean otras personas.
+* "Traducir" datos: comunicar los análisis de datos a públicos no técnicos
+* "Pensar" usando datos: comprender cómo se relacionan tus análisis con las las preguntas de negocio que son las que realmente para el público interesado
+
+
+# Introducción a excel y tablas básicas
+
+Muchos análisis de datos comienzan con una hoja de cálculo de Excel. Algunos de los factores clave que hacen de Excel una herramienta tan útil son:
+
+* Es fácil de aprender
+* Es muy intuitivo y la interfaz de usuario es muy amigable
+* Puedes calcular con relativa facilidad algunos parámetros bastante detallados de los datos
+* Muchas herramientas de análisis de datos pueden trabajar directamente con archivos de Excel
+
+Una de las cosas más útiles de Excel es que puedes "mirar" tu conjunto de datos tan solo con abrirlo. Aquí tienes un ejemplo:
+
+![descarga](https://user-images.githubusercontent.com/87950040/201536939-bebb7891-e5d9-4716-9bf4-4ac429a9c5d4.png)
+
+# SQL
+
+ **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una base de datos que consta de cientos de miles de datos:
+
+![sql](https://user-images.githubusercontent.com/87950040/201537149-9c8128b6-d888-47bf-b5ec-0d665c2ec478.png)
+
+# Programación con python
+
+Python es otra herramienta que te permite realizar análisis muy complejos de tus datos. Muchas aplicaciones de IA (inteligencia artificial), como los carros que se conducen solos o los modelos de predicción de los mercados de valores, se desarrollan con Python.
+
+
 
 # Herramientas y tecnologías
 
