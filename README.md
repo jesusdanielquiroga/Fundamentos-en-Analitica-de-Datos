@@ -28,6 +28,8 @@
 
 * [Interpretación de gráficos](#interpretación-de-gráficos)
 
+* [El mundo de los datos](#el-mundo-de-los-datos)
+
 * [SQL](#sql)
 
 * [Programación con python](#programación-con-python)
@@ -237,6 +239,14 @@ Los diagramas de torta son buenos para representar las frecuencias no sólo como
 * Las alturas de las barras en los gráficos de barras son proporcionales a las frecuencias
 * Los ejes  de los gráficos de barras deben empezar siempre en cero, a menos que haya una buena razón para no hacerlo
 * Los diagramas de torta pueden mostrar la misma información que los diagramas de barras, pero son más difíciles de leer cuando hay muchas categorías
+
+# El mundo de los datos
+
+En las últimas décadas se han producido avances astronómicos en la potencia de los computadores y la interconectividad de los dispositivos. Se ha llegado a un punto en el que podemos aprovechar el poder de una gran cantidad de datos para tomar mejores decisiones, cada vez más rápido. En los últimos 5 años aproximadamente, el campo de trabajo dedicado a hacer todo lo necesario para que esto ocurra se ha convertido en lo que ahora se conoce como ciencia de los datos.
+
+La ciencia de los datos está en auge en este momento, con muchas oportunidades de innovación y de generación de empleo en todas las industrias. Pero, ¿quién es exactamente un “Científico de Datos”? ¿Qué hacen en el día a día? ¿Qué herramientas utilizan?.
+
+<a href="Jupyter_Notebook/introduccion_datos.ipynb">Más información...</a>
 
 # SQL
 
