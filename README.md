@@ -117,6 +117,27 @@ Tu trabajo consiste en redactar un breve informe que resuma los datos de ventas 
 Encontraste este <a href="https://www.forbes.com/wheels/news/top-20-selling-vehicles-first-six-months-2020/">artículo</a> en la revista Forbes Wheels. Contiene información sobre cuántos carros se vendieron en Estados Unidos entre enero y junio de 2020. Debes utilizar la tabla de ventas de carros que aparece en el artículo como fuente de datos para redactar tu informe. Le has pedido a uno de tus compañeros que tome los datos y prepare algunas visualizaciones sencillas para ayudarte a ti y a tu jefe a interpretar las cifras.
 
 
+## Cómo leer una tabla
+
+Las tablas se componen de dos partes: columnas y filas. Las filas suelen representar personas, transacciones, artículos o cualquier tipo de "cosa" en general. Las columnas suelen representar características o atributos que tienen esas "cosas". Por ejemplo, en esta tabla:
+
+<img width="152" alt="tabla" src="https://user-images.githubusercontent.com/87950040/201538472-fb8db560-c74a-488e-812c-0263d690e378.png">
+
+Las filas representan personas y las columnas representan la información que tenemos sobre esas personas, es decir, sus nombres, apellidos y comidas favoritas. Cada uno de los cuadritos donde se cruzan una columna y una fila se llama celda.
+
+Para leer una tabla, normalmente empiezas por localizar la fila que te interesa y luego la columna. O, si conoces el atributo y quieres saber más sobre la "cosa", primero localizas la columna y luego la fila.
+
+## Tablas de frecuencia
+
+Las tablas son extremadamente útiles para representar prácticamente cualquier tipo de datos: desde la histora médica de una persona en la base de datos de un hospital, hasta toda su red de amigos en Facebook.
+
+Uno de los tipos de tablas más utilizados son las tablas de frecuencias. Son tablas que muestran cuántas veces aparece un elemento concreto en un conjunto de datos, es decir, su frecuencia en ese conjunto de datos.
+
+Aquí está nuestra tabla de ventas de carros (hemos extraído sólo los 10 modelos de carro más vendidos):
+
+<img width="521" alt="tablacarros" src="https://user-images.githubusercontent.com/87950040/201538682-8f316aa2-35c2-4226-aa5b-777cc1b5ae93.png">
+
+
 # Herramientas y tecnologías
 
 Durante el desarrollo del programa frecuentemente se usará algunas herramientas tecnológicas:
