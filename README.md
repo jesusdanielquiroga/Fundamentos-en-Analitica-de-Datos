@@ -79,6 +79,8 @@ Una de las cosas más útiles de Excel es que puedes "mirar" tu conjunto de dato
 **¿Cómo crear una cuenta de microsoft?**
 
 <a href="https://www.youtube.com/watch?v=YVVEtB36IXI">Ver tutorial</a>.  En este video, se explica cómo crear una cuenta de Microsoft para que puedas trabajar con Excel Online.
+
+<a href="https://scribehow.com/shared/Live_Workflow__nI-C4bfbRyuaXqOyAQuvew"> Instructivo en pdf</a>
  
  
 # SQL
