@@ -84,7 +84,7 @@ Una de las cosas más útiles de Excel es que puedes "mirar" tu conjunto de dato
 
 # SQL
 
- **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una base de datos que consta de cientos de miles de datos:
+ **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una <a href="https://github.com/jesusdanielquiroga/Introduccion-Base-de-Datos.git">base de datos</a> que consta de cientos de miles de datos:
 
 ![sql](https://user-images.githubusercontent.com/87950040/201537149-9c8128b6-d888-47bf-b5ec-0d665c2ec478.png)
 
