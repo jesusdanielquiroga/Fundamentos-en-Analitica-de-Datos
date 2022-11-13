@@ -94,6 +94,27 @@ Una de las cosas más útiles de Excel es que puedes "mirar" tu conjunto de dato
 
 Python es otra herramienta que te permite realizar análisis muy complejos de tus datos. Muchas aplicaciones de IA (inteligencia artificial), como los carros que se conducen solos o los modelos de predicción de los mercados de valores, se desarrollan con Python.
 
+# Interpretación de gráficos
+
+## Caso 1: ¿Qué marcas y modelos de carros son los más populares en Estados Unidos?
+
+![descarga](https://user-images.githubusercontent.com/87950040/201538127-5c9f2d4e-5a2a-4f37-b592-c2c3d40628a3.jpg)
+
+**Objetivo**
+
+Al final de este caso habrás aprendido a interpretar tablas, diagramas de barras y diagramas de torta. También conocerás los conceptos de frecuencia absoluta y relativa.
+
+**Contexto General**
+
+Eres un analista en un pequeño concesionario de carros en Manizales. El concesionario está planeando ampliar sus campañas de marketing para dar mayor cobertura a las marcas y modelos que han demostrado ser más populares entre los consumidores a nivel mundial, con la esperanza de que también serán populares en el mercado colombiano.
+
+**Problema a resolver**
+
+Tu trabajo consiste en redactar un breve informe que resuma los datos de ventas de carros del primer semestre de 2020 en Estados Unidos, ya que Estados Unidos es el principal mercado de carros del mundo y puede dar información útil para los mercados de Latinoamérica. Tu jefe utilizará tu informe para tomar decisiones sobre qué marcas y modelos promocionar a través del márketing audiovisual del concesionario en los próximos meses.
+
+**Contexto temático**
+
+Encontraste este <a href="https://www.forbes.com/wheels/news/top-20-selling-vehicles-first-six-months-2020/">artículo</a> en la revista Forbes Wheels. Contiene información sobre cuántos carros se vendieron en Estados Unidos entre enero y junio de 2020. Debes utilizar la tabla de ventas de carros que aparece en el artículo como fuente de datos para redactar tu informe. Le has pedido a uno de tus compañeros que tome los datos y prepare algunas visualizaciones sencillas para ayudarte a ti y a tu jefe a interpretar las cifras.
 
 
 # Herramientas y tecnologías
