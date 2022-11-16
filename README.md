@@ -24,11 +24,13 @@
 
 * [Alfabetización de datos](#alfabetización-de-datos)
 
+* [El mundo de los datos](#el-mundo-de-los-datos)
+
 * [Introducción a excel y tablas básicas](#Introducción-a-excel-y-tablas-básicas)
 
 * [Interpretación de gráficos](#interpretación-de-gráficos)
 
-* [El mundo de los datos](#el-mundo-de-los-datos)
+* [Consultas básicas en Excel](#consultas-básicas-en-excel)
 
 * [SQL](#sql)
 
@@ -65,6 +67,17 @@ Podemos descibir estas 4 habilidades que componen la alfabetización en datos de
 * "Pensar" usando datos: comprender cómo se relacionan tus análisis con las las preguntas de negocio que son las que realmente para el público interesado
 
 <a href="https://www.youtube.com/watch?v=1LkmG5_FdZg">Ver recurso (video)</a>
+
+# El mundo de los datos
+
+En las últimas décadas se han producido avances astronómicos en la potencia de los computadores y la interconectividad de los dispositivos. Se ha llegado a un punto en el que podemos aprovechar el poder de una gran cantidad de datos para tomar mejores decisiones, cada vez más rápido. En los últimos 5 años aproximadamente, el campo de trabajo dedicado a hacer todo lo necesario para que esto ocurra se ha convertido en lo que ahora se conoce como ciencia de los datos.
+
+La ciencia de los datos está en auge en este momento, con muchas oportunidades de innovación y de generación de empleo en todas las industrias. Pero, ¿quién es exactamente un “Científico de Datos”? ¿Qué hacen en el día a día? ¿Qué herramientas utilizan?.
+
+<a href="Jupyter_Notebook/introduccion_datos.ipynb">Más información...</a>
+
+![es_venn](https://user-images.githubusercontent.com/87950040/201545861-0749cc88-1d21-43ab-9d5b-8b50ad28e4f1.png)
+
 
 
 # Introducción a excel y tablas básicas
@@ -240,16 +253,25 @@ Los diagramas de torta son buenos para representar las frecuencias no sólo como
 * Los ejes  de los gráficos de barras deben empezar siempre en cero, a menos que haya una buena razón para no hacerlo
 * Los diagramas de torta pueden mostrar la misma información que los diagramas de barras, pero son más difíciles de leer cuando hay muchas categorías
 
-# El mundo de los datos
+# Consultas básicas en Excel
 
-En las últimas décadas se han producido avances astronómicos en la potencia de los computadores y la interconectividad de los dispositivos. Se ha llegado a un punto en el que podemos aprovechar el poder de una gran cantidad de datos para tomar mejores decisiones, cada vez más rápido. En los últimos 5 años aproximadamente, el campo de trabajo dedicado a hacer todo lo necesario para que esto ocurra se ha convertido en lo que ahora se conoce como ciencia de los datos.
+## Caso 2: ¿Cómo debo fijar el precio de los libros que vende mi editorial?
 
-La ciencia de los datos está en auge en este momento, con muchas oportunidades de innovación y de generación de empleo en todas las industrias. Pero, ¿quién es exactamente un “Científico de Datos”? ¿Qué hacen en el día a día? ¿Qué herramientas utilizan?.
+**Objetivo**
 
-<a href="Jupyter_Notebook/introduccion_datos.ipynb">Más información...</a>
+Al final de este caso estarás familiarizado con cómo usar referencias variables y fijas en fórmulas de Excel, así como con las funciones básicas incorporadas de Excel y algunos atajos de teclado útiles para insertar datos en hojas de cálculo.
 
-![es_venn](https://user-images.githubusercontent.com/87950040/201545861-0749cc88-1d21-43ab-9d5b-8b50ad28e4f1.png)
+**Contexto general**
 
+Eres el dueño de una compañia editorial independiente especializada en literatura de ficción. Hasta ahora, has estado tratando las negociaciones de precios y costos de una manera muy informal e intuitiva, pero el negocio ha crecido recientemente y te has dado cuenta de que tienes que empezar a tratar tus números de manera más profesional. Tu método actual ha funcionado razonablemente bien hasta ahora, pero podría no hacerlo en el futuro.
+
+**Problema a resolver**
+
+Tienes que crear un libro de Excel para calcular el precio de venta al público (PVP) sugerido por el fabricante y el costo de cada libro que vas a lanzar este mes, así como los ingresos, costos y beneficios esperados de tu negocio.
+
+**Contexto Analitico**
+
+Tu asistente te ha preparado un libro de Excel con algunas cantidades descriptivas relevantes sobre los libros de este mes. Trabajarás en él para calcular las cifras requeridas.
 
 # SQL
 
