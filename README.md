@@ -271,7 +271,66 @@ Tienes que crear un libro de Excel para calcular el precio de venta al público 
 
 **Contexto Analitico**
 
-Tu asistente te ha preparado un libro de Excel con algunas cantidades descriptivas relevantes sobre los libros de este mes. Trabajarás en él para calcular las cifras requeridas.
+Tu asistente te ha preparado un <a href="Excel/datos_libros_estudiante.xlsx">libro de Excel</a> con algunas cantidades descriptivas relevantes sobre los libros de este mes. Trabajarás en él para calcular las cifras requeridas.
+
+**Explorar los datos**
+
+Las siguentes son las columnas presentes en la hoja de cálculo **datos libros**:
+
+<img width="786" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202322071-08a9c064-2d7a-4a23-8850-be4f849f1ee6.png">
+
+* Título del libro: El título del libro.
+* Autor: El nombre del autor.
+* Número estimado de páginas: Cuántas páginas tendrá el diseño terminado.
+* Peso del papel: El grosor del papel. El grosor del papel se mide en gramos por metro cuadrado (gmc). El estándar es de 70 gmc, y todos los libros de esta lista se imprimirán en papel de ese gramaje.
+* Tipo de cubierta: Tapa dura o blanda. Para reducir costos, todos tus libros nuevos serán de tapa blanda.
+* Páginas interiores: Las páginas interiores de un libro pueden imprimirse sólo con tinta negra (TN) o con tinta de color (Color). Como estos libros son literatura y no revistas, todos se imprimirán en blanco y negro.
+* Derechos de autor por libro vendido: Esta cifra corresponde a los dólares que se pagarán al autor por cada libro vendido. En toda la industria, la norma es de alrededor del 10% del precio de venta. Has negociado estas cifras con los autores antes de conocer el precio de catálogo exacto, pero por tu experiencia sabes que estas cifras serán razonables.
+* Copias: Cuántas copias del libro se imprimirán. Has negociado estas cifras con el autor y tu director de mercadeo.
+* Demanda estimada (% de copias vendidas): El porcentaje estimado de todas las copias producidas que se venderán en los próximos tres meses. Esta cifra representa el peor escenario posible.
+
+Estas son las columnas de la hoja de cálculo **costos de impresión**:
+
+* Peso (gmc): Peso del papel en gramos por metro cuadrado.
+* Costo por página TN: Cuánto te cobra el impresor por página utilizando sólo tinta negra.
+* Costo por página Color: Cuánto te cobra el impresor por página utilizando tinta de color.
+
+Por último, estas son las columnas de la hoja de cálculo **costos de cubierta**:
+
+* Tipo: Tapa blanda o tapa dura.
+* Costo: Cuánto te cobra la imprenta (en dólares) por encuadernar cada libro con una cubierta de tapa blanda o de tapa dura.
+
+**Calculo de costos**
+
+Algunos factores que influyen en los costos son el número de páginas, el gramaje y la calidad del papel, si el libro es de tapa blanda o dura, si las páginas interiores son en blanco y negro o en color, los derechos de autor, etc.
+
+**Costos de impresión**
+
+Si vas a la hoja de cálculo costos impresión, verás que el costo de imprimir una página varía en función de si la impresión se hará en blanco y negro o en color, así como del gramaje del papel. Todos los libros de nuestra lista se imprimirán con papel de 70 gmc en tinta negra, lo que significa que la única celda que nos interesa es la B2:
+
+<img width="292" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202322326-b05d02e5-ced4-4114-b678-5b233379b8c2.png">
+
+**Ejemplo 1**
+
+Utilizando fórmulas de Excel, calcula el costo de impresión de todos los libros de la lista.
+
+Respuesta. Este número se puede calcular con esta fórmula:
+```sh
+costo de impresion = numero de paginas x costo por pagina
+```
+Utilicemos lo que ya sabemos sobre las fórmulas de Excel para crear una nueva columna en la hoja de cálculo datos libros que contenga el costo de impresión de cada libro. Vayamos a J2 y hagamos lo siguiente:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202323686-fcda8b5d-0e9a-4b52-a7fd-c578b06788a9.gif)
+
+¿Puedes ver que la fórmula contiene el nombre de la hoja de cálculo a la que se hace referencia ('costos impresión'!) seguido de la celda a la que se hace referencia en esa hoja de cálculo? Esta es la forma que tiene Excel de saber a qué hojas de cálculo pertenecen las celdas referenciadas en una fórmula.
+
+**Referencias variables:** Excel utiliza referencias variables, lo que significa que cada vez que copias una fórmula, todas las referencias de celda dentro de la fórmula se actualizan en función de la ubicación de la celda de destino de la copia.
+
+**Referencias fijas:** Las referencias de celda seguiran siendo las mismas independientemente de dónde estemos copiando la fórmula. Para hacer que una referencia de celda sea una referencia fija, debes añadir previamente el signo de dólar ($) tanto al nombre de la columna como al número de fila en la fórmula, de esta forma
+
+![descarga](https://user-images.githubusercontent.com/87950040/202324844-65ad9ed0-6513-4ed2-90f7-f26a22277991.gif)
+
+
 
 # SQL
 
