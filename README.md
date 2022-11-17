@@ -330,6 +330,74 @@ Utilicemos lo que ya sabemos sobre las fórmulas de Excel para crear una nueva c
 
 ![descarga](https://user-images.githubusercontent.com/87950040/202324844-65ad9ed0-6513-4ed2-90f7-f26a22277991.gif)
 
+**Costos de las cubiertas**
+
+En cuanto a las cubiertas, puedes ver fácilmente que, como todos los libros serán de tapa blanda, la única celda relevante en la hoja de cálculo costos cubierta será la celda B3:
+
+<img width="269" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202325399-f91ee764-c11f-49ae-9f44-8e431e7fc36a.png">
+
+**Ejercicio 1**
+
+Utilizando fórmulas de Excel, calcula la suma de los costos de impresión y de encuadernación de todos los libros de la lista. Pon los resultados en una nueva columna llamada Costos de Impresión y Encuadernación.
+
+<img width="743" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202326285-99605923-65ab-4c78-bc6b-1f0ff12fa3e6.png">
+
+**Otros costos fijos**
+
+Por regla general, en la empresa normalmente hay que añadir otros 80 centavos de dólar por libro a manera de costos fijos. Esto incluye todos los costos de pagar a los editores, correctores, diseñadores, etc. No hay ninguna razón especial para cambiar esta regla ahora, así que simplemente crearemos una nueva hoja de cálculo llamada otros costos fijos y añadiremos esta cantidad allí. Para crear una nueva hoja de cálculo, hacemos clic en el signo + a la derecha de la última pestaña de la hoja de cálculo:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202326596-fb6ade02-8cb3-4e58-a402-4d715978ebc4.gif)
+
+**Costo total**
+
+Ahora que conocemos todos los costos parciales, debería ser fácil calcular el costo total.
+
+**Ejercicio 2**
+
+Calcula el costo total por libro. Para efectos de este ejercicio, asume que el costo total es la suma de los costos de impresión, los costos de cubierta, otros costos fijos y las regalías del autor.
+
+**Calculando el precio de venta**
+
+**Las utilidades del editor**
+
+Tu objetivo es siempre un margen de beneficio del 35% del costo total, para que puedas obtener utilidades en tu negocio. Por ejemplo, si el costo total de producción de un libro es de 100 dólares, tu margen de beneficio debería ser de 35 dólares.
+
+**Ejercicio 3**
+
+Crea una nueva columna llamada Margen de Beneficio con el margen de beneficio en dólares de cada libro.
+
+**El precio con descuento y el PVP**
+
+Los minoristas casi siempre te pedirán un descuento del 40% sobre el precio de venta al público (PVP). Esto significa que:
+
+<img width="302" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202327709-a75d7cc1-15ee-4e4b-b6ca-5bb90caba900.png">
+
+Si dividimos ambos lados de la ecuación por 0,6, obtenemos:
+
+<img width="194" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202327894-615f9e0d-0273-4233-a625-5d27b20088be.png">
+
+Ahora, el precio con descuento será el total de tus costos más tu margen de beneficio. Como ejemplo, digamos que tus costos totales fueron de 10 dólares y tu margen de beneficio es de 3,5 dólares. Por tanto,
+
+<img width="110" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202328077-83530d8f-10d3-4458-890e-1d06e7d392e0.png">
+
+**Ejercicio 4**
+
+Utilizando la fórmula anterior, crea una nueva columna llamada Precio con descuento y utilízala para calcular el PVP de cada libro (crea una nueva columna llamada PVP). Recuerda que tu precio con descuento es igual a tus costos totales más tu margen de beneficio.
+
+<img width="878" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202328829-bb9dc21c-e0d0-426c-9a1d-dba0f02910fb.png">
+
+**Calcular algunas estadísticas adicionales útiles**
+
+Sería muy conveniente tener algunas estadísticas de alto nivel sobre lo que has vendido. Después de pensarlo un poco, decides que quieres conocer la suma de los ingresos, costos y utilidades totales previstos en todos los libros que has vendido. Además, quieres saber el PVP medio por página, es decir, cuánto acaban pagando los clientes por cada página den promedio. Esta cifra es muy importante porque puede servir como regla general sobre el precio que podría tener un libro en función de su número de páginas. Puedes utilizarlo como una estimación aproximada en las primeras fases de tus negociaciones con autores y minoristas.
+
+Para calcular estos agregados, primero tenemos que crear dos nuevas columnas, **Ingreso total esperado** y **Costo total esperado**. Estas son las fórmulas:
+
+<img width="497" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202329227-c3b3b73c-83dc-4027-b059-213fab9cc448.png">
+
+Observa que sólo hemos incluido el porcentaje de demanda estimado en la fórmula de los ingresos. Esto se debe a que sólo recibes ingresos de los libros que vendes, pero incurres en costos por todos los libros que produces, aunque no los vendas. A continuación te explicamos cómo crear las columnas:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202329404-2807f115-4472-4512-9eb4-ef2fab0ca101.gif)
+
 
 
 # SQL
@@ -350,7 +418,6 @@ Durante el desarrollo del programa frecuentemente se usará algunas herramientas
 * <a href="https://app.slack.com/client/T047ETKDFGF/C048ZQ4KG15">Slack</a>: (Software de mensajería instantánea para comunicarse con otros compañeros, TAs y el personal de Correlation One para temas relacionados con el material del curso).
 * <a href="https://c1-learning.com/my-programs/1f3baeaa-66cd-440c-84a7-4a1bcbd02bcc/course-materials">Sitio Web del Programa</a>: (Donde el contenido del programa y los ejercicios de código serán publicados)
 * <a href="https://lookerstudio.google.com/gallery">Looker Studio</a>: Es una herramienta gratuita que convierte tus datos en informes y paneles claros, totalmente personalizables y fáciles de consultar y compartir.
-
 
 
 
