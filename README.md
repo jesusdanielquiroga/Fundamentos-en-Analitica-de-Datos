@@ -398,7 +398,41 @@ Observa que sólo hemos incluido el porcentaje de demanda estimado en la fórmul
 
 ![descarga](https://user-images.githubusercontent.com/87950040/202329404-2807f115-4472-4512-9eb4-ef2fab0ca101.gif)
 
+**Ejemplo 2**
 
+Calcula los ingresos totales esperados en todos los libros vendidos.
+
+**Respuesta.** Vamos a crear una nueva hoja de cálculo llamada estadisticas utiles y a añadir algunas celdas con textos descriptivos. Podríamos calcular el total de ingresos esperados consultando y sumando los ingresos de cada libro en una fórmula, uno por uno. Pero esto consumiría mucho tiempo rápidamente, ¡sobre todo para cientos o miles de libros!
+
+¿Hay alguna forma de reducir este esfuerzo? ¡Seguro que la hay! Podemos utilizar la función integrada SUMA() de Excel y hacer referencia a la columna correspondiente (¡no a una sola celda!) en la hoja de cálculo datos libros. ¿Cómo lo hacemos? Bien, haces referencia a un rango en una fórmula haciendo clic en la primera celda y arrastrando el cursor hacia abajo mientras lo mantienes pulsado. Luego escribes el paréntesis de cierre para salir del modo de selección:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202330526-1f6fcd72-8800-4fb8-af6c-d2bd49e4f801.gif)
+
+**Ejercicio 5**
+
+Calcula los costos totales esperados en todos los libros vendidos.
+
+**Ejercicio 6**
+
+Calcula la utilidad total esperada en todos los libros vendidos.
+
+Pista: La utilidad total sería la diferencia entre los ingresos totales esperados y los costos totales esperados.
+
+**Ejercicio 7**
+
+Calcula el PVP medio por página. Para hacer esto, tendrás que crear una nueva columna en la hoja de cálculo datos libros (llámala PVP por página), que te indique el PVP por página de cada libro. Después, en la hoja de cálculo de estadísticas útiles, tendrás que utilizar la función PROMEDIO() para calcular la media de todos los libros. La sintaxis es similar a la de la función SUMA(); es decir, pasas el rango de celdas como entrada para la función.
+
+Las funciones SUMA() y PROMEDIO() no son las únicas que tienes a tu disposición. Algunas otras son:
+
+* CONTARA(): Cuenta cuántas celdas no vacías hay en un rango
+* MIN(): Da el valor mínimo de un rango de celdas
+* MAX(): Da el valor máximo de un rango de celdas
+
+**Conclusiones y tips para recordar**
+
+* **Referencias variables** - Son las que vienen por defecto en Excel. Actualizan las referencias de las celdas en función de la ubicación del destino del pegado
+* **Referencias fijas** - No se actualizan cuando copias y pegas una fórmula. Puedes hacer que una referencia sea fija añadiendo $ tanto al principio del nombre de la columna como al principio del nombre de la fila. También puedes fijar sólo la columna o sólo la fila. Si quieres fijar la columna, añade el $ sólo al nombre de la columna (antes de la letra, por ejemplo, $A2); si quieres fijar la fila, añade el $ sólo al nombre de la fila (antes del número, por ejemplo, A$2).
+* **Funciones incorporadas** - Para sumar un rango de celdas, puedes utilizar la función SUMA() y poner el rango de celdas entre los paréntesis. Para calcular promedios se utiliza PROMEDIO().
 
 # SQL
 
