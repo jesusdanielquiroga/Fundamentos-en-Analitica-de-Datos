@@ -434,6 +434,77 @@ Las funciones SUMA() y PROMEDIO() no son las únicas que tienes a tu disposició
 * **Referencias fijas** - No se actualizan cuando copias y pegas una fórmula. Puedes hacer que una referencia sea fija añadiendo $ tanto al principio del nombre de la columna como al principio del nombre de la fila. También puedes fijar sólo la columna o sólo la fila. Si quieres fijar la columna, añade el $ sólo al nombre de la columna (antes de la letra, por ejemplo, $A2); si quieres fijar la fila, añade el $ sólo al nombre de la fila (antes del número, por ejemplo, A$2).
 * **Funciones incorporadas** - Para sumar un rango de celdas, puedes utilizar la función SUMA() y poner el rango de celdas entre los paréntesis. Para calcular promedios se utiliza PROMEDIO().
 
+## CASO 3: Analizando y resumiendo datos de jugadores de tenis
+
+**Objetivo**
+
+Una vez terminemos este caso, serás capaz de consultar datos en Excel de forma eficiente utilizando operaciones comunes de filtrado, indexación, comparación y funciones condicionales. También aprenderás varias funciones clave de Excel, tales como:
+
+* BUSCARV()
+* BUSCARH()
+* INDICE()
+* COINCIDIR()
+* SUMAPRODUCTO()
+* SUMAR.SI()
+* CONTAR.SI()
+* PROMEDIO.SI()
+* CONTAR.SI.CONJUNTO()
+
+**Contexto general**
+
+Asume que eres un analista de la Asociación de Tenis de los Estados Unidos (conocida como USTA, de acuerdo a las siglas en inglés de ‘United States Tennis Association’) y que te han encargado que analices los resultados de un torneo que tuvo lugar en 2020 en el estado de Pennsilvania. Tus conclusiones serán utilizadas por los altos ejecutivos de la empresa para introducir cambios en la forma de dirigir el torneo en los años siguientes.
+
+**Problema de negocio**
+
+Tienes que crear un libro de Excel para encontrar información específica de forma eficiente y calcular varias estadísticas relacionadas con el desempeño de los jugadores.
+
+**Contexto analítico**
+
+Tu jefe te ha proporcionado un archivo de Excel (<a href="Excel/data_es_estudiante.xlsx">data_es_estudiante.xlsx</a>), que contiene información de todos los partidos de tenis jugados durante el torneo, así como información histórica sobre la clasificación de los jugadores. Trabajarás en este libro de Excel para calcular las estadísticas necesarias.
+
+**Todo se trata de filas y columnas**
+
+Como hemos visto en los casos anteriores, el formato de Excel está constituido básicamente como una intersección de filas y columnas. Algo que debes tener en cuenta es que la primera fila suele considerarse especial y se conoce como fila de encabezado, esta es la que da nombre a los datos contenidos en cada columna. El archivo tiene varias hojas con información sobre partidos, jugadores y condados (los condados en Estados Unidos son parecidos a lo que nosotros en Colombia llamamos municipios). La hoja Partidos contiene información sobre cada uno de los partidos jugados, como por ejemplo los nombres de los jugadores que lo disputaron, la fecha del partido, su duración, los identificadores numéricos de los jugadores, etc.
+
+**Filtrando datos**
+
+Los filtros nos ayudan a localizar manualmente los datos que necesitamos sin alterarlos. Para crear filtros en cualquier hoja, sigue estos pasos:
+
+* Selecciona toda la tabla que quieras filtrar. Un buen atajo, si lo único que hay en tu hoja es la tabla, es hacer clic en el pequeño triángulo que hay entre la columna A y la fila 1, que seleccionará toda la hoja:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202335144-369d832c-8857-474a-a422-f7cf2983e229.gif)
+
+* En la pestaña Inicio de la barra de herramientas, haz clic en el botón "Ordenar y filtrar". Se abrirá un menú desplegable. Haz clic en "Filtrar".
+
+![descarga](https://user-images.githubusercontent.com/87950040/202335266-ee6d1567-b074-43c6-8004-405e387f657d.gif)
+
+En la siguiente imagen, podemos ver cómo filtrar la columna D con encabezado EdadAgo2021 (que representa la edad de los jugadores a Agosto de 2021) en la hoja de cálculo Jugadores para que sólo nos quedemos con los jugadores que tienen 30 años. Al hacer esto, se añadirá una pequeña flecha en la fila de la cabecera de todas las columnas. Estas flechas te permiten filtrar la tabla para encontrar los datos exactos que necesitas:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202335486-34d2db08-9f84-4077-88b1-4e1495e59bca.gif)
+
+**Ejercicio 1**
+
+¿Cuántos jugadores tienen exactamente 18 años?
+
+**BUSCARV() y BUSCARH()**
+
+El filtrado es una forma de limitar nuestros resultados, sin embargo, el proceso de extracción de los datos sigue siendo muy manual. ¿Cómo podemos extraer estos datos de manera más automatizada para reutilizarlos en otros lugares?
+
+¡Démosles la bienvenida a las funciones BUSCARV() y BUSCARH()! Estos nombres son la abreviatura de “Buscar Vertical” y “Buscar Horizontal”. Como nuestros datos están en tablas verticales, utilizaremos BUSCARV(). La función BUSCARH() opera igual que BUSCARV(), sólo que con los ejes invertidos, así que debería ser muy fácil de entenderla después de conocer la primera.
+
+Un ejemplo de algo que podemos buscar es el nombre de un jugador dado su identificador denominado IdJugador. Vamos a crear una nueva columna en la hoja de cálculo Partidos con el nombre del ganador.
+
+La función BUSCARV() tiene tres argumentos obligatorios y uno opcional:
+
+La celda que contiene el valor que vamos a buscar para ayudarnos a encontrar más información.
+El rango de búsqueda en el cual buscará el valor (el rango se especifica indicando celda de inicio y celda de fin). Este rango de celdas debe tener el valor que buscamos en su primera columna.
+El número de la columna en la que podemos encontrar el valor que necesitamos, contando desde la primera columna de nuestro rango.
+Opcionalmente, podemos indicar a la función que queremos una coincidencia exacta poniendo la palabra clave FALSO en esta posición.
+
+Aquí tienes un ejemplo ilustrativo:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202335903-36e30a37-368c-40f2-8c69-6050b3765112.png)
+
 # SQL
 
  **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una <a href="https://github.com/jesusdanielquiroga/Introduccion-Base-de-Datos.git">base de datos</a> que consta de cientos de miles de datos:
