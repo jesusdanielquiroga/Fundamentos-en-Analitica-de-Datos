@@ -505,6 +505,139 @@ Aquí tienes un ejemplo ilustrativo:
 
 ![descarga](https://user-images.githubusercontent.com/87950040/202335903-36e30a37-368c-40f2-8c69-6050b3765112.png)
 
+Ahora vamos a recrear cada uno de los pasos anteriores para nuestro objetivo concreto:
+
+* El valor que queremos buscar está contenido en la celda B2.
+* Para el rango en el que necesitamos buscar el nombre del jugador, utilizaremos la hoja Jugadores, y tomaremos el rango de celdas que comienza con A2 y termina con B346. Ten en cuenta que empezamos nuestro rango en la columna A, ya que es la que contiene los identificadores de los jugadores. Lo terminamos en la columna B porque contiene los nombres de los jugadores, pero también podríamos terminarlo en cualquier otra columna después de la K si quisiéramos datos que estuvieran más a la derecha.
+* La columna B contiene nuestros datos deseados. Como la columna A contiene nuestro valor de búsqueda, B es la 2ª columna.
+* Dado que queremos una coincidencia exacta, utilizamos FALSO como último argumento.
+
+Así, nuestra fórmula final es:
+
+```sh
+=BUSCARV(D2;Jugadores!$A$2:$B$346;2;FALSO)
+```
+
+**Ejercicio 2**
+
+Crea una nueva columna en la hoja de cálculo Partidos con los nombres de los perdedores de cada partido.
+
+<img width="652" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202873716-87c97948-7c00-43fd-8e8d-8e2b8511b228.png">
+
+Ahora sabemos cómo utilizar BUSCARV() y BUSCARH() para buscar información en una tabla. Sin embargo estas funciones tienen algunas limitaciones: en primer lugar, sólo pueden buscar datos en una columna que esté después de la columna inicial en un rango. Y en segundo lugar, sólo devolverán la primera coincidencia del rango cada vez, por lo que si queremos los datos posteriores a la primera coincidencia, no podremos conocerlos. Esto significa que la función BUSCARV() es más adecuada para tablas en las que cada fila tiene un identificador único, y ese identificador está en la primera columna.
+
+**INDICE() + COINCIDIR()**
+
+Una forma más flexible (y en general mejor) de buscar información es la combinación de las funciones INDICE() y COINCIDIR(). Utilizando una combinación de ambas, puedes buscar en las columnas anteriores a la columna con tu valor inicial y buscar valores más allá de la primera coincidencia que satisface tu conjunto de condiciones. Quizá son un poco más difíciles de entender al principio, pero a medida que avancemos, te irás sintiendo más cómodo con ellas.
+
+**INDICE()** te da el resultado de un valor en un rango, dado el rango y la posición del valor dentro del mismo. También funciona para rangos horizontales, ¡e incluso funciona para rangos con múltiples columnas y filas! Sus argumentos son el rango de celdas donde se encuentra el valor y la posición de la celda correspondiente en ese rango:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202873973-bb71a60a-02cc-447c-b562-db5fb1b63b0e.gif)
+
+Esto nos permite encontrar el valor de una celda concreta de un rango mirando su posición en ese rango. ¿Pero cómo podemos encontrar el valor de una celda si no conocemos su posición? ¡Fácil! Lo podemos hacer empleando la función COINCIDIR().
+
+**COINCIDIR()** obtiene la posición de cualquier valor en un rango horizontal o vertical. La función necesita tres argumentos:
+
+* El valor a buscar.
+* El rango horizontal o vertical en el que hay que buscar el valor.
+* (Opcionalmente) El número 0 si quieres encontrar una coincidencia exacta, o 1 o -1 si basta con una coincidencia aproximada. ¡Esto es importante! En la mayoría de los casos, probablemente querrás usar 0 para una coincidencia exacta. En este caso no vamos a explicar la diferencia entre poner un 1 o un -1, pero si estás interesado en aprenderla, puedes revisar este <a href="https://support.microsoft.com/es-es/office/funci%C3%B3n-coincidir-e8dffd45-c762-47d6-bf89-533f4a37673a">vínculo</a>.
+
+COINCIDIR() te devolverá la posición de tu valor en la lista si existe:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202874169-0e81eb10-3903-4bb9-8f5e-f18b8870b1ff.gif)
+
+Ahora, ¿cómo combinamos estas dos funciones para hacer una búsqueda completa? En lugar de los argumentos de posición de INDICE(), podemos utilizar COINCIDIR(). Así, en lugar de decirle a INDICE()en qué fila debe buscar la celda, dejamos que COINCIDIR() encuentre la fila por nosotros.
+
+Por ejemplo, busquemos el Ranking del ganador de cada partido:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202874184-4ca3365d-7d58-428e-9cad-5a274b69648a.png)
+
+La fórmula que escribimos en la celda H2 es:
+```sh
+=INDICE(Jugadores!$A$2:$H$346;COINCIDIR(D2;Jugadores!$A$2:$A$346;0);7)
+```
+
+Inicialmente puede parecer un poco abrumadora, pero ya veras que la vamos a entender mejor, si la analizamos por partes:
+
+* COINCIDIR(D2,Jugadores!$A$2:$A$346,0): obtiene la posición del valor en la celda D2 (el Id del ganador en la hoja de cálculo Partidos) en la hoja de cálculo Jugadores.
+* =INDICE(Jugadores!$A$2:$H$346,<RESULTADO DE COINCIDIR>,7) toma el número de fila que generó la función COINCIDIR() y lo pasa como argumento a la función INDICE(), que recupera el valor de la 7ª columna de la hoja de cálculo Jugadores (el ranking) que corresponde a ese número de fila. Aquí, <Resultado de COINCIDIR> está diciendo que lo que va aquí es el resultado de la función COINCIDIR(). Encerrar el texto entre un < y un > es una forma habitual de insertar comentarios cuando se habla de fórmulas o códigos en informática. Por ejemplo, también podrías decir que la sintaxis de la función INDICE() es:
+
+```sh
+=INDICE(<rango>, <número de fila>, <número de columna>).
+```
+
+**Ejercicio 3**
+
+Ya que lo logramos con los ganadores, es ahora tu turno. Encuentra los rankings de los perdedores.
+
+La ventaja de utilizar este enfoque, con las funciones INDICE() y COINCIDIR() en lugar de BUSCARV(), es que podemos buscar valores en cualquier fila o columna, lo que significa que la posición de la columna con el identificador único no importa, por lo que la búsqueda es más flexible.
+
+
+**Resumiendo los datos**
+
+Imagina que queremos saber como está relacionada la edad de un jugador con las posibilidades que tiene de ganar un partido. Podemos encontrar la respuesta a estas preguntas utilizando funciones de agregación, que toman varios valores y nos entregan un único resultado. Algunos ejemplos básicos de este tipo de funciones son las funciones SUMA() y PROMEDIO(), que por su nombre es muy probable que puedas intuir que hacen. Experimenta con ellas, y si quieres mas detalles aquí puedes ver su documentación: <a href="https://support.microsoft.com/es-es/office/suma-funci%C3%B3n-suma-043e1c7d-7726-4e80-8f32-07b23e057f89">- SUMA()</a> <a href="https://support.microsoft.com/es-es/office/promedio-funci%C3%B3n-promedio-047bac88-d466-426c-a32b-8f33eb960cf6">- PROMEDIO()</a>.
+
+Otra función de agregación muy útil es **SUMAPRODUCTO()**. SUMAPRODUCTO() toma dos rangos del mismo tamaño, calcula el producto de las celdas correspondientes de cada rango (es decir, el producto de las primeras celdas de cada rango, el producto de las segundas celdas de cada rango, etc.), y luego suma todos estos productos.
+
+Uno de los usos más comunes de esta función es el cálculo de los promedios ponderados. Probablemente estés familiarizado con los promedios ponderados desde tus días de colegio: tu nota se dividía en varios entregables, cada uno de los cuales tenía un peso diferente, y tu nota final se calculaba como el promedio ponderado de todos los entregables.
+
+La sintaxis para calcular el promedio ponderado es la siguiente:
+```sh
+=SUMAPRODUCTO(<rango de ponderaciones>,<rango a promediar>)/SUMA(<rango de ponderaciones>)
+```
+Puedes ver la documentación de la función aquí: <a href="https://support.microsoft.com/es-es/office/sumaproducto-funci%C3%B3n-sumaproducto-16753e75-9f68-4874-94ac-4d2145a2fd2e">- SUMAPRODUCTO()</a>
+
+Nota: Un promedio ponderado es diferente de un promedio normal, ¡no los confundas!
+
+**Ejercicio 4**
+
+Halla el promedio ponderado de la cantidad aces del ganador en relación con la cantidad de minutos jugados en cada partido como elemento de ponderación. Si no estás muy familiarizado con el tenis, ace es un punto ganado directamente en el servicio sin que el oponente toque la pelota con su raqueta.
+
+¿Cómo interpretas el resultado?
+
+**Funciones condicionales**
+
+A veces querrás promediar sólo los valores de un jugador concreto, de un país concreto o de cualquier otra condición particular. Las funciones condicionales te permiten hacer precisamente eso: les proporcionas unas condiciones, y ellas ignoran cualquier valor a lo largo de un rango que no cumpla esa condición.
+
+**PROMEDIO.SI()** es una de estas funciones y toma dos argumentos obligatorios y uno opcional:
+
+* El rango sobre el que se va a comprobar el criterio o condición.
+* La condición a comprobar.
+* (Opcional) El rango sobre el que se va a calcular el promedio. Si no se proporciona, la operación se realiza sobre el rango indicado en el primer argumento.
+Por ejemplo, utilicemos PROMEDIO.SI() para encontrar la duración promedio de los partidos jugados en los que ha ganado un jugador del Condado de Bradford. Puedes ver la fórmula en la celda A1 de la hoja DuraciónPromedio:
+```sh
+=PROMEDIO.SI(Partidos!J2:J1463;"=Bradford";Partidos!C2:C1463)
+```
+
+Las condiciones se ponen entre comillas dobles. Si quieres comprobar si los valores de un rango son superiores a 5, escribirías ">5" como condición. Si quieres comprobar si los valores son menores o iguales a 30, escribirías "<=30". En el ejemplo anterior, comprobamos la condición "=Bradford" a lo largo de la columna J, que contiene el código del condado del ganador de cada partido. También dimos el tercer argumento opcional con la columna C, que contiene el número de minutos del partido.
+
+**Ejercicio 5**
+
+Encuentra la duración media en minutos de los partidos jugados en los que ganó un jugador del condado de Fulton.
+
+Otras funciones condicionales son SUMAR.SI(), CONTAR.SI() y CONTAR.SI.CONJUNTO(). SUMAR.SI() y CONTAR.SI() tienen una sintaxis similar a la de PROMEDIO.SI(). ¡Para CONTAR.SI.CONJUNTO(), puedes incluir hasta 127 sentencias condicionales! No es necesariamente una buena práctica hacerlo, ya que sería difícil hacer un seguimiento de tantas condiciones en una única función. La sintaxis de la función CONTAR.SI.CONJUNTO() es:
+```SH
+=CONTAR.SI.CONJUNTO(rango_de_criterio1, criterio1, rango_de_criterio2, criterio2,...)
+```
+Donde el ... representa la inclusión de condiciones adicionales.
+
+Podemos utilizar esta función para calcular el número de partidos que duraron más de 120 minutos en los que el ganador tuvo menos de 60 puntos de saque (aces):
+```SH
+=CONTAR.SI.CONJUNTO(Partidos!C:C;">120";Partidos!L:L;"<60")
+```
+Lo que debería dar un resultado de 153.
+
+**Ejercicio 6**
+
+Calcula el número de partidos ganados por un jugador del condado de Franklin en los que el partido duró más de 100 minutos y hubo más de 80 puntos de saque ganador (aces).
+
+**Conclusiones y tips para recordar**
+
+En este caso, hemos aprendido a buscar información en Excel utilizando diversos métodos de filtrado y búsqueda de datos, como lo son BUSCARV(), BUSCARH() e INDICE() + COINCIDIR().
+
+También aprendimos a aplicar funciones de agregación a nuestros datos para obtener información con un poco más de detalle (con funciones como SUMAPRODUCTO() y PROMEDIO.SI().
+
+
 # SQL
 
  **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una <a href="https://github.com/jesusdanielquiroga/Introduccion-Base-de-Datos.git">base de datos</a> que consta de cientos de miles de datos:
