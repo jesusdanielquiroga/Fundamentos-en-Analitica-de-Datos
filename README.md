@@ -36,8 +36,7 @@
 
 * [Programación con python](#programación-con-python)
 
-
-
+* [Conceptos De Estadística](#conceptos_de_estadística)
 
 * [Herramientas y tecnologías](#herramientas-y-tecnologías)
 
@@ -647,6 +646,82 @@ También aprendimos a aplicar funciones de agregación a nuestros datos para obt
 # Programación con python
 
 Python es otra herramienta que te permite realizar análisis muy complejos de tus datos. Muchas aplicaciones de IA (inteligencia artificial), como los carros que se conducen solos o los modelos de predicción de los mercados de valores, se desarrollan con Python.
+
+# Conceptos De Estadística
+
+## Caso 4: ¿Qué patrones podemos encontrar en los costos de la salud de la población fumadora?
+
+**Objetivos**
+
+Hasta este momento, nos hemos centrado en el análisis de datos desde una perspectiva empírica, es decir, trabajando únicamente a partir de los datos que hemos podido recopilar y conocer. Sin embargo, las técnicas más avanzadas de análisis de datos (como las pruebas de hipótesis, la inferencia estadística, el modelado predictivo y el aprendizaje automático) suelen requerir cierta base teórica, en la que hacemos uso de abstracciones, que en muchos casos nos permiten facilitar el entendimiento del problema a través de conceptos, aunque puedan no estar completamente vinculadas a los datos que tenemos. Este caso se centrará en la construcción de los fundamentos matemáticos básicos necesarios para continuar profundizando en el análisis de datos, a la vez que se discutirán algunos conceptos estadísticos fundamentales. Al final de este caso serás capaz de: 
+* Describir los distintos tipos de datos y los métodos para trabajar con cada uno de ellos.
+* Entender la diferencia entre la media, la mediana y la moda.
+* Explicar por qué es importante medir la variabilidad al comparar grupos.
+* Utilizar la probabilidad para obtener conclusiones sobre los distintos grupos.
+
+**Contexto general**
+
+Estás empleado en una compañía de seguros de salud. Tu empleador quiere entender mejor cómo su competencia estima los costos para los seguros de los fumadores. Te han pedido que investigues algunos datos históricos de la competencia para aclarar qué características de la población fumadora resultan claves en este proyecto.
+
+**Problema de negocio**
+
+Tu jefe te ha pedido que respondas a la siguiente pregunta “¿Cuál es el perfil de los fumadores en relación con el costo de su seguro de salud, sus características personales y la región geográfica donde habitan?”
+
+**Contexto analítico**
+
+Los datos que emplearemos para trabajar en este caso son públicos y se encuentran en el archivo de excel denominado seguro.xlsx. El archivo contiene información sobre diversos atributos que pueden afectar el costo del seguro de salud.
+
+En este caso, utilizarás Excel para calcular algunas estadísticas básicas. Tu foco estará en asegurarte de elegir de manera adecuada las métricas y los gráficos que mejor transmitan tus observaciones y conclusiones respecto a los datos analizados.
+
+**Entendamos los datos**
+
+Echemos un vistazo al conjunto de datos del seguro de salud, disponible aquí. El conjunto de datos tiene de los siguientes atributos:
+
+* edad: la edad de la persona, en años
+* sexo: masculino o femenino
+* imc: el Índice de Masa Corporal (IMC) de la persona
+* hijos: el número de hijos que tiene la persona
+* fumador: si la persona es fumadora o no
+* región: noreste, noroeste, sureste, suroeste
+* costo: el costo del seguro de salud de esa persona
+
+Dado que existen diferentes tipos de datos, podemos agrupar los atributos en las siguientes categorías (ya explicaremos en qué consisten cada una de ellas):
+
+<img width="529" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202875918-9553371e-245e-4949-8b0b-b542ed27e674.png">
+
+Es útil entender el tipo de datos con los que estás trabajando antes de calcular cualquier estadística. Existen 4 tipos fundamentales de datos:
+
+* **Datos de razón**: son aquellos para los cuales su escala tiene un cero absoluto. Cero absoluto significa que no hay ningún valor numérico negativo y que el número 0 representa la ausencia total de la cantidad estudiada. Esto lleva a que sea generalmente fácil comparar datos de razón. Por ejemplo, si te cobran 5 dólares y a otra persona le cobran 10 dólares, puedes decir fácilmente que le han cobrado el doble que a ti. Y un cobro de 0 dólares significa que no te han cobrado nada.
+
+* **Datos de intervalo**: son aquellos para los cuales su escala no tiene un cero absoluto. En nuestro caso específico, por ejemplo, el IMC no tomará nunca un valor de cero. Recuerda que el IMC se calcula como una relación entre el peso de una persona y el cuadrado de su altura. Como nadie tiene una altura de cero, el IMC tampoco podrá ser cero. Por tal razón, aunque podamos utilizar el IMC para establecer comparaciones entre personas, no es correcto afirmar que una persona tiene el doble del IMC que otra.
+
+* **Datos ordinales**: son aquellos que presentan categorías a las que se les puede asociar un orden natural. El IMC podría convertirse en un ejemplo, si agrupamos las personas en las categorías de bajo peso, normal, sobrepeso y obesidad. Esas cuatro categorías contienen una amplia gama de valores, pero tienen límites claros entre las categorías. Esto también nos ayuda a ver que no es el nombre de la variable lo que nos indica su tipo de dato, sino la forma en la que se mide la variable.
+
+* **Datos nominales**: son simplemente una colección de categorías sin un ordenamiento natural. Por ejemplo, en nuestro caso específico la variable del sexo tiene las categorias femenino y masculino, pero estas categorias no tienen un orden particular. Lo mismo ocurre por ejemplo con los colores o los sabores.
+
+## Estadísticos de tendencia central
+
+Recordemos nuestro problema de negocio: queremos averiguar cuál es el perfil de los fumadores en relación con el costo de su seguro de salud, sus características personales y la región geográfica donde habitan. Como ya sabrás, un buen punto de partida es obtener diferentes estadísticos de los datos de los fumadores, como por ejemplo la media, la mediana y la moda de un conjunto de datos. Las tres son medidas de tendencia central, es decir, nos dan una idea de cómo es el elemento típico (más central) en un conjunto de datos para una variable determinada. Recuerda que:
+
+**La media** es la suma de todas las observaciones de una determinada variable dividida por el número de observaciones de esa variable.
+
+**La mediana** es otra medida del “centro” de los datos y nos entrega el valor “frontera” que divide el conjunto de datos en dos: la mitad de los datos se encuentran por encima de este valor y la otra mitad son iguales o inferiores a este valor (otra manera en la que se conoce las mediana es como el percentil 50 porque el 50% de los datos queda por debajo de ella y el otro 50% queda por encima).
+
+**La moda**: nos entrega el valor más común (el que más se repite) en un conjunto de datos.
+
+Por ejemplo, digamos que tenemos los siguientes datos:
+
+<img width="305" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202876088-b77140ad-9dac-414c-93e9-08d2c68f6088.png">
+
+Si sumamos todas las observaciones, tenemos 21 mascotas en total. Hay 9 personas. O sea que hay una media de $21/9 = 2,33$ mascotas por persona. La moda es el valor que más se repite, que es el 1, porque hay 4 personas que tienen una sola mascota. La mediana requiere que organicemos los valores de menor a mayor, así:
+
+<img width="297" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202876103-ea8cb9af-80ee-4706-aa89-1f4fe1fcc0a7.png">
+
+La mediana sería el valor que corresponde a Kelly, o sea el número 1, porque hay 4 personas que tienen una cantidad de mascotas igual o menor a Kelly y 4 personas que tienen más mascotas que Kelly. Como Kelly “parte” la tabla a la mitad, su valor es la mediana (en este caso, Kelly tiene el mismo número de mascotas que María, Milena o Benjamín, entonces cualquiera de los tres habría podido servir como mediana, porque el valor, el número 1, no cambiaría).
+
+La media, la mediana y la moda son útiles con tipos de datos de razón y de intervalo. Sin embargo, los datos ordinales y nominales a menudo sólo se describen con la moda, o incluso simplemente informando del número de valores de cada categoría, especialmente cuando sólo hay un pequeño número de categorías posibles.
+
+
 
 # Herramientas y tecnologías
 
