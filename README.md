@@ -777,6 +777,103 @@ La empresa está pensando en ofrecer un sorteo para que un cliente tenga el segu
 * Si se hiciera un sorteo para cada región individualmente, ¿cuál es la probabilidad de que la persona seleccionada en la región que más fuma sea un fumador?
 * Si se hiciera un sorteo para todas las regiones juntas, ¿cuál es la probabilidad de que se seleccione a un fumador de la región que más fuma?
  
+## Relaciones entre variables
+
+Como hemos visto en los casos anteriores, las propiedades de las variables individuales son importantes, pero no son lo único importante. Mejor aún, la ciencia de los datos suele consistir en el estudio de las relaciones entre múltiples variables. Una forma de ofrecer una rápida evaluación de la relación entre dos variables es mediante el concepto de correlación.
+
+El coeficiente de correlación de Pearson (también llamado $R$ de Pearson) se utiliza habitualmente con este fin y tiene valores en el intervalo $[-1:1]$ . El coeficiente de Pearson puede ser útil para describir tipos de datos de razón o de intervalo. Una correlación positiva $R>0$ significa que a medida que una variable aumenta, la tendencia común es que la otra variable también aumente, mientras que una correlación negativa $R<0$ significa que a medida que una variable aumenta, la otra disminuye. Si $R=1$  significa que hay una relación lineal positiva perfecta entre las dos variables; si $R=-1$, hay una relación lineal negativa perfecta.
+
+La siguiente imagen muestra una correlación positiva fuerte a la izquierda, una correlación positiva débil en el centro y ninguna correlación a la derecha. En el caso de las correlaciones positivas, puedes ver que los datos se agrupan en una tendencia que va desde la parte inferior izquierda a la superior derecha, y que parece ser "ascendente". En una correlación negativa, los datos se agruparían de la parte superior izquierda a la inferior derecha, pareciendo que están "cayendo".
+
+<img width="526" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202883528-ff89efbe-f4bb-4dac-9526-57798d970055.png">
+
+Podemos crear un sencillo gráfico de dispersión en Excel seleccionando la columna de la edad, y luego manteniendo pulsada la tecla ctrl en el pc o command en el mac, para seleccionar además la columna imc. Luego, en la pestaña Insertar, elegiremos el tipo de gráfico de dispersión.
+
+![descarga](https://user-images.githubusercontent.com/87950040/202883843-95b899fd-27b9-42a0-8b6c-d2cd9e16d460.gif)
+
+Después de etiquetar y ajustar nuestros índices, nuestro gráfico de dispersión tendrá el siguiente aspecto:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202883983-be75ee47-c471-44af-b4dd-1659e2eb3bb5.png)
+
+No parece que haya una relación entre la edad y el IMC. No hay una tendencia ascendente o descendente en los datos. Si eligiéramos una edad al azar, encontraríamos una distribución similar de los IMC.
+
+**Ejercicio 5**
+
+* Crea gráficos de dispersión para mostrar la relación entre el IMC y los costos, así como también para la edad y los costos.
+* Para cada uno de tus gráficos, indica si la relación es positiva, negativa o si no existe relación. Si la relación es positiva o negativa, estima la fuerza de la relación como fuerte o débil. Anota cualquier otro patrón que encuentres.
+
+## Teoría de la probabilidad y distribuciones
+
+Hasta ahora, nos hemos ocupado de calcular valores estadísticos que permiten conocer información a partir de los datos que ya tenemos, es decir, hemos adoptado un enfoque más empírico. Sin embargo, a menudo tenemos que mirar hacia adelante y predecir también la probabilidad de que se produzcan acontecimientos futuros, lo cual es de naturaleza más teórica. En el Ejercicio 4 tuvimos un ejemplo de ello, pero aquí hablaremos con más detalle de las distribuciones y de algunas de las teorías básicas que las rodean.
+
+Supongamos que trazamos la distribución de los IMC de los fumadores de nuestro conjunto de datos: eso nos daría un histograma. Pero un histograma se basa totalmente en una muestra limitada de datos pasados, y no nos permite hacer predicciones directamente sobre la población general de fumadores independientemente de nuestro conjunto de datos específico. Para ello, necesitamos una función de densidad de probabilidad (FDP), que es una construcción teórica que nos ayuda a calcular la probabilidad de un rango de valores que tomaría el IMC de cualquier fumador elegido al azar, y que no está estrictamente sujeto a los límites de nuestro conjunto de datos (advertencia: para utilizar una FDP como ayuda para la inferencia, es decir, para hacer afirmaciones generales sobre una población utilizando los datos de una muestra, necesitamos relacionarla con algunas otras técnicas que aseguren que la muestra es representativa del conjunto).
+
+Fíjate en que no hemos dicho que la FDP pueda decirnos directamente la probabilidad de que el IMC de un fumador elegido al azar sea exactamente un valor determinado, digamos, 30. El motivo es que el IMC es un valor continuo y no un valor discreto, puede adoptar cualquier valor decimal, por lo que la probabilidad de que el IMC de una persona sea exactamente 30 es prácticamente nula. Está prácticamente garantizado que lo que creemos que es un IMC de 30 es en realidad un IMC de 29,99, o un IMC de 30,01, o incluso un IMC de 30,001. En cualquier caso, encontrar una persona con un IMC de exactamente 30 es tan complejo como intentar encontrar un unicornio en una piscina.
+
+## Área bajo la curva
+
+Acorde a lo discutido, tiene más sentido calcular la probabilidad de que el IMC de un fumador se encuentre dentro de algún intervalo, digamos, entre 29 y 31. La FDP está perfectamente diseñada para esto. En concreto, si trazamos la FDP en un plano de coordenadas estándar de 2 dimensiones con un eje $x$ y un eje $y$, esta probabilidad es el área de la región que se encuentra bajo la FDP y por encima de el eje $x$, con valores de $x$ entre 29 y 31. Para los que estén familiarizados con el cálculo, esto se llama **área bajo la curva**.
+
+Una consecuencia interesante de esta propiedad de la FDP es que el área total bajo la FDP y por encima del eje $x$, sin límites en los valores de $x$ , tiene que ser 1 (porque la probabilidad de un evento tiene que estar entre 0 y 1).
+
+Una de las distribuciones más famosas es la normal, que ya mencionamos, en la que la media, la mediana y la moda son iguales, dando como resultado que la distribución sea simétrica en torno a la mediana. Esta distribución tiene un pico alto en el centro y se reduce a medida que nos movemos hacia los extremos izquierdo y derecho.
+
+## Z-score
+
+Una distribución normal ideal tiene el siguiente aspecto:
+
+![descarga](https://user-images.githubusercontent.com/87950040/202885014-06d0b3e4-df90-4856-ace6-48c385d8e692.png)
+
+Como puedes ver, hay algunas líneas verticales superpuestas a la curva. Representan reglas generales que es muy útil recordar:
+
+Aproximadamente el 68% de las muestras de una distribución normal caen dentro de una desviación estándar de la media
+Aproximadamente el 95% de las muestras se sitúan dentro de dos desviaciones típicas de la media
+Aproximadamente el 99,7% de las muestras se sitúan dentro de las tres desviaciones típicas de la media
+Ahora, ¿qué es una desviación estándar? Es simplemente una medida de qué tan dispersos están nuestros datos. Si un conjunto de datos tiene una desviación estándar grande, significa que una gran parte de los datos están lejos del promedio, o sea que están “dispersos”. Y si tiene una desviación estándar pequeña, significa que gran parte de los datos están cerca del promedio.
+
+En la gráfica de arriba, la desviación estándar está representada con la letra griega .
+
+Es una práctica habitual referirse al número de desviaciones estándar de un dato respecto a la media como su z-score. Aunque la palabra “score” traduce literalmente “puntaje”, es poco probable encontrar que se haga referencia a ella en español y se mantiene la referencia a este parámetro con su nombre en inglés, por lo cual los seguiremos llamando z-score.
+
+Relacionando esto con nuestra discusión sobre el área bajo la curva, las reglas generales anteriores pueden interpretarse como:
+
+El área bajo la FDP de la distribución normal y sobre el eje , con un -score entre -1 y 1 es aproximadamente 0,68.
+El área bajo la FDP de la distribución normal y sobre el eje , con un -score entre -2 y 2 es de aproximadamente 0,95.
+El área bajo la FDP de la distribución normal y sobre el eje , con un -score entre -3 y 3 es de aproximadamente 0,997.
+Es habitual en estadística considerar los valores que tienen un z-score inferior a -2 y superior a 2 como “extremos” y relativamente raros. Esto representa el 2,5% en el extremo inferior de la distribución y el 2,5% en el extremo superior de la distribución.
+
+Para calcular el z-score de un valor, resta la media del valor y divide ese producto por la desviación estandar:
+
+<img width="227" alt="descarga" src="https://user-images.githubusercontent.com/87950040/202885059-eca24633-8c36-4577-9ebd-ac8998dcc04c.png">
+
+La desviación estándar se calcula en Excel mediante la función DESVEST(). Si quisiéramos ver cómo se compara el costo del seguro de $5300$ con el de la población en general, primero calcularíamos el costo medio $13270.42$, la desviación estándar $12110.01$ y luego podríamos calcular el z-score de esta manera:
+
+<img width="188" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202885201-41f3605f-88b3-48a8-ba90-9df96c2da2fd.png">
+
+La puntuación z negativa nos dice que 5300 está por debajo del costo medio del seguro en 0,66 desviaciones estándar. Nota: el z-score no es adecuado para los costos, porque los datos no se distribuyen normalmente. Sólo se utiliza como ejemplo para discutir la fórmula.
+
+Para saber más sobre el z-score haz clic <a href="https://datascience.eu/es/matematica-y-estadistica/que-es-un-z-score/">aquí</a>.
+
+**Ejercicio 6**
+
+Supóngamos por ahora que la distribución del IMC es perfectamente normal. Calcula lo siguiente:
+
+* ¿Cuál es la probabilidad de que una persona tenga un IMC superior a 30 (el umbral de la obesidad)? Una estimación aproximada está bien. Explica tu razonamiento.
+* ¿Cuál es la probabilidad de que una persona tenga un IMC superior a 37?
+* ¿Qué rango de valores de IMC tiene un z-score inferior a -2 o superior a 2?
+
+Pista: mira la distribución del z-score de arriba como referencia.
+
+**Tips para recordar**
+
+En este caso, has visto que podemos analizar los datos históricos para comprender las tendencias que hay en ellos, y utilizar esas tendencias y algunos conocimientos teóricos sobre la probabilidad y la estadística para predecir lo que podría ocurrir en eventos futuros. Podemos resaltar como conclusiones los siguientes puntos clave:
+
+* Los estadísticos pueden utilizarse para indicar rápidamente dónde se encuentra el “centro” de un conjunto de datos, o lo disperso que está.
+* Podemos investigar las correlaciones entre las variables. Esto es especialmente útil durante el análisis exploratorio de datos, y cuando (como verás en casos futuros) se construyen modelos que predicen el valor de una variable de interés en función de otras variables.
+* La función de densidad de probabilidad es lo que nos permite pasar del mundo totalmente empírico de los histogramas, que son una representación imperfecta y limitada de toda la población, a modelar e inferir características de esa población. El área bajo la FDP y por encima de 0 entre dos valores concretos de $a$ , $b$  y $x$ , nos entrega la probabilidad de que una muestra elegida al azar de esa población tenga un valor de $x$, para esa variable entre $a$ y $b$.
+* La distribución normal es una FDP particularmente especial que es perfectamente simétrica para la cual coinciden sus valores de media, mediana y moda, y se ajusta además bastante bien a muchos fenómenos naturales.
+
+
 # Herramientas y tecnologías
 
 Durante el desarrollo del programa frecuentemente se usará algunas herramientas tecnológicas:
