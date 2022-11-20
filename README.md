@@ -721,6 +721,22 @@ La mediana sería el valor que corresponde a Kelly, o sea el número 1, porque h
 
 La media, la mediana y la moda son útiles con tipos de datos de razón y de intervalo. Sin embargo, los datos ordinales y nominales a menudo sólo se describen con la moda, o incluso simplemente informando del número de valores de cada categoría, especialmente cuando sólo hay un pequeño número de categorías posibles.
 
+**Ejercicio 1**
+ 
+Podemos obtener información sobre la media, la mediana y la moda utilizando las funciones de Excel. Otra palabra muy común para referirnos a la media es el promedio, y ese es el término que utiliza Excel, por lo cual para encontrar la media, utilizaremos la función PROMEDIO(). Para encontrar la mediana utilizaremos la función MEDIANA(). Si queremos comparar valores estadísticos entre grupos, como lo veremos en la pregunta 2, podemos utilizar tablas dinámicas o las funciones PROMEDIO.SI() o PROMEDIO.SI.CONJUNTO().
+
+* ¿Cuál es el costo promedio del costo del seguro para todo el conjunto de datos?
+* ¿El costo promedio de las personas que fuman es mayor que el de los no fumadores? ¿Cuál es la diferencia porcentual?
+* Según los datos, ¿el tabaquismo es más frecuente en los hombres o en las mujeres?
+* ¿Cuál es el costo medio del seguro para una mujer fumadora?
+ 
+Pista: La diferencia porcentual se calcula con esta fórmula:
+ 
+ <img width="127" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202876261-2063c10d-4d22-49b7-9ccb-67a43516b462.png">
+
+Donde $n$ es la primera media que calculas, y $n_2$ es la segunda media que calculas. El valor absoluto está representado en esta fórmula con dobles barras, así: $|valor|$. Puedes calcular el valor absoluto en Excel con la función ABS().
+ 
+ <img width="127" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202876443-5547c38f-8003-4ccb-be10-0d4c2bf43d1c.png">
 
 
 # Herramientas y tecnologías
