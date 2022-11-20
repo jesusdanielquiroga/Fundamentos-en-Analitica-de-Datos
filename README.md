@@ -736,7 +736,6 @@ Pista: La diferencia porcentual se calcula con esta fórmula:
 
 Donde $n$ es la primera media que calculas, y $n_2$ es la segunda media que calculas. El valor absoluto está representado en esta fórmula con dobles barras, así: $|valor|$. Puedes calcular el valor absoluto en Excel con la función ABS().
  
- <img width="127" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202876443-5547c38f-8003-4ccb-be10-0d4c2bf43d1c.png">
 
 
 # Herramientas y tecnologías
