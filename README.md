@@ -736,8 +736,47 @@ Pista: La diferencia porcentual se calcula con esta fórmula:
 
 Donde $n$ es la primera media que calculas, y $n_2$ es la segunda media que calculas. El valor absoluto está representado en esta fórmula con dobles barras, así: $|valor|$. Puedes calcular el valor absoluto en Excel con la función ABS().
  
+## Histogramas
+Es muy importante practicar generando diversos tipos gráficos al representar nuestros datos, pues algo tan sencillo como observarlos nos puede entregar pistas sobre cuál puede ser la mejor manera de analizarlos. La siguiente pregunta que queremos hacernos es cuál de estas dos medidas de tendencia central, la media o la mediana, nos entrega una mejor representación de nuestras variables.
 
+Los histogramas se utilizan para mostrar la frecuencia de los valores de una variable. Esto permite comprender visualmente la dispersión de los datos. Existe un gráfico similar al histograma, llamado gráfico de columnas. Mientras que los histogramas se utilizan con datos de razón e intervalo, los gráficos de columnas se utilizan con datos ordinales y nominales. En un gráfico de columnas, es frecuente encontrar un espacio entre las barras para mostrar que las barras representan categorías diferentes, pero en los histogramas no se presenta ese espacio. Otro tipo de gráfico, llamado gráfico de barras, es similar al de columnas pero orientado horizontalmente.
 
+Podemos crear un histograma seleccionando la columna que queremos utilizar y seleccionando la pestaña Insertar, y luego Insertar gráfico. En la sección de Otros elige Histograma.
+ 
+ ![descarga](https://user-images.githubusercontent.com/87950040/202878796-01d4de39-2d1c-4c6a-853d-e5f8dca972af.gif)
+
+ Se producirá un histograma básico con el siguiente aspecto (aquí hemos añadido ademas un título y las etiquetas de los ejes):
+ 
+ ![descarga](https://user-images.githubusercontent.com/87950040/202878826-22239715-962c-41d9-8ee7-a9a6bc39fa44.png)
+ 
+En la parte inferior de este histograma, ves que cada columna representa un rango de valores de IMC. Puedes ajustar la anchura de estos valores utilizando el panel de formato del gráfico y ampliando el área que dice Serie imc. (Si no ves este panel, haz clic derecho en la imagen y selecciona la opción Formato. Desde allí, al lado de donde dice Rangos, el valor por defecto es Automático. Puedes cambiar de Automático a Número de rangos y luego cambiar el número por defecto que aparece. Haciendo ese número más grande o más pequeño puedes ver cómo cambia el histograma).
+
+En nuestro caso, éste parece ser un número razonable de intervalos para representar los datos. Esta distribución se parece a lo que se llama una distribución normal. Una distribución nos muestra los distintos valores que se dan para una variable. En una distribución normal, la media, la mediana y la moda coinciden, y los datos son simétricos en torno a la mediana. Esta distribución tiene un pico alto en el centro y se reduce a medida que nos desplazamos hacia los extremos izquierdo y derecho. La distribución normal es muy frecuente en la naturaleza y se parece a una campana, por lo que a veces la llaman “campana de Gauss”, en honor al matemático que la describió en fórmulas. Puedes encontrar más información sobre las distribuciones <a href="https://es.wikipedia.org/wiki/Distribuci%C3%B3n_de_probabilidad#:~:text=En%20teor%C3%ADa%20de%20la%20probabilidad,de%20que%20dicho%20suceso%20ocurra.">aquí</a>.
+ 
+**Ejercicio 2**
+ 
+* Crea un histograma para la columna costo de tu conjunto de datos.
+* Contrasta los dos histogramas que has creado.
+* Calcula la media y la mediana tanto para el imc como para costo.
+* Describe cómo se relacionan la media y la mediana para imc y cómo se relacionan para costo.
+ 
+ **Ejercicio 3**
+ 
+Esta es una tabla del porcentaje de fumadores por región. ¿Por qué el Sureste tiene en promedio un mayor costo de seguro de salud en comparación con las demás regiones? Analiza también si estos datos estarían mejor representados mediante un histograma o un gráfico de barras.
+ 
+## Probabilidad
+ 
+Es común que sea necesario o útil calcular la probabilidad de que ocurra algún evento $A$, la cual puede tomar un valor entre 0 y 1. Matemáticamante denotamos esta probabilidad como $P(A)$. Una probabilidad de 0 significa que es seguro que este evento no se dé, y una probabilidad de 1 significa que es seguro que este evento se dé. Para calcular la probabilidad de que se produzca un evento, podemos utilizar las siguientes reglas (aquí,$A$ y $B$ son dos eventos diferentes):
+ 
+ <img width="127" alt="aaa" src="https://user-images.githubusercontent.com/87950040/202880984-52f52a17-acf5-4b48-9a88-86adc6dec209.png">
+
+**Ejercicio 4**
+ 
+La empresa está pensando en ofrecer un sorteo para que un cliente tenga el seguro de manera gratuita durante el próximo mes. Quieren saber qué probabilidad hay de que un fumador sea seleccionado. En concreto la empresa quiere saber:
+
+* Si se hiciera un sorteo para cada región individualmente, ¿cuál es la probabilidad de que la persona seleccionada en la región que más fuma sea un fumador?
+* Si se hiciera un sorteo para todas las regiones juntas, ¿cuál es la probabilidad de que se seleccione a un fumador de la región que más fuma?
+ 
 # Herramientas y tecnologías
 
 Durante el desarrollo del programa frecuentemente se usará algunas herramientas tecnológicas:
