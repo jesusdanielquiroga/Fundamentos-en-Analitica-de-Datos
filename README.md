@@ -864,6 +864,9 @@ Supóngamos por ahora que la distribución del IMC es perfectamente normal. Calc
 
 Pista: mira la distribución del z-score de arriba como referencia.
 
+<img width="389" alt="image" src="https://user-images.githubusercontent.com/87950040/203687931-74a3cb44-7988-4900-83d7-ca6b97049aa5.png">
+
+
 **Tips para recordar**
 
 En este caso, has visto que podemos analizar los datos históricos para comprender las tendencias que hay en ellos, y utilizar esas tendencias y algunos conocimientos teóricos sobre la probabilidad y la estadística para predecir lo que podría ocurrir en eventos futuros. Podemos resaltar como conclusiones los siguientes puntos clave:
