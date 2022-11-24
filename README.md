@@ -638,7 +638,77 @@ En este caso, hemos aprendido a buscar información en Excel utilizando diversos
 
 También aprendimos a aplicar funciones de agregación a nuestros datos para obtener información con un poco más de detalle (con funciones como SUMAPRODUCTO() y PROMEDIO.SI().
 
+# Manipulación de datos en Excel
 
+## Caso 4: Analizando E-sports
+ 
+**Objetivos**
+ 
+En este momento, tras desarrollar algunos casos en anteriores sesiones, ya deberíamos sentirnos cómodos con funciones de búsqueda tales como INDICE() + COINCIDIR() y con funciones de agregación como SUMA(), CONTAR(), y PROMEDIO(). En este caso, aprenderemos algunas funciones para procesar datos de tipo texto y veremos cómo trabajar con la lógica condicional en Excel. Las funciones que aprenderemos en este caso son:
+
+* IZQUIERDA() 
+* DERECHA()
+* EXTRAE()
+* CONCAT()
+* ESPACIOS()
+* MAYUSC()
+* MINUSC()
+* NOMPROPIO()
+* SI()
+* Y()
+* O()
+* NO()
+* HALLAR()
+* ENCONTRAR()
+* SI.ERROR()
+ 
+**Contexto de negocio**
+ 
+Los deportes electrónicos, más conocidos por su referencia en inglés E-Sports, son una nueva y atractiva forma de competencia en la que los jugadores interactúan en videojuegos en lugar de hacerlo en vivo con deportes físicos. También son un segmento creciente de la industria de los videojuegos, especialmente desde la llegada de la tecnología de transmisión en directo que cada vez se hace más asequible y de mayor alta calidad. Supón que eres un analista de datos junior en una empresa de consultoría de marketing, y que uno de tus compañeros te ha pedido que busques y prepares algunos datos sobre los jugadores más populares y con mayores ingresos del mundo. Estos datos serán analizados por tu compañero para proporcionar información para una importante campaña de marketing que se avecina.
+ 
+**Problema de negocio**
+ 
+ Tendrás que preparar los datos para tu compañero y darle una idea del tipo de información interesante que podrá encontrar de ellos.
+ 
+ **Contexto analítico**
+ 
+Trabajarás con el archivo del libro de Excel <a href="">esports_ingresos_estudiante.xlsx</a>, que contiene información de los 1.000 mejores jugadores de E-Sports del mundo (en 10 juegos populares), en relación con los ingresos que tienen.
+ 
+ ## Datos de texto: ¡los números son sólo la mitad de la historia!
+ 
+Cuando trabajes con conjuntos de datos a lo largo de tu vida profesional, encontrarás muchos datos que se almacenan como texto en lugar de números. A veces incluso encontraremos campos de texto no estructurados, que son bloques de texto de forma libre que no se ajustan a reglas específicas y, por tanto, son mucho más difíciles de entender para los sistemas de cómputo.
+
+Nuestro libro de Excel tiene 3 hojas:
+
+* jugadores_mejores_ingresos: contiene la lista de los 1.000 mejores jugadores junto con sus nombres completos, su nombre de usuario, apodo o nickname en cada uno de los juegos que interactúan, el género del juego, su país de origen y sus ingresos totales.
+* equipos_mejores_ingresos: es muy similar, pero contiene los nombres de los equipos en lugar de los jugadores. No aparece ningún país, ya que un equipo puede tener jugadores de muchos países.
+* codigos_pais: contiene la lista de todos los países junto con sus códigos de país y los continentes en los que se encuentran.
+ 
+También hay una 4ª hoja que contiene algunos ejemplos de fórmulas útiles llamada anexo_formulas.
+
+Fíjate en que la hoja jugadores_mejores_ingresos no incluye el nombre completo del país o del continente de cada jugador: ¡vamos a aprender cómo incluir el nombre completo!
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 # SQL
 
  **SQL** (Lenguaje de Consulta Estructurada, denominado así por su siglas en inglés: Structured Query Language) es un lenguaje de programación que utiliza palabras básicas en inglés para buscar o calcular cantidades específicas utilizando tus conjuntos de datos disponibles. Para que te hagas una idea de cómo es el trabajo con SQL, hemos grabado un GIF de un científico de datos consultando una <a href="https://github.com/jesusdanielquiroga/Introduccion-Base-de-Datos.git">base de datos</a> que consta de cientos de miles de datos:
@@ -648,6 +718,8 @@ También aprendimos a aplicar funciones de agregación a nuestros datos para obt
 # Programación con python
 
 Python es otra herramienta que te permite realizar análisis muy complejos de tus datos. Muchas aplicaciones de IA (inteligencia artificial), como los carros que se conducen solos o los modelos de predicción de los mercados de valores, se desarrollan con Python.
+ 
+ 
 
 # Conceptos De Estadística
 
