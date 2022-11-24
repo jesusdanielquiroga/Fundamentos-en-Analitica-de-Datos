@@ -688,7 +688,49 @@ También hay una 4ª hoja que contiene algunos ejemplos de fórmulas útiles lla
 
 Fíjate en que la hoja jugadores_mejores_ingresos no incluye el nombre completo del país o del continente de cada jugador: ¡vamos a aprender cómo incluir el nombre completo!
  
+**Ejercicio 1**
  
+Utilizando INDICE() y COINCIDIR(), rellena las columnas nombre_pais y nombre_continente de la hoja $jugadores_mejores_ingresos$ con los correspondientes nombres de país y continente de todos los jugadores.
+ 
+## Extraer texto
+ 
+Las primeras funciones que aprenderemos serán las que nos permitirán extraer parte de un bloque de texto. IZQUIERDA(), como su nombre indica, nos permite obtener la parte de la izquierda de una cadena de texto. El primer argumento es el texto del que quieres extraer una parte, y el segundo argumento es el número de caracteres que quieres extraer. Mira el ejemplo de la celda G4 de la hoja anexo_formulas. Puedes jugar con el número de la celda J4 para extraer unos cuantos caracteres más o menos de la cadena de texto.
+
+DERECHA() funciona exactamente igual, pero toma los caracteres contando desde (lo has adivinado) ¡la derecha!
+
+Por último, EXTRAE() toma los caracteres al interior de la cadena de texto. La función toma como argumentos el texto, la posición del primer carácter a partir del cual empezar a extraer el texto, y el número de caracteres a extraer. Consulta el ejemplo de la celda G7 de la hoja anexo_formulas.
+
+Como habrás observado, todo lo que hay en una cadena de texto se cuenta como un carácter: ¡espacios, signos de puntuación e incluso emojis (si decides insertar uno en una celda)!
+
+**Ejemplo 1**
+ 
+Obtén la primera letra del nombre de todos los jugadores y colócala en la columna inicial_nombre de la hoja jugadores_mejores_ingresos.
+
+Respuesta. Tenemos que introducir la fórmula =IZQUIERDA(B2; 1) en la celda K2 y arrastrarla hacia abajo.
+
+**Ejercicio 2**
+ 
+Haz lo mismo con los apellidos e incluyelos en la columna inicial_apellido.
+
+Acabamos de aprender a extraer partes de cadenas de texto, pero ¿cómo hacer lo contrario? Es decir, juntar partes de textos y unirlas en uno único. CONCAT() es la respuesta. La función nos permite concatenar (es decir, unir) tantos trozos de texto como queramos en una sola cadena o bloque de texto.
+
+CONCAT() funciona de manera muy sencilla: unirá como una única cadena de texto todos los elementos que le pases como argumentos, ya sean cadenas de texto, números o cualquier otro formato. Mira el ejemplo de la celda G13 de anexo_formulas.
+
+Nota: En versiones anteriores de Excel, se utilizaba CONCATENAR() en lugar de CONCAT().
+
+**Ejercicio 3**
+Utilizando la función CONCAT(), une las iniciales tanto del nombre como del apellido de cada uno de los jugadores y regístralos en la columna iniciales_union de la hoja jugadores_mejores_ingresos.
+
+## Limpiar y formatear el texto
+Otras funciones nos ayudan a limpiar y dar formato al texto son: ESPACIOS(), NOMPROPIO(), MAYUSC(), y MINUSC().
+
+ESPACIOS() limpia los espacios innecesarios del texto. De manera frecuente recibirás conjuntos de datos con valores de texto que tienen espacios al principio o al final de un valor de texto, o espacios dobles entre palabras. ESPACIOS() elimina todos los espacios al principio y al final, y sólo deja espacios sencillos entre las palabras. El único argumento que requiere es el texto a limpiar.
+
+MAYUSC() hace que una cadena de texto quede completamente en mayúsculas, mientras que MINUSC() lo hace completamente en minúsculas. NOMPROPIO() pone en mayúscula la primera letra de cada palabra. Puedes ver ejemplos de todas ellas en las celdas G21 a G24 de la hoja anexo_formulas.
+
+**Ejercicio 4**
+ 
+Escribe la fórmula necesaria para transformar el texto poR_ fAVOr_ coRRigEME!_ a CORRIGEME. Supón que el texto a arreglar está ubicado en la celda A1.
  
  
  
