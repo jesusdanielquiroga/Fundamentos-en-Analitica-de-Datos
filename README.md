@@ -32,7 +32,7 @@
 
 * [Consultas básicas en Excel](#consultas-básicas-en-excel)
 
-* [Manipulación de datos en Excel](#manipulación-de-datos-en-Excel)
+* [Manipulación de datos en Excel](#manipulación-de-datos-en-excel)
 
 * [SQL](#sql)
 
