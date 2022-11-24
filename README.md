@@ -36,7 +36,7 @@
 
 * [Programación con python](#programación-con-python)
 
-* [Conceptos De Estadística](#conceptos_de_estadística)
+* [Conceptos de estadística](#conceptos_de_estadística)
 
 * [Herramientas y tecnologías](#herramientas-y-tecnologías)
 
