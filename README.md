@@ -719,6 +719,7 @@ CONCAT() funciona de manera muy sencilla: unirá como una única cadena de texto
 Nota: En versiones anteriores de Excel, se utilizaba CONCATENAR() en lugar de CONCAT().
 
 **Ejercicio 3**
+ 
 Utilizando la función CONCAT(), une las iniciales tanto del nombre como del apellido de cada uno de los jugadores y regístralos en la columna iniciales_union de la hoja jugadores_mejores_ingresos.
 
 ## Limpiar y formatear el texto
@@ -732,9 +733,80 @@ MAYUSC() hace que una cadena de texto quede completamente en mayúsculas, mientr
  
 Escribe la fórmula necesaria para transformar el texto poR_ fAVOr_ coRRigEME!_ a CORRIGEME. Supón que el texto a arreglar está ubicado en la celda A1.
  
+## Lógica condicional
  
+Ahora queremos conocer la distribución del dinero que ganan los equipos en los torneos. Vamos a crear una nueva columna en la hoja de cálculo equipos_mejores_ingresos que nos diga si el premio que ha ganado cada equipo es superior o inferior a un determinado umbral (digamos, 100.000 dólares). Para ello primero debemos promediar el total de premio en dólares en relación al número de torneos en que cada equipo participó.
+
+Para ello utilizamos la función SI(), que nos permite comprobar si nuestros datos cumplen una condición y luego actuar sobre los resultados de forma dinámica. La sintaxis de esta función es la siguiente:
+
+ ```sh
+=SI(condición, valor_si_condición_es_verdadero, valor_si_condición_es_falso)
+ ```
  
+**Ejemplo 2**
  
+Crea la columna mas_de_100.000 en la hoja de cálculo equipos_mejores_ingresos. El contenido de las celdas debe ser “Si” si el premio promedio es superior a 100.000 y “No” en caso contrario.
+
+Respuesta. Escribe esta fórmula en la celda G2 y arrástrala hacia abajo: 
+ ```sh
+ =SI(C2/D2>100000;"Si";"No").
+ ```
+Para entenderla mejor, desagrega la fórmula:
+
+* C2/D2>100000. Esta es la condición: “el premio promedio es superior a 100.000”.
+ 
+* "Si". Si la condición es verdadera, el contenido de la celda debe ser la palabra “Si”.
+ 
+* "No". Si la condición es falsa, el contenido de la celda debe ser la palabra “No”.
+ 
+Es común que la función SI() vaya acompañada de las funciones Y(), O(), y NO(), que permiten comprobar condiciones más complejas. Con Y() puedes combinar varias condiciones en una sola, de forma que sólo sea verdadera si todas las condiciones más simples también lo son (es decir, si al menos una de ellas es falsa, entonces Y() dará un falso). O() es similar, pero con esta función, la condición compuesta será verdadera si al menos una de las condiciones más simples es verdadera y falsa en caso contrario. La única forma en que un O() puede dar lugar a un falso es si todas las condiciones son falsas. Por último, NO() invierte el valor de una condición. Por ejemplo, si C1>10 es verdadero, entonces NO(C1>10) será falso.
+
+La sintaxis de los condicionaesY() y O() es:
+```sh
+=Y(condición_1, condición_2, ..., condición_n)
+=O(condición_1, condición_2, ..., condición_n)
+```
+**Ejercicio 5**
+ 
+Cuenta cuántos equipos ganaron más de 100.000 dólares por torneo y participaron en 5 torneos o menos.
+
+**Ejercicio 6**
+ 
+¿Cuántos jugadores del conjunto de datos no son de EEUU? (EEUU es la sigla que representa a Estados Unidos, y ‘us’ es el código de país asociado)
+
+**Ejercicio 7**
+ 
+Empleemos ahora un doble condicional. ¿Cuántos jugadores del conjunto de datos o no son de EEUU o tienen ingresos superiores a 500.000 dólares?
+
+Pista: Usa la función O(). 
+ 
+## Buscar texto
+Las funciones HALLAR() y ENCONTRAR() nos permiten buscar una combinación especifica de caracteres dentro de nuestro texto. A primera vista parecen idénticas:
+
+* Ambas nos permiten buscar la posición de un determinado valor de texto dentro de otro valor de texto
+* Ambas toman como argumentos el valor que hay que buscar y el valor dentro del cual hay que buscarlo
+* Ambas devuelven un número que representa la posición del valor encontrado, o un error si no se encuentra
+ 
+Sin embargo, estas dos funciones tienen un par de diferencias clave. En primer lugar, ENCONTRAR() distingue entre mayúsculas y minúsculas y HALLAR() no. La segunda (y más importante) diferencia es que la función HALLAR() acepta caracteres que pueden emplearse como un comodín, esto quiere decir que puede encontrar variaciones de un valor de texto. Hay dos comodines: el carácter ? representa cualquier carácter simple, y el comodín * representa cualquier número de cualquier carácter. Puedes ver un par de ejemplos en las celdas G34 y G35 de la hoja anexo_formulas.
+
+**Ejemplo 3**
+ 
+Utilizando la función ENCONTRAR(), calcula cuántos jugadores tienen apodos que tengan al menos una “E” mayúscula.
+
+Respuesta. Podemos arrastrar la fórmula =ENCONTRAR("E"; D2) en la hoja jugadores_mejores_ingresos. ¡Sin embargo, para muchas de las celdas, el resultado será el error #¡VALOR! Esto se debe a que si ENCONTRAR() no encuentra el texto que busca, dará un error. Antes de que podamos responder a la pregunta de cuántos jugadores tienen apodos que tengan al menos una “E” mayúscula, tenemos que hacer que nuestra fórmula produzca un valor significativo en lugar de este error.
+
+Podemos utilizar la función SI.ERROR() para detectar esos errores y sustituirlos por una cadena de texto vacía. Esta es otra función que puedes utilizar para trabajar con la lógica condicional en Excel. La sintaxis de la función es:
+```sh
+SI.ERROR(valor, valor_si_error)
+```
+
+Entonces podemos contar todas las celdas no vacías del rango, lo que nos daría la respuesta. En concreto, arrastraríamos =SI.ERROR(ENCONTRAR("E"; D2); "") por la columna P, y luego usaríamos =CONTAR(P:P).
+
+## Conclusiones y tips para recordar
+ 
+En este caso hemos aprendido a trabajar con datos de texto. También hemos conocido una de las funcionalidades más importantes de Excel: las sentencias condicionales. Esperemos que para este momento te sientas lo suficientemente familiarizado con Excel como para consultar y manipular conjuntos de datos de tamaño pequeño o mediano con ellas.
+
+Ten en cuenta que no tienes que limitarte a trabajar con condiciones simples ya que siempre puedes combinar la función SI() con otras como Y(), O(), NO(), y SI.ERROR(). Mézclalas además con funciones como IZQUIERDA(), DERECHA(), o EXTRAE(). ¡Las posibilidades para combinarlas son infinitas, así como las preguntas que puedes responder utilizando las funciones que ahora conoces!
  
  
  
