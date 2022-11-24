@@ -32,11 +32,13 @@
 
 * [Consultas básicas en Excel](#consultas-básicas-en-excel)
 
+* [Manipulación de datos en Excel](#manipulación-de-datos-en-Excel)
+
 * [SQL](#sql)
 
 * [Programación con python](#programación-con-python)
 
-* [Conceptos de estadística](#conceptos_de_estadística)
+* [Conceptos de estadística](#conceptos-de-estadística)
 
 * [Herramientas y tecnologías](#herramientas-y-tecnologías)
 
