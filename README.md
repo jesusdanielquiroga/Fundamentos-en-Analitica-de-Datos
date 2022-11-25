@@ -34,6 +34,8 @@
 
 * [Manipulación de datos en Excel](#manipulación-de-datos-en-excel)
 
+* [Visualización De Datos](#visualización-de-datos)
+
 * [SQL](#sql)
 
 * [Programación con python](#programación-con-python)
@@ -809,6 +811,251 @@ En este caso hemos aprendido a trabajar con datos de texto. También hemos conoc
 Ten en cuenta que no tienes que limitarte a trabajar con condiciones simples ya que siempre puedes combinar la función SI() con otras como Y(), O(), NO(), y SI.ERROR(). Mézclalas además con funciones como IZQUIERDA(), DERECHA(), o EXTRAE(). ¡Las posibilidades para combinarlas son infinitas, así como las preguntas que puedes responder utilizando las funciones que ahora conoces!
  
  
+ # Visualización De Datos
+ 
+ ## Caso 5: ¿Cómo podemos comunicar claramente las tendencias del PIB utilizando visualizaciones?
+ 
+**Objetivos**
+ 
+En este caso aprenderás a seleccionar el tipo de gráfico más adecuado para visualizar determinados tipos de datos así como algunas habilidades para preparar y presentar los datos de forma profesional.
+ 
+**Contexto general**
+ 
+Eres un empleado de GoodEconomists, una ONG que hace campaña para mejorar el nivel de vida en todo el mundo. Debido a que tienen recursos financieros muy limitados, GoodEconomists no dispone de un gran presupuesto para difusión y márketing. En lugar de eso, confían en su capacidad para hacer publicaciones de historias contundentes acompañadas de excelentes gráficas para llamar la atención de las personas. Te han pedido que trabajes en la presentación de datos y gráficos de su próximo informe sobre el PIB y sus implicaciones para la economía de las personas menos favorecidas.
+
+**Problema a resolver**
+ 
+ Tu jefe te ha pedido que respondas a la siguiente pregunta “¿Cómo podemos comunicar claramente las fuertes correlaciones que tiene el PIB con otros factores?”
+
+**Contexto temático**
+ 
+Los datos relevantes son un par de archivos públicos que contienen información sobre el PIB de diferentes países. El primero es sobre el PIB y la esperanza de vida y se llama gdp_data.xlsx. También tenemos un conjunto de datos llamado gdp_data_years.xlsx. Es similar, aunque tiene un formato diferente. Cada columna es un año para que podamos ver la evolución del PIB a lo largo del tiempo. No incluye datos sobre el tamaño de la población ni la esperanza de vida.
+ 
+## Una primera mirada a los datos
+ 
+Abre los archivos de Excel para poder crear estas visualizaciones. Echemos un vistazo a nuestras tablas para hacernos una idea de cómo son nuestros datos.
+
+Nota: Estas tablas contienen muchos registros, por lo que a continuación sólo se mostrarán unas porciones de las mismas.
+
+Primero tenemos gdp_data.xlsx:
+ 
+<img width="287" alt="image" src="https://user-images.githubusercontent.com/87950040/203886400-cfda8f2f-09cc-4bdf-8592-62abe8e406fa.png">
+
+Podemos extraer bastante información de esta tabla:
+
+* pais: El nombre del país
+* continente: El nombre del continente
+* expVida: La expectativa o esperanza de vida promedio de una persona en ese país (en años)
+* pob: La población del país
+* pibPercap: El PIB per cápita, o la producción económica media de cada persona en el país
+ 
+Al abrir el archivo gdp_data.xlsx, vemos que el conjunto de datos no tiene formato.
+
+Para darle formato de tabla, selecciona el área que está a la izquierda del marcador de la columna A, y encima del marcador de la fila 1 para que todos los datos queden resaltados. A continuación, selecciona Insertar y luego Tabla, como muestra la animación: 
+ 
+![descarga](https://user-images.githubusercontent.com/87950040/203886629-5cfeb561-940a-4cd8-80dd-6ff2b24def7a.gif)
+
+**Nota**: En algunas versiones de Excel, esto podría crear también una tabla con columnas vacías. Si eso ocurre, deshaz el cambio y selecciona sólo las columnas que quieras formatear.
+
+Darle formato tabla te permite filtrar fácilmente los datos. Por ejemplo, puedes seleccionar la flechita que aparece ⌄ a la derecha de continente, y luego configurarlo para que sólo muestre los países de Asia.
+
+ ![descarga](https://user-images.githubusercontent.com/87950040/203886732-cb4ef89b-7559-4545-a571-2464b8d4988f.gif)
+
+También puedes ordenar fácilmente la tabla por población, esperanza de vida, etc.
+
+También tenemos gdp_data_years.xlsx:
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/203886964-964f8266-c6b8-4df6-97cb-97ab415b5532.png)
+
+ Aquí no vemos todas las columnas porque la tabla es demasiado grande, pero podemos resumir la información de esta tabla de la siguiente manera:
+
+* Nombre del País: El nombre del país
+* Código del País: El código de tres letras del país
+* 1960 - 2019: El valor del PIB en USD para cada año desde 1960 hasta 2019 (Nota: Aquí sólo se muestra 1960-1963, el resto de la tabla es la misma pero continúa hasta 2019).
+ 
+## Datos y tipos de gráficos 
+ 
+Casi cualquier conjunto de datos que quieras presentar o visualizar estará formado por variables que pueden considerarse de diferentes maneras. La mayoría de las variables pueden considerarse como variables o bien categóricas, o bien numéricas. Por ejemplo, en nuestro conjunto de datos la variable continente es una variable categórica, porque podemos clasificar los países según el continente al que pertenecen, aunque esta clasificación no es inherentemente comparable: no sabemos en qué orden van los continentes (aunque podríamos inventar una forma, como por ejemplo por población total o superficie).
+
+También tenemos la variable pob (correspondiente a la población), que es numérica. Las variables numéricas sí tienen un orden natural. En este caso, claramente podemos ordenar los países por su población de mayor a menor o de menor a mayor.
+
+Aunque hay cientos de tipos diferentes de gráficos, los principales gráficos en los que nos centraremos son los siguientes:
+ 
+* Tabla
+* Gráfico de barras
+* Gráfico Circular
+* Gráfico de dispersión
+* Gráfico de líneas
+* Gráfico de cajas
+ 
+La elección de cuál de ellos es el más adecuado suele depender tanto del tipo de datos que tengas (categóricos, numéricos o ambos) como del tipo de mensaje que desees comunicar. Por ejemplo, puede que quieras mostrar cómo cambian tus datos a lo largo del tiempo, cómo se distribuyen según una tabla de frecuencias o cómo se comparan dos grupos entre sí.
+
+Es muy común ver que se utilizan erradamente los tipos de gráficos, o que se presentan mal los datos, incluso dentro de un gráfico correctamente elegido. Por eso, si queremos que nuestro trabajo sea realmente profesional, ¡debemos saber usar nuestras herramientas!
+ 
+## PIB, población y esperanza de vida
+ 
+Intentemos visualizar la población total de cada continente (sumando la población de cada país de ese continente) mediante tablas, diagramas de barras y gráficos de torta:
+ 
+ **Tabla**
+ 
+<img width="502" alt="image" src="https://user-images.githubusercontent.com/87950040/203887615-2ab82808-7b7e-4f13-abb6-e57078172853.png">
+ 
+**Nota:** Como los datos provienen de la Fundación Gapminder, que los publica en inglés, tenemos los nombres de los continentes en inglés. “Europe” es Europa y “Americas” incluye Norteamérica, Centroamérica y Suramérica.
+
+Una forma fácil de recrear esta tabla es creando una tabla dinámica. Selecciona las cinco columnas de tus datos, haz clic en la pestaña Insertar y luego en Tabla dinámica. Selecciona Desde una tabla o rango, y ahora verás el panel Creación de tabla dinámica que te da la opción de colocar la tabla en una Hoja de cálculo nueva o en una Hoja de cálculo existente.
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/203887864-3f2b4ce8-a345-4765-9b16-2a1490646725.png)
+
+Selecciona Hoja de cálculo existente y elige cualquier celda vacía a la derecha de tus datos donde haya espacio para poner una tabla. En este caso, se ha seleccionado G4. Luego elige Aceptar y verás un nuevo panel que dice Campos de tabla dinámica. A la izquierda, hay una lista de las cabeceras de las columnas. Arrastra continente a la casilla de Filas y arrastra pob a la de Valores. El valor por defecto es Suma de pob. (Puedes cambiar el cálculo haciendo clic en Suma de pob y seleccionando Configuración del campo de valor, y eligiendo una opción diferente que se ajuste a tus necesidades, como un conteo o un promedio, por ejemplo).
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/203888095-90e34a63-502c-4307-a7bb-27689eb2afc4.png)
+
+Una vez que hayas elegido esas opciones, podrás ver la tabla con la suma de la población por continente. Puedes cerrar el panel de la tabla dinámica, y verás que la tabla tiene una fila que dice (en blanco). Para eliminar el espacio en blanco, selecciona la flechita ⌄ junto al continente en la tabla que acabas de crear. Selecciona Filtrar y desmarca la casilla junto a (en blanco).
+ 
+![image](https://user-images.githubusercontent.com/87950040/203888153-70fb6525-aef0-497e-ae6e-8914f209be7f.png)
+
+## Gráfico de columnas
+ 
+![image](https://user-images.githubusercontent.com/87950040/203888683-ac6c4bbf-3b2e-4812-bdd0-c794c9918bb1.png)
+
+Para crear este gráfico, selecciona los datos de la tabla dinámica que acabas de crear, selecciona la pestaña Insertar y Columna agrupada dentro de el espacio donde aparecen los gráficos. A menudo, los términos Gráfico de barras y Gráfico de columnas se utilizan indistintamente. Sin embargo, Excel reserva el término Gráfico de Barras para los gráficos en los que las barras son horizontales, y denomina Gráfico de Columnasa gráficos como este. Los datos categóricos pueden visualizarse con barras verticales u horizontales.
+ 
+![descarga](https://user-images.githubusercontent.com/87950040/203888777-034e4a02-4bda-4129-acdb-8328de19a276.gif)
+
+Verás que este gráfico tiene un aspecto diferente al del ejemplo. Si haces clic con el botón derecho en el gráfico y eliges Formato, deberías ver las opciones para cambiar la apariencia del gráfico. Puedes hacer clic con el botón derecho del ratón en la tabla de datos y ordenar por la población, y experimentar con las opciones de formato.
+ 
+ ## Gráfico circular
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/203889530-770a4c4f-100c-496c-8784-b623750eab00.png)
+
+Crear un gráfico circular es similar a crear un gráfico de barras. Selecciona Gráfico Circular en la misma pestaña Insertar.
+ 
+![image](https://user-images.githubusercontent.com/87950040/203889590-b1c93046-5a7c-4825-a347-f146141c68b1.png)
+
+
+Haz clic con el botón derecho del ratón, selecciona Formato y ajusta la configuración para cambiar el aspecto del gráfico.
+
+Al elaborar visualizaciones, hay algunas directrices generales que debes tener en cuenta para que las imágenes sean fáciles de interpretar para tus lectores:
+
+* El título de cada gráfico debe explicar el mensaje de la visualización, no sólo una descripción de los datos. Así, en lugar de decir “Población por continente”, intenta encontrar la historia que hay detrás de los datos y utilizarla como título de cada gráfico. Como por ejemplo: “Asia es el continente más poblado”.
+* Utiliza etiquetas y leyendas según corresponda.
+ 
+**Ejercicio 1**
+ 
+Explica cuáles son las ventajas e inconvenientes de cada uno de los tres enfoques anteriores para visualizar estos datos.
+ 
+ 
+## Gráficos de dispersión
+ 
+Ahora que hemos echado un rápido vistazo al conjunto de datos y a la población por continentes, vamos a empezar a ver los datos que realmente hemos venido a buscar: el PIB de cada país. Tu hipótesis es que el PIB afecta a la esperanza de vida, por lo que esperas ver que la gente de los países más ricos vive más tiempo. Veamos un gráfico de dispersión del PIB per cápita frente a la esperanza de vida:
+
+![image](https://user-images.githubusercontent.com/87950040/203889752-710a2ccd-b166-41a0-8d3a-701ec38bb5d8.png)
+
+Podemos ver en este gráfico que nuestra hipótesis probablemente es correcta, por lo que titulamos el gráfico de acuerdo a ello. Utilizamos el PIB per cápita (USD) como eje $x$  y la esperanza de vida (años) como eje $y$  porque queremos ver el efecto que tiene el PIB sobre la esperanza de vida y los gráficos de dispersión suelen leerse en este orden. Si calculamos la correlación, encontramos que la correlación global entre el PIB y la esperanza de vida es de 0,68, una correlación bastante fuerte (puedes leer más sobre la correlación aquí).
+
+Para crear este tipo de gráfico, a menudo es mejor configurar primero los datos de forma que el eje $x$ vaya antes que el eje $y$. Empieza haciendo clic en la letra de la columna que corresponde a expVida para seleccionar toda la columna, y copia la columna. Pégala a la derecha de pibPercap, y luego selecciona tanto pibPercap como la nueva columna que has creado. En la pestaña Insertar, elige la primera opción de la parte superior izquierda en Dispersión.
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/203889900-6beb46ba-fd38-46d0-89d8-62fadda2a968.png)
+
+Haz clic derecho en el gráfico, elige Formato y realiza ajustes en el gráfico para actualizarlo con un título mejor, añadir títulos a los ejes y para realizar cualquier otro cambio que desees.
+
+**Pregunta 1**
+ 
+¿Por qué es adecuado un gráfico de dispersión para este análisis?
+ 
+**Ejercicio 2**
+ 
+2.1 La información anterior es útil para mostrar que hay una correlación bastante fuerte entre el PIB y la esperanza de vida en todo el mundo, pero podemos ver en el gráfico de dispersión que hay algunas agrupaciones inusuales, especialmente hacia el lado izquierdo del gráfico, donde el PIB es bajo. ¿De qué manera podriamos mejorar nuestro gráfico de dispersión para mostrar información más específica de cada región del mundo?
+
+2.2 ¿Qué representa la agrupación de la parte izquierda del gráfico? ¿Qué conclusión sacas de ella?
+
+2.3 Veamos la correlación desglosada por regiones:
+ 
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/87950040/203890994-e938a964-7bd7-4977-b3bd-7d7744b0008a.png">
+
+ ¿Cómo afecta esto a nuestra hipótesis original?
+ 
+ ## Tendencias del PIB a lo largo del tiempo
+ 
+ Hasta ahora hemos examinado los datos de un solo punto en el tiempo, y hemos utilizado gráficos de barras y de dispersión para presentarlos. Nuestro segundo conjunto de datos incluye datos recogidos desde la década de 1960 hasta la década de 2010, por lo que naturalmente recurriremos a los gráficos de líneas.
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/203892490-f81c4211-8e0d-4829-8932-0c850031945c.png)
+
+ Para este ejercicio, utiliza el archivo gdp_data_years.xlsx. Los datos que queremos están en la pestaña gráfico_de_líneas.
+
+Para crear este gráfico, selecciona las filas 8 y 9, y en la pestaña Insertar elige la primera opción de la parte superior izquierda bajo Líneas.
+ 
+![image](https://user-images.githubusercontent.com/87950040/203892545-4a504e90-de7c-4095-bd4c-37faec5bcc9d.png)
+
+ Abre el panel de formato haciendo clic derecho sobre el gráfico y seleccionando Formato.
+ 
+**Ejercicio 3**
+ 
+Ya sabemos que el PIB ha ido creciendo a lo largo del tiempo, pero queda la inquietud sobre qué tanto ha crecido.
+
+* ¿Por qué un gráfico de líneas es apropiado para este propósito?
+* ¿Qué etiquetas utilizarías para representar mejor la información en tu gráfico de lineas?
+* ¿Qué problema podrías encontrar al sumar todos los PIB de los países para obtener el PIB mundial?
+ 
+**Ejercicio 4**
+ 
+Escojamos algunos países de interés y creemos un nuevo gráfico de líneas que sólo se centre en ellos. Utilizaremos los siguientes países: Brasil, China, India, Japón y Estados Unidos:
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/203892693-3952a8e8-efd1-46fc-8996-2e6be0f8e857.png)
+
+Puede que crear esta gráfica en Excel sea un poco complejo. ¡Pero intentémoslo!
+
+Selecciona las 6 primeras filas de la hoja gráfico_de_líneas y, a continuación, selecciona Dispersión en la pestaña Insertar y elige la primera opción de la parte superior izquierda. Puede que tengas que seleccionar Cambiar fila/columna en el extremo izquierdo de la pestaña Gráfico. Verás que la pestaña Gráfico aparece en la parte superior de la barra de herramientas cuando hagas clic en el gráfico. Puedes seleccionar la pestaña Gráfico haciendo clic en Gráfico. A continuación, selecciona Línea y elige la primera opción de la parte superior izquierda.
+ 
+![image](https://user-images.githubusercontent.com/87950040/203892740-16adc6a2-9c71-46c8-bb90-f5f993785ab1.png)
+
+ Ajusta el formato según sea necesario.
+
+¿Qué tendencias podemos deducir de este gráfico? ¿Qué problemas hay en la presentación de estos datos?
+
+Pudimos obtener mucha más información de nuestro gráfico de líneas una vez que lo separamos en varios países, pero ¿qué pasa si queremos incluir más de 5 países en nuestra visualización?
+ 
+ ## Gráficos de caja
+ 
+En este caso, el gráfico de líneas se vuelve muy desordenado y su capacidad para presentar la información de forma coherente se reduce. Una herramienta útil para ver el agregado de nuestro conjunto de datos de forma más clara es el gráfico de caja. Aquí tenemos un diagrama de caja del PIB a lo largo del tiempo para los 20 principales países de nuestro conjunto de datos:
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/203892849-dae987ea-72bd-46a4-ba1f-2e88437207cc.png)
+ 
+ Podemos ver algunos valores atípicos bastante significativos en la parte superior del gráfico. Esto se debe probablemente a algunos de los países con mayor PIB, como Estados Unidos y China.
+
+Nota sobre los gráficos de caja: Están disponibles en Excel en la pestaña Insertar bajo Otras gráficas si quieres experimentar con ellos. No se suelen utilizar en la presentación de datos porque no son visualmente intuitivos, pero es importante entender cómo se leen.
+ 
+![image](https://user-images.githubusercontent.com/87950040/203892925-e820897a-7b22-44a3-a8b7-7d58f29e60c2.png)
+ 
+ La gran idea de los gráficos de caja, también conocidos como gráficos de caja y bigotes, es que muestran la distribución de los datos. ¿Dónde se encuentra la mayoría de nuestros datos en un rango? La cosa se pone un poco matemática porque las diferentes partes de los gráficos de caja deben calcularse en función de algunas reglas:
+ 
+<img width="510" alt="image" src="https://user-images.githubusercontent.com/87950040/203892999-81b3d86f-e8df-48c6-ba84-227e8caf4f37.png">
+
+ 
+ **Ejercicio 5**
+ 
+Vuelve a mirar el diagrama de caja anterior que muestra el PIB a lo largo del tiempo para los 20 países más importantes de nuestro conjunto de datos. ¿Qué cambios se pueden hacer en el gráfico de caja para representar mejor nuestros datos? ¿Qué etiquetas habría que cambiar?
+
+## Conclusiones
+ 
+El PIB es una métrica que se ha vuelto controvertida porque es una forma muy cruda de medir la actividad económica. Sin embargo, puede proporcionar una perspectiva interesante para observar países concretos y cómo se relacionan entre sí. Después de observar correlaciones como “la gente de los países más ricos vive más tiempo” es tentador establecer un vínculo de causalidad (por ejemplo, “si los países más pobres aumentan su PIB, sus ciudadanos vivirán más tiempo”), pero la correlación no es lo mismo que la causalidad y vimos que en ciertas regiones del mundo incluso la correlación era tenue.
+
+Vimos que EEUU y China hacen ver más pequeños a la mayoría de los demás países en términos de PIB, y que el crecimiento del PIB de Japón, anteriormente fuerte, se ha estabilizado en las últimas décadas.
+
+## Tips para recordar
+ 
+Para presentar bien los datos, tienes que tener constantemente en cuenta dos cosas:
+
+Elegir la forma correcta de visualizar los datos
+Hacer que la historia sea fácil de entender teniendo cuidado con los detalles de la presentación, como los títulos y las etiquetas
+En este caso, has visto que:
+
+* Los gráficos de barras son buenos para un análisis básico, mostrando cómo se relacionan las variables categóricas con las numéricas. En circunstancias muy concretas, los gráficos circulares también pueden utilizarse para esto cuando te interesan los tamaños relativos frente a los absolutos.
+* Los gráficos de dispersión se utilizan para mostrar cómo se relacionan las variables numéricas entre sí, y son buenos para observar las correlaciones
+* Los gráficos de líneas son casi siempre adecuados para mostrar cómo cambian los datos continuos a lo largo del tiempo
+* Los gráficos de caja son una gran herramienta si necesitas mostrar algo más que un resumen básico (como una media), pero no quieres dibujar la distribución completa de cada variable (que puede ser engorroso y demasiado detallado). Muestra diagramas de caja si tu audiencia los entiende.
+También has visto lo importante que es conseguir todos los detalles al presentar los datos. Es muy común que la gente utilice etiquetas erróneas o engañosas, o que utilice títulos que no aportan nada a la visualización. Ten siempre cuidado de utilizar las unidades correctas y de etiquetar claramente cuáles son, al tiempo que utilizas el título para resumir el mensaje que hay detrás de los datos.
  
  
  
@@ -818,7 +1065,7 @@ Ten en cuenta que no tienes que limitarte a trabajar con condiciones simples ya 
  
  
  
- 
+
  
  
  
