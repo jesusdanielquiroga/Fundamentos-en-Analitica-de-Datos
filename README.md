@@ -1120,15 +1120,109 @@ A continuación, seleccionamos el botón "Tabla dinámica". Queremos comprobar q
 En la parte derecha, verás un panel con el título "Campos de tabla dinámica" que contiene los nombres de todas las columnas de nuestra hoja original. Justo debajo, verás 4 áreas: "Filtros", "Filas", "Columnas" y "Valores".
 
 Las tablas dinámicas son mágicas por su facilidad de uso. Para analizar los datos, lo único que tenemos que hacer es arrastrar los campos del panel "Campos de tabla dinámica" a una de estas 4 áreas.
+ 
+## ¿Cómo funciona una tabla dinámica?
+ 
+Para un mejor entendimiento, primero tenemos que comprender qué significan esas 4 áreas. En general:
+
+* Las "Filas" indican qué campos quieres tener agrupados en las filas de la tabla dinámica
+* Las "Columnas" indican los campos que quieres agrupar en las columnas de la tabla dinámica
+* "Valores" indica qué campos quieres tener como valores en las celdas interiores de la tabla dinámica
+* "Filtros" indica por qué campos quieres poder filtrar los datos
+
+Para la tarea de identificar la prevalencia de cada calificación en el conjunto de datos, seleccionaremos nuestra columna overall y la arrastraremos al área "Filas", que toma cada calificación y la coloca en las filas de nuestra tabla dinámica. A continuación, volvemos a seleccionar overall y la añadimos a la parte de "Valores" del menú. Esto puede generarse como una suma al principio, ¡pero eso no es lo que queremos ahora! En realidad no nos interesa sumar las calificaciones, ya que eso no nos diría nada sobre el producto. En su lugar, queremos contar cuántas personas lo han calificado con 1, cuántas lo han calificado con 2, y así sucesivamente, para hacernos una idea del patrón de calificación general del producto. Si haces click en el menú desplegable de "Valores" y, a continuación, en "Configuración del campo de valor", puedes abrir una ventana que te permite cambiar la estadística utilizada. Aquí queremos seleccionar la estadística "Recuento". Una vez hecho esto, ¡tendrás una pequeña tabla dinámica!
+ 
+ ![download](https://user-images.githubusercontent.com/87950040/204089233-eeb74c65-7d25-4686-b8f0-47dea5230dd2.gif)
+
+**Pregunta 1**
+ 
+Consideremos cómo podríamos querer visualizar estos datos de conteos. ¿Qué tipos de visualizaciones funcionan mejor para mostrar este tipo de información?
+
+Respuesta. Un enfoque sería hacer un gráfico de columnas. Para ello, volvamos a la pestaña "Insertar" y busquemos el área de creación de gráficos. Desde ahí, podemos ir a los gráficos de columnas y seleccionar "Columna agrupada". Se debería generar automáticamente un gráfico de barras:
+
+![download](https://user-images.githubusercontent.com/87950040/204089973-6730ddca-fa24-495a-8546-72207f5ce3ce.gif)
+
+Echemos un vistazo al gráfico de barras que acabamos de crear. ¿Qué cosas de esta visualización parecen un poco extrañas? ¿Hay cosas que podríamos hacer para mejorarla?
+
+Como probablemente lo hayas identificado, hay algunas cosas que podrían mejorarse aquí. En primer lugar, tenemos una leyenda que no añade demasiado contexto. En segundo lugar, nuestro título no es nada útil y podría actualizarse para ser más informativo.
+
+Para eliminar la leyenda, podemos simplemente ir a "Leyenda" en el menú "Gráfico" y seleccionar "Ninguno". Piensa en por qué probablemente no necesitamos esta leyenda aquí. ¿Cuándo sería útil o necesario tener una leyenda?
+ 
+ ![downloa](https://user-images.githubusercontent.com/87950040/204090040-f81f1bc5-5d9a-4f79-9646-3697fe2cb5aa.gif)
+
+Para cambiar el título, sólo tenemos que ir a "Título del gráfico", hacer clic en "Editar título de gráfico" y escribir lo que consideremos adecuado. Aquí hemos utilizado el título "Conteo de calificaciones en el conjunto de datos". ¿Cómo se podría mejorar esto? ¿Y qué hace que un título sea bueno o malo?
+
+![download](https://user-images.githubusercontent.com/87950040/204090088-ec21c25c-147a-405e-978d-073b91361fc5.gif)
+
+**Ejercicio 1**
+ 
+Un gráfico de torta es otra posible opción para visualizar este tipo de datos. Intenta crear un gráfico de torta utilizando lo que ya hemos discutido sobre cómo crear un gráfico de barras.
+
+Ahora que tenemos un gráfico de torta, podemos actualizar las etiquetas de los datos y el título. Es posible actualizar las etiquetas seleccionando los datos en el gráfico, haciendo clic con el botón derecho y seleccionando "Añadir etiquetas de datos". Una vez añadidas, podemos volver a ese mismo menú para editar las etiquetas seleccionando "Formatear etiquetas de datos". En este ejemplo, seleccionaremos la calificación, el recuento y el porcentaje como etiquetas de datos:
+
+![download](https://user-images.githubusercontent.com/87950040/204090120-b0a2e1a7-724b-4e43-8534-8a6717457a87.gif)
+
+También hemos actualizado el título a "Conteo de reseñas en el conjunto de datos":
+ 
+![download](https://user-images.githubusercontent.com/87950040/204090151-0c7e76c2-ba79-4bd3-9504-fa841671f218.gif)
+
+**Pregunta 2**
+ 
+En general, podemos ver que gran parte de nuestro conjunto de datos está formado por opiniones de 5 estrellas. Piensa en nuestros datos y en que se centran en los CD y los vinilos. ¿Qué tipos de clientes tienden a hacer reseñas de ese tipo de compras? ¿Qué más podríamos explorar sobre el comportamiento de nuestros consumidores con respecto a estas calificaciones? 
+ 
+## Encontrando el precio promedio por calificación
+ 
+En los pasos anteriores, hemos trabajado para identificar la prevalencia de las calificaciones dentro de nuestro conjunto de datos y hemos trabajado para crear visualizaciones de esta información. El siguiente paso es ver cómo se relacionan los precios de los artículos con las calificaciones dentro de nuestro conjunto de datos.
+
+**Ejercicio 2**
+ 
+Crea una tabla dinámica que calcule los precios promedio de cada calificación.
+
+**Ejercicio 3**
+ 
+Con nuestra nueva tabla dinámica, ahora podemos crear una visualización que muestre el precio promedio de cada categoría de calificación. ¿Qué visualizaciones mostrarían los datos adecuadamente y cuáles no? ¡Adelante, crea una que te parezca adecuada!
+
+Los artículos con reseñas de 1 estrella tienen el precio promedio más alto, y los productos con una reseña de 4 estrellas tienen el precio promedio más bajo. Una idea para explorar esto más a fondo sería contextualizar estos precios y ver cómo se relacionan con los precios actuales y pasados. Para ello, tendríamos que validar el comportamiento de precio a lo largo del tiempo.
+ 
+## Encontrar el precio promedio a lo largo del tiempo
+Para mostrar la evolución del precio a lo largo del tiempo, es posible utilizar los gráficos de líneas. Podemos seguir pasos similares a los que hemos seguido anteriormente, pero tenemos que cambiar algunas cosas. En primer lugar, tendremos que crear una tabla dinámica similar pero con algunas diferencias. Tenemos que crear una tabla dinámica que funcione con datos de series temporales, y esto es un poco diferente de lo que hemos hecho antes.
+
+**Ejercicio 4**
+ 
+Crea una tabla dinámica que muestre el precio promedio de los productos por año.
+
+Pista: Excel Online no permite agrupar automáticamente las columnas de fecha por mes, año, etc. (otras versiones de Excel sí tienen esa funcionalidad), así que necesitarás esta solución: Ve a la hoja de cálculo principal y crea una columna con el nombre de year(año en inglés) en la celda I1. Luego, en la fila 2, pon la fórmula =AÑO(H2) y arrástrala hacia abajo. Entonces podrás añadir el año a tu tabla dinámica en la sección "Filas" para agrupar por esa variable.
+
+Con la tabla dinámica en su sitio, podemos crear nuestro gráfico de líneas yendo a la pestaña "Insertar" y seleccionando un gráfico de "Líneas". El gráfico final debería tener el siguiente aspecto:
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/204090281-ae5e1282-ffca-4d4a-9373-1a80dc559e20.png)
+
+**Ejercicio 5**
+ 
+¿Qué vemos en nuestro gráfico de líneas y qué crees que puede significar? ¿Sugieren estos resultados nuevas preguntas que deberíamos formular? ¿Cómo responderías a esas preguntas?
+
+## Conclusión y tips para recordar
+ 
+En este caso, nos hemos centrado en el aspecto práctico de la creación de visualizaciones de datos. Esto incluyó la identificación de diferentes visualizaciones que podíamos utilizar, y el uso de Excel para construir esas visualizaciones de una manera limpia y con estilo. En concreto, hicimos lo siguiente
+
+* Construir tablas dinámicas para organizar nuestros datos de manera adecuada
+* Crear gráficos de barras y de torta
+* Incorporar etiquetas de datos y títulos de gráficos
+* Construir un gráfico de líneas utilizando datos de series temporales
+* Estilizar elementos de nuestras visualizaciones
+ 
+En general, este análisis sólo abarcó los primeros pasos de un análisis de datos completo y nos ayudó a familiarizarnos un poco más con nuestros datos. En la práctica, tomaríamos estos análisis y seguiríamos desarrollando nuestros resultados para llegar a conclusiones más profundas.
 
 
-
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
  
