@@ -46,6 +46,8 @@
 
 * [Conceptos de estadística](#conceptos-de-estadística)
 
+* [Módulos de repaso](#módulos-de-repaso)
+
 * [Herramientas y tecnologías](#herramientas-y-tecnologías)
 
 
@@ -1485,6 +1487,9 @@ En este caso, has visto que podemos analizar los datos históricos para comprend
 * La función de densidad de probabilidad es lo que nos permite pasar del mundo totalmente empírico de los histogramas, que son una representación imperfecta y limitada de toda la población, a modelar e inferir características de esa población. El área bajo la FDP y por encima de 0 entre dos valores concretos de $a$ , $b$  y $x$ , nos entrega la probabilidad de que una muestra elegida al azar de esa población tenga un valor de $x$, para esa variable entre $a$ y $b$.
 * La distribución normal es una FDP particularmente especial que es perfectamente simétrica para la cual coinciden sus valores de media, mediana y moda, y se ajusta además bastante bien a muchos fenómenos naturales.
 
+# Módulos de repaso
+ 
+* Módulo de repaso 1 - Fundamentos Analítica de Datos 📈
 
 # Herramientas y tecnologías
 
