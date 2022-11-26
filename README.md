@@ -36,6 +36,8 @@
 
 * [Visualización De Datos](#visualización-de-datos)
 
+* [Tablas Dinámicas](#tablas dinámicas)
+
 * [SQL](#sql)
 
 * [Programación con python](#programación-con-python)
@@ -1058,15 +1060,77 @@ En este caso, has visto que:
 También has visto lo importante que es conseguir todos los detalles al presentar los datos. Es muy común que la gente utilice etiquetas erróneas o engañosas, o que utilice títulos que no aportan nada a la visualización. Ten siempre cuidado de utilizar las unidades correctas y de etiquetar claramente cuáles son, al tiempo que utilizas el título para resumir el mensaje que hay detrás de los datos.
  
  
+ # Tablas Dinámicas
  
+ ## Caso 6: Explorando las reseñas de CDs y discos de vinilo en Amazon
  
- 
- 
- 
- 
- 
+**Objetivos**
 
+Este es un caso para practicar algunos conceptos que ya hemos aprendido en el curso. Hoy vamos a crear visualizaciones sencillas en Excel, incluyendo tablas dinámicas, gráficos de barras, de torta y de líneas. Vamos también a modificar dichos gráficos para personalizar su estilo y presentación.
+
+**Contexto general**
+
+Eres un analista de datos que trabaja en Amazon y te han pedido que investigues algunas calificaciones de CDs y Vinilos de la tienda. Se te ha pedido que sólo hagas una exploración inicial a la que se hará seguimiento más adelante. Por ahora, lo que más te interesa es comprender el conjunto de datos y explorarlo para encontrar algunas tendencias preliminares. Utilizarás los conocimientos que has aprendido hasta ahora para decidir qué gráficos nos ayudarían a conocer los datos de una mejor manera.
  
+**Problema a resolver**
+
+Tu jefe te ha pedido que generes algunas visualizaciones que permitan mostrar tendencias dentro del conjunto de datos de calificaciones de CDs y vinilos. Puntualmente, te ha pedido:
+
+* Identificar la frecuencia con la que aparece cada calificación dentro del conjunto de datos y los precios medios asociados a estas calificaciones
+* Comprender los cambios en el precio promedio a lo largo del tiempo
+ 
+**Contexto analítico**
+
+Te han proporcionado un conjunto de datos, amazon_reviews.xlsx, que incluye las calificaciones de una serie de CDs y Vinilos. Las calificaciones están en la columna overall (“overall” significa “general” en inglés, como diciendo “calificación general”). Los datos constan de una muestra de 1000 reseñas.
+
+## Cómo extraer los datos
+
+Vamos a descargar el archivo de Excel y a abrirlo. Antes de comenzar a analizar los datos, vamos a comprender y a validar el contenido del archivo. Para comprenderlo adecuadamente, es necesario que notes que el archivo está en idioma inglés y por tal motivo, a continuación mostramos el significado de cada columna:
+
+* amazon-id: Corresponde a un identificador propio de Amazon para cada registro correspondiente a un CD o vinilo en el archivo.
+
+* title: "Título" en español, corresponde al nombre del álbum (CD o vinilo).
+
+* artist: "Artista" en español, corresponde al nombre del artista o autor del álbum.
+
+* price: "Precio" en español, corresponde al valor del artículo en Amazon (CD o vinilo). Está dado en dólares estadounidenses (USD).
+
+* overall: "General" en español, realmente corresponde a la calificación del álbum (CD o vinilo). Este es uno de los datos más relevantes que se nos pide analizar sobre este dataset. Sus posibles valores son: 1,2,3,4 o 5 (medido con estrellas).
+
+* reviewText: "Texto de la reseña" en español, corresponde al texto digitado por la persona que ha realizado una reseña e incluido una calificación en Amazon sobre cada álbum.
+
+* summary: "Resumen" en español, corresponde al título o resumen de la reseña del álbum, realizada por un usuario en Amazon.
+
+* reviewTime: "Momento de la reseña" en español, corresponde a la fecha en la cual se realizó la reseña del álbum por parte de un usuario en Amazon.
+
+Cuando abrimos por primera vez cualquier archivo, es una buena práctica comprobar que los datos están completos y son correctos. Por ejemplo, probablemente queramos comprobar que cada columna está especificada con el tipo de dato correcto. Esto es posible hacerlo como se observa en la imagen siguiente. Todas las columnas deben ser del tipo "General", excepto price y overall, que deben ser "Moneda" y "Número" respectivamente, y reviewTime, que debe ser del tipo "Fecha".
+ 
+![image](https://user-images.githubusercontent.com/87950040/204088847-54a8818e-9534-46fd-867f-137c43370a70.png)
+
+## Explorando el conteo de calificaciones
+
+Para comenzar nuestro análisis, la primera tarea consistirá en identificar la prevalencia de cada valoración en el conjunto de datos. Podemos hacerlo generando una tabla dinámica en Excel, que nos ayudará a identificar el conteo de valores dentro de nuestro conjunto de datos para cada una de las categorías de calificación. Para ello, primero seleccionaremos todo nuestro conjunto de datos y luego iremos a la pestaña "Insertar" de Excel. Puedes seleccionar los datos de muchas maneras. Una de ellas es seleccionar todas las columnas y, a continuación, pulsar Ctrl + Mayús + Abajo.
+
+![download](https://user-images.githubusercontent.com/87950040/204088905-dcc01a49-6dad-4b42-8eb5-be56251795a7.gif)
+
+A continuación, seleccionamos el botón "Tabla dinámica". Queremos comprobar que la tabla dinámica accede a todos nuestros datos para poder elegir lo que queremos utilizar en el siguiente paso. (Cuando seas más experto, podrás seleccionar sólo lo que necesites, pero por ahora vamos a seleccionar todos los datos para estar seguros). En la ventana que se abre luego de dar click en "Tabla dinámica", pulsa "Hoja de cálculo nuevo" y el botón "Aceptar". Excel abrirá una nueva hoja en la que podrás trabajar con la tabla dinámica:
+
+![download](https://user-images.githubusercontent.com/87950040/204088943-83631cfe-9dc3-46ef-a654-910956e679bb.gif)
+
+En la parte derecha, verás un panel con el título "Campos de tabla dinámica" que contiene los nombres de todas las columnas de nuestra hoja original. Justo debajo, verás 4 áreas: "Filtros", "Filas", "Columnas" y "Valores".
+
+Las tablas dinámicas son mágicas por su facilidad de uso. Para analizar los datos, lo único que tenemos que hacer es arrastrar los campos del panel "Campos de tabla dinámica" a una de estas 4 áreas.
+
+
+
+
+
+
+
+
+
+
+
  
  
  
