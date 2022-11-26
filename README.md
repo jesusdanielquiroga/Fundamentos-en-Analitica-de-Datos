@@ -36,11 +36,13 @@
 
 * [Visualización De Datos](#visualización-de-datos)
 
-* [Tablas Dinámicas](#tablas dinámicas)
+* [Tablas Dinámicas](#tablas-dinámicas)
 
 * [SQL](#sql)
 
 * [Programación con python](#programación-con-python)
+
+* [Estructura de datos](#estructura-de-datos)
 
 * [Conceptos de estadística](#conceptos-de-estadística)
 
@@ -1237,12 +1239,26 @@ En general, este análisis sólo abarcó los primeros pasos de un análisis de d
 # Programación con python
 
 Python es otra herramienta que te permite realizar análisis muy complejos de tus datos. Muchas aplicaciones de IA (inteligencia artificial), como los carros que se conducen solos o los modelos de predicción de los mercados de valores, se desarrollan con Python.
- 
- 
+
+# Estructura de datos
+
+## Caso: Analizando a los investigadores que quieren trabajar en nuestro grupo de investigación
+
+Eres el ayudante de una profesora muy reconocida que ha estado recopilando aplicaciones de candidatos que quieren hacer parte de su grupo de investigación. Tu profesora te ha pedido que la ayudes a obtener una idea preliminar sobre los tipos de intereses que los solicitantes tienen en común, así como a organizar los datos para su posterior análisis y para programar las entrevistas. Al final de este caso, serás capaz de diferenciar entre los conjuntos, las listas, las tuplas y los diccionarios en Python. Además, sabrás cómo crearlos y utilizarlos.
+
+<a href="Jupyter_Notebook/data_structures_in_python_fellow.ipynb">Ir al caso</a> 
+
+# Lógica Condicional
+
+## Caso: Una tarea de clasificación de animales
+
+Eres el ayudante de una profesora muy reconocida que ha estado recopilando aplicaciones de candidatos que quieren hacer parte de su grupo de investigación. Tu profesora te ha pedido que la ayudes a obtener una idea preliminar sobre los tipos de intereses que los solicitantes tienen en común, así como a organizar los datos para su posterior análisis y para programar las entrevistas. Al final de este caso, serás capaz de diferenciar entre los conjuntos, las listas, las tuplas y los diccionarios en Python. Además, sabrás cómo crearlos y utilizarlos.
+
+<a href="Jupyter_Notebook/conditional_logic_in_python_fellow.ipynb">Ir al caso</a> 
 
 # Conceptos De Estadística
 
-## Caso 4: ¿Qué patrones podemos encontrar en los costos de la salud de la población fumadora?
+## Caso: ¿Qué patrones podemos encontrar en los costos de la salud de la población fumadora?
 
 **Objetivos**
 
