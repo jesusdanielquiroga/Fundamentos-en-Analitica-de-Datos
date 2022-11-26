@@ -1489,7 +1489,49 @@ En este caso, has visto que podemos analizar los datos históricos para comprend
 
 # Módulos de repaso
  
-* Módulo de repaso 1 - Fundamentos Analítica de Datos 📈
+## Módulo de repaso 1 - Fundamentos Analítica de Datos 📈
+
+### Instrucciones
+
+1. Descarga el dataset: descarga el archivo con el que trabajarás a lo largo del test haciendo clic <a href="Excel/Emergencias_UNGRD_test.xlsx">aquí</a>.
+
+<img width="541" alt="image" src="https://user-images.githubusercontent.com/87950040/204099240-6aa5d5a6-0aee-45fa-8d75-557bde24ab5b.png">
+
+El dataset con el que trabajaremos es generado por el Ministerio de Ambiente y Desarrollo Sostenible, registra eventos naturales o antrópicos (es decir, debidos a la acción del ser humano) no intencionales ocurridos durante los años 2019, 2020 y 2021 y que fueron reportados a la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD).
+
+2. Llévalo a tu forma:
+
+Antes de responder a cualquier pregunta específica, familiarízate con el dataset. Manipúlalo, recórrelo, entiéndelo. Organízalo y llévalo a la forma con la que te sientas más cómodo para trabajar.
+
+3. Carga el dataset al finalizar el test:
+
+Aunque el formato del test es de selección múltiple, al finalizar el test te solicitaremos que nos compartas el enlace al archivo de Excel en el que has trabajado y que te ha permitido dar respuesta a las preguntas formuladas. Este nos permitirá evidenciar el procedimiento que has seguido y que seguramente será tan único como tú. Trata sin embargo de que el archivo tenga un orden claro, por ejemplo: podrías elegir crear una hoja por pregunta. Así será más fácil para ti trabajar.
+
+### Consejos
+
+1. ¡Siéntete en confianza!
+
+Todo lo que necesitas saber para responder este test lo has conocido en anteriores casos. Por supuesto puedes encontrar algunas preguntas o procedimientos que puedes sentir como retadores, pero nada que no puedas resolver con lo que ya conociste en los casos de prueba.
+
+2. ¡Divide y vencerás!
+
+Muchas de las preguntas y problemas que enfrentamos como analistas resultan complejas si las intentamos abordar como un todo. Una pregunta compleja, realmente puede estar compuesta de un grupo de preguntas mucho más simples, que pueden irnos guiando paso a paso. Ganar la guerra resulta de ir ganando pequeñas batallas.
+
+3. ¡Explora, siempre explora!
+
+Muchas veces como analistas no sabemos cómo empezar, y no hay por qué avergonzarse de ello. Todo se trata de explorar. No debes saber siempre de antemano que hacer. Se trata de probar, no importa dónde te lleve tu prueba. ¡Ningún computador va a explotar! así que tranquilo, todo lo que se te ocurra, ¡pruébalo! Al explorar descubrirás cosas que no sabías de los datos y ganarás confianza, y poco a poco este nuevo conocimiento te llevará en el camino de la pregunta original que querías responder.
+
+### Preguntas
+
+¡A lo que vinimos! En esta sección encontrarás una serie de preguntas basadas en el dataset que ya descargaste, y que registra eventos naturales o antrópicos (es decir, debidos a la acción del ser humano) no intencionales ocurridos durante los años 2019, 2020 y 2021, reportados por la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD).
+
+### Dataset Emergencias UNGRD
+
+Registro de eventos naturales o antrópicos no intencionales ocurridos durante los años 2019, 2020 y 2021 y que fueron reportados a la UNGRD con su respectiva afectación y atención prestada a cada uno. <a href="https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Emergencias-UNGRD/mthb-auu9">Información dataset</a>
+
+<img width="756" alt="image" src="https://user-images.githubusercontent.com/87950040/204099887-1eeb89e8-a23c-4e85-aa72-39cc3a358b1d.png">
+
+
 
 # Herramientas y tecnologías
 
