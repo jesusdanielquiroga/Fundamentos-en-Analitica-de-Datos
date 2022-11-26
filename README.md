@@ -1521,15 +1521,25 @@ Muchas de las preguntas y problemas que enfrentamos como analistas resultan comp
 
 Muchas veces como analistas no sabemos cómo empezar, y no hay por qué avergonzarse de ello. Todo se trata de explorar. No debes saber siempre de antemano que hacer. Se trata de probar, no importa dónde te lleve tu prueba. ¡Ningún computador va a explotar! así que tranquilo, todo lo que se te ocurra, ¡pruébalo! Al explorar descubrirás cosas que no sabías de los datos y ganarás confianza, y poco a poco este nuevo conocimiento te llevará en el camino de la pregunta original que querías responder.
 
-### Preguntas
-
-¡A lo que vinimos! En esta sección encontrarás una serie de preguntas basadas en el dataset que ya descargaste, y que registra eventos naturales o antrópicos (es decir, debidos a la acción del ser humano) no intencionales ocurridos durante los años 2019, 2020 y 2021, reportados por la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD).
-
 ### Dataset Emergencias UNGRD
 
 Registro de eventos naturales o antrópicos no intencionales ocurridos durante los años 2019, 2020 y 2021 y que fueron reportados a la UNGRD con su respectiva afectación y atención prestada a cada uno. <a href="https://www.datos.gov.co/Ambiente-y-Desarrollo-Sostenible/Emergencias-UNGRD/mthb-auu9">Información dataset</a>
 
 <img width="756" alt="image" src="https://user-images.githubusercontent.com/87950040/204099887-1eeb89e8-a23c-4e85-aa72-39cc3a358b1d.png">
+ 
+ ### Preguntas
+
+¡A lo que vinimos! En esta sección encontrarás una serie de preguntas basadas en el dataset que ya descargaste, y que registra eventos naturales o antrópicos (es decir, debidos a la acción del ser humano) no intencionales ocurridos durante los años 2019, 2020 y 2021, reportados por la Unidad Nacional para la Gestión del Riesgo de Desastres (UNGRD).
+ 
+ **A tener en cuenta**
+ 
+```sh
+Existe un amplio número de tipos de eventos naturales y antrópicos que pueden registrarse. 
+Sin embargo, como sabemos, resulta útil generar algunas categorías específicas para poder clasificar esta serie de eventos.
+
+Nota: para todas las preguntas cuando hacemos referencia a "el periodo 2019-2021" incluimos 2019, 2020 y 2021.
+```
+
 
 
 
