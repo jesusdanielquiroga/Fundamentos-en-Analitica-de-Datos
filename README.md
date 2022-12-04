@@ -1877,7 +1877,8 @@ Sustituye los ? de esta tabla por opciones de visualización adecuadas (basta co
 
 <img width="517" alt="image" src="https://user-images.githubusercontent.com/87950040/205519803-0c7fac62-fab7-4c5f-8266-0536c78b6cea.png">
 
-Ejercicio 5
+**Ejercicio 5**
+ 
 Supongamos que queremos representar los ingresos, las ganancias y las ventas a lo largo del tiempo. ¿Cuál sería el tipo de visualización adecuada?
 
 ## Planificando el diseño de nuestro tablero de control
