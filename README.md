@@ -44,6 +44,12 @@
 
 * [Estructura de datos](#estructura-de-datos)
 
+* [Lógica Condicional](#lógica-condicional)
+
+* [Funciones](#funciones)
+
+* [Bucles](#bucles)
+
 * [Conceptos de estadística](#conceptos-de-estadística)
 
 * [Introducción a los KPIs](#introducción-a-los-KPIs)
@@ -1257,8 +1263,22 @@ Eres el ayudante de una profesora muy reconocida que ha estado recopilando aplic
 ## Caso 2: Una tarea de clasificación de animales
 
 Eres el ayudante de una profesora muy reconocida que ha estado recopilando aplicaciones de candidatos que quieren hacer parte de su grupo de investigación. Tu profesora te ha pedido que la ayudes a obtener una idea preliminar sobre los tipos de intereses que los solicitantes tienen en común, así como a organizar los datos para su posterior análisis y para programar las entrevistas. Al final de este caso, serás capaz de diferenciar entre los conjuntos, las listas, las tuplas y los diccionarios en Python. Además, sabrás cómo crearlos y utilizarlos.
-
+ 
 <a href="Jupyter_Notebook/conditional_logic_in_python_fellow.ipynb">Ir al caso</a> 
+ 
+# Funciones
+## Caso 3: Adiconando etiquetas nutricionales a los alimentos
+
+Tú y tus compañeros están llevando a cabo un proyecto de investigación para determinar la precisión de las afirmaciones de los fabricantes de alimentos sobre el contenido nutricional de sus productos. Ya has reunido los datos de unos 500 productos de tu supermercado local y ahora quieres etiquetar cada uno de ellos según su densidad calórica, su contenido en azúcares y grasas. En este caso, aprenderás qué son las funciones de Python, cómo crearlas y ejecutarlas.
+
+<a href="Jupyter_Notebook/python_functions_fellow.ipynb">Ir al caso</a> 
+ 
+# Bucles
+## Caso 4: ¿Cuántos casos confirmados de COVID19 hay en los estados de Estados Unidos? 
+ 
+Trabajas como analista de datos en un Centro de Pensamiento local especializado en política social. Hoy tu jefe ha obtenido un buen conjunto de datos sobre el COVID-19 y quiere que le ayudes con un informe rápido para incluirlo en una de sus presentaciones. En este caso aprenderás a escribir loops, (qué en inglés significa bucles) for y a leer y escribir archivos de texto plano utilizando Python.
+ 
+<a href="Jupyter_Notebook/python_for_loops_text_io_fellow.ipynb">Ir al caso</a> 
 
 # Conceptos De Estadística
 
