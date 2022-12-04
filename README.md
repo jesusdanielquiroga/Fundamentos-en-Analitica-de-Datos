@@ -54,7 +54,7 @@
 
 * [Introducción a los KPIs](#introducción-a-los-KPIs)
 
-* [Tableros de control](#tableros-de-control)
+* [Tableros de control](#tablero-de-control)
 
 * [Módulos de repaso](#módulos-de-repaso)
 
@@ -1775,7 +1775,65 @@ Los atributos de la tabla clientes son:
  
 Quizá te preguntes cómo vamos a unir todos estos datos para crear nuestro tablero de control. La buena noticia es que las herramientas de creación de tableros de control suelen ofrecer formas sencillas de combinar tablas, por lo que en muchos casos no tendrás que preocuparte demasiado por eso. La otra buena noticia es que, en este caso concreto, ya hemos fusionado los datos por ti en el conjunto de datos <a href="Excel/simply_music_es.xlsx">simply_music_es.xlsx</a> (una versión en formato CSV se encuentra <a href="Excel/simply_music_es.csv">acá</a>)
  
+### Eligiendo las visualizaciones adecuadas
+ 
+Tengamos en cuenta el enunciado de nuestro problema: “El tablero de control debe mostrar las ventas, los ingresos y las ganancias en función del tipo de producto, la ubicación y la edad del cliente”. ¿Qué visualizaciones son las más adecuadas de acuerdo a esto?
 
+Quizá recuerdes que los datos pueden ser categóricos o numéricos. A su vez, los datos numéricos pueden ser de tipo entero o flotante. Los tipos de datos son probablemente el criterio clave a tener en cuenta a la hora de elegir una visualización.
+ 
+**Ejercicio 1**
+ 
+¿Cuál de los siguientes tres tipos de gráficos consideras que es apropiado para relacionar datos categóricos vs. datos numéricos? ¿Cual es adecuado para el caso de datos numéricos vs. datos numéricos?
+ 
+ **Indicador:**
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/205475075-25af4262-1606-4b20-972e-d1a6232c0a98.png)
+
+ **Mapas de coropletas:**
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/205475089-504fd83f-9023-4a5e-b8c6-d6622344fc1a.png)
+
+ **Gráfico de dispersión:**
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/205475105-1c8d3862-6595-411c-8e52-b52d2c922ebd.png)
+
+Elige una única opcion entre las siguientes 4 que se presentan:
+
+A. Numérico vs. numérico: Indicador, Mapas de coropletas; Categórico vs. numérico: Gráfico de dispersión
+ 
+B. Categórico vs. numérico: Indicador, Mapas de coropletas; Numérico vs. numérico: Gráfico de dispersión
+ 
+C. Categórico vs. numérico: Gráfico de dispersión, Mapas de coropletas; Numérico vs. numérico: Indicador}
+ 
+D. Numérico vs. numérico: Gráfico de dispersión, Mapas de coropletas; Categórico vs. numérico: Indicador
+ 
+Ampliando las ideas anteriores, puedes incluso añadir una tercera variable numérica y una variable categórica a la mezcla, y crear un gráfico dinámico de burbujas, en el que la tercera variable numérica se representa como el tamaño de la burbuja y la variable categórica se asigna a un código de colores. Un ejemplo interactivo es este gráfico de burbujas de <A href="https://www.google.com/publicdata/explore?ds=d5bncppjof8f9_&ctype=b&strail=false&nselm=s&met_x=sp_dyn_le00_in&scale_x=lin&ind_x=false&met_y=sp_dyn_tfrt_in&scale_y=lin&ind_y=false&met_s=sp_pop_totl&scale_s=lin&ind_s=false&dimp_c=country:region&ifdim=country&hl=en_US&dl=en_US&iconSize=0.5&uniSize=0.035">Google Public Data Explorer</a>(con datos del Banco Mundial):
+ 
+![descarga](https://user-images.githubusercontent.com/87950040/205475213-d4d7dc9a-8557-43c7-b4d3-7866812cde2f.gif)
+
+**Gráficos de líneas**
+ 
+Si necesitas representar el comportamiento de una variable numérica a lo largo del tiempo, te resultarán útiles los gráficos de líneas. Puedes añadir más series al gráfico (es decir, más líneas) para comparar a lo largo del tiempo diferentes variables numéricas en relación una única variable categórica. Cuando añadimos más series, solemos diferenciarlas utilizando un color diferente para cada una. Aquí tienes un ejemplo:
+ 
+![image](https://user-images.githubusercontent.com/87950040/205475242-504c69a4-8bc6-49f9-8425-a0ca1f329fb0.png)
+
+**Tablas y cuadros de resultados**
+ 
+Las últimas visualizaciones que cubriremos no son en realidad gráficos. También puedes representar tus datos en forma de tabla, y esto algunas veces resulta más apropiado que utilizar un gráfico visual. El principio general es que debes mantener las tablas sencillas y despejadas. Si eso no es posible, prueba alguna de las otras visualizaciones explicadas anteriormente.
+
+Un caso de uso común en el que resulta adecuado emplear una representación tabular es cuando necesitas hacer una tabulación cruzada (Tabulación cruzada) de dos variables categóricas. <a href="https://es.wikipedia.org/wiki/Tabulaci%C3%B3n_cruzada">Las tabulaciones cruzadas</a> (también conocidas como <a href="https://es.wikipedia.org/wiki/Tabla_de_contingencia">tablas de contingencia</a), cuentan el número de elementos de la categoría A que también pertenecen a la categoría B. Un ejemplo de nuestro problema particular es el siguiente: 
+ 
+<img width="521" alt="image" src="https://user-images.githubusercontent.com/87950040/205475286-9d83ed49-5c97-4ce8-afc1-4dce1a228651.png">
+
+Esta tabla muestra, por ejemplo, que se vendieron 40 guitarras en un local físico. Para saber más sobre las tablas de contingencia, consulta <a href="https://es.wikipedia.org/wiki/Tabla_de_contingencia">aquí</a>.
+
+Si quieres, puedes mostrar una tabla cruzada directamente en tu tablero de control, o también puedes obtenerla empleando un filtro y representando la porción correspondiente como un diagrama de barras o un diagrama de torta. Digamos que utilizas un filtro para quitar las ventas “online” (es decir, sólo quieres ver las ventas de los locales físicos), lo que significa que el gráfico que obtienes debe verse como sigue:
+  
+ ![image](https://user-images.githubusercontent.com/87950040/205475361-c95b8b4d-8922-4f2e-85a8-ce64fddf5977.png)
+
+Además de estas alternativas, también puedes mostrar valores individuales mediante cuadros de resultados, como éste:
+ 
+![descarga](https://user-images.githubusercontent.com/87950040/205475383-70cd60d9-65e1-4621-a723-439331d1305f.gif)
 
 # Módulos de repaso
  
