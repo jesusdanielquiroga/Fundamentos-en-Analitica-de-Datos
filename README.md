@@ -46,6 +46,8 @@
 
 * [Conceptos de estadística](#conceptos-de-estadística)
 
+* [Introducción a los KPIs](#introducción-a-los-KPIs)
+
 * [Módulos de repaso](#módulos-de-repaso)
 
 * [Herramientas y tecnologías](#herramientas-y-tecnologías)
@@ -1486,6 +1488,48 @@ En este caso, has visto que podemos analizar los datos históricos para comprend
 * Podemos investigar las correlaciones entre las variables. Esto es especialmente útil durante el análisis exploratorio de datos, y cuando (como verás en casos futuros) se construyen modelos que predicen el valor de una variable de interés en función de otras variables.
 * La función de densidad de probabilidad es lo que nos permite pasar del mundo totalmente empírico de los histogramas, que son una representación imperfecta y limitada de toda la población, a modelar e inferir características de esa población. El área bajo la FDP y por encima de 0 entre dos valores concretos de $a$ , $b$  y $x$ , nos entrega la probabilidad de que una muestra elegida al azar de esa población tenga un valor de $x$, para esa variable entre $a$ y $b$.
 * La distribución normal es una FDP particularmente especial que es perfectamente simétrica para la cual coinciden sus valores de media, mediana y moda, y se ajusta además bastante bien a muchos fenómenos naturales.
+
+# Introducción a los KPIs
+
+## Objetivos
+
+El objetivo del actual caso es presentar el concepto de KPIs en el contexto general de la inteligencia de negocios. Las preguntas que abordaremos y responderemos a largo del caso son:
+
+* ¿Qué son los KPIs?
+* ¿En qué se diferencia un KPI de una medida cuantitativa normal?
+* ¿Qué cualidades tienen los KPIs?
+* ¿Cuáles son los KPIs habituales en el sector logístico?
+* ¿Cuáles son las mejores prácticas para elaborar tableros de control a partir de los KPIs?
+
+## Introducción
+
+**Contexto general**
+
+Eres un empleado en un supermercado enfocado en la venta de alimentos que importa sus productos comprándolos a diferentes proveedores. Con el fin de garantizar la satisfacción de los consumidores, es necesario que la calidad de los productos sea adecuada y se mantenga constante en el tiempo. En los últimos 5 años, los proveedores han informado que las condiciones para el cultivo son cada vez más difíciles, pues diversos factores ambientales han hecho que sea más dificil mantener el mismo nivel de calidad en los productos. Por otra parte, algunos clientes del supermercado también ya han empezado a reportar problemas de calidad en los productos.
+
+Se prevé que con el cambio climático este problema pueda incluso empeorar. Dado tu conocimiento del problema, le planteas la situación al gerente de supermercado, pero tras finalizar un primer encuentro, él no parece muy convencido de que el problema sea lo suficientemente grave como para afectar a la estabilidad del negocio.
+
+**Contexto analítico**
+
+Para convencer al gerente, decides utilizar información objetiva (basada en datos), que te permita emplear una medida cuantitativa para darle mayor claridad del riesgo potencial que esta situación trae al negocio. Para ello, asignas a todos los productos que se proveen al supermercado una etiqueta basada en la sospecha de que su calidad pueda verse afectada o no por el cambio climático. La etiqueta es la siguiente:
+
+* Sin riesgo: No hay antecedentes de importaciones de mala calidad ni se ha informado de una amenaza sobre el rendimiento de los cultivos en el lugar del proveedor.
+
+* Potencialmente en riesgo: No hay antecedentes de importaciones de mala calidad, pero se informó una amenaza en el rendimiento de los cultivos en la ubicación del proveedor.
+
+* En riesgo: Se tiene un historial de importaciones de mala calidad así como también se notificó una amenaza sobre el rendimiento de los cultivos en la ubicación del proveedor.
+
+Utilizando estas etiquetas, planteaste las siguientes métricas para convencer al gerente. La primera es el $PIR$, o Porcentaje de Importaciones en Riesgo:
+
+<img width="263" alt="image" src="https://user-images.githubusercontent.com/87950040/205469777-81a1e363-b712-4e82-9f0f-350d3f8344e8.png">
+
+La segunda es el $PIPR$, o Porcentaje de Importaciones Potencialmente en Riesgo:
+
+<img width="355" alt="image" src="https://user-images.githubusercontent.com/87950040/205469795-284bdfd9-c8f7-4451-9332-2ccc6df5a670.png">
+
+
+
+
 
 # Módulos de repaso
  
