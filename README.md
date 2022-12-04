@@ -54,6 +54,8 @@
 
 * [Introducción a los KPIs](#introducción-a-los-KPIs)
 
+* [Tableros de control](#tableros-de-control)
+
 * [Módulos de repaso](#módulos-de-repaso)
 
 * [Herramientas y tecnologías](#herramientas-y-tecnologías)
@@ -1638,6 +1640,142 @@ En general, en la industria no se utiliza un único KPI, sino múltiples KPIs. A
  
 ## Conclusiones y tips para recordar
 Este caso busca proporcionarte claridad respecto al concepto de KPIs o también llamados Indicadores Clave de Rendimiento. Tras haber finalizado el caso debes estar en capacidad de describir qué son, cuándo utilizarlos y cómo identificarlos.
+ 
+# Tablero de Control
+
+## Caos 1: Diseñando un tablero de control de ventas
+ 
+Eres miembro del equipo de análisis de negocio de Simply Music, una tienda de instrumentos musicales con sede en Florida, Estados Unidos, que ha crecido a gran velocidad en los últimos años. La dirección está interesada en conocer cuáles son los artículos más populares y qué ubicaciones de su tienda son las más rentables. Aprenderás cómo planear el diseño de un tablero de control.
+ 
+### Objetivos
+En este caso, aprenderás cómo planear el diseño de un tablero de control. Ampliarás las habilidades que aprendiste en relación con la elección de qué visualización usar en cada situación y cómo presentarla de forma clara y convincente. Las técnicas y conceptos de visualización que presentaremos en este caso serán los siguientes:
+
+* Tableros de control
+* Indicadores
+* Gráficos de burbujas
+* Mapas coropléticos
+* Cuadros de resultados
+* Dimensiones
+* Métricas
+* Páginas en un tablero de control
+* Drill-down (desglose de información)
+ 
+### Introducción
+ 
+**Contexto general**
+ 
+Asume que eres miembro del equipo de análisis de negocio de Simply Music, una tienda de instrumentos musicales con sede en Florida, Estados Unidos, que ha crecido a gran velocidad en los últimos años. La dirección está interesada en conocer cuáles son los artículos más populares y qué ubicaciones de su tienda son las más rentables. Con ello la dirección desea ajustar sus estrategias de marketing y la logística de existencias con el fin de aumentar sus ventas e ingresos. También quieren conocer el número de entregas realizadas fuera de Florida, ya que están contemplando abrir una nueva sucursal en otro estado.
+
+**Problema de negocio**
+
+Te han solicitado crear un tablero de control de ventas para uso de la dirección. Este tablero de control debe mostrar las ventas, ingresos y ganancias a lo largo del tiempo, y debe además permitir filtrar las consultas por producto, ubicación y edad del cliente. Acorde a las reuniones que has tenido con la dirección, te has dado cuenta que les interesa tener respuestas ágiles y concretas a estas tres grandes preguntas:
+
+* ¿Cómo han evolucionado las ventas, ingresos y ganancias a lo largo del tiempo?
+* ¿Cuáles son los lugares con las cifras más altas de ventas y ganancias?
+* ¿Cuáles son los artículos con mayor número de ventas, ganancias e ingresos en función de: la descripción del producto, el tipo de producto, la línea del producto, la ubicación, el grupo de edad del cliente y el estado de entrega?
+ 
+**Contexto analítico**
+
+Te han entregado un conjunto de datos de muestra de 5000 registros de ventas de Simply Music, correspondientes a los años 2018 y 2019. Con este grupo de datos te han solicitado que diseñes el tablero de control para que lo presentes y sea aprobado por la dirección. Una vez tu tablero reciba la aprobación, tu equipo tendrá que conectarlo a una base de datos online para alimentarlo con los datos en tiempo real que provienen del software de seguimiento de ventas de la empresa. La tabla de muestra y la base de datos comparten la misma estructura, por lo que no tienes que preocuparte de la gestión o creación de la base de datos.
+ 
+A menudo, los profesionales de los datos tienen que extraer información valiosa de conjuntos de datos sin que se les den preguntas concretas a las que responder. Este tipo de casos se suelen abordar con un análisis exploratorio de datos combinado con el conocimiento propio del negocio. En otras ocasiones, es posible que se logre definir con los clientes un conjunto limitado de preguntas que guíen el problema de negocio que se desea resolver. Existe también un tercer escenario, en el que los clientes quieren explorar los datos por sí mismos de forma que puedan responder fácilmente a consultas ad hoc que no pueden conocerse de antemano. Este último escenario es mucho más abierto y requiere que comprendamos en detalle la estructura natural de los datos y las posibles consultas a realizar.
+
+Una forma de abordar esta necesidad es creando tableros de control que organicen y muestren toda la información de negocio relevante. Los tableros de control deben contar además con un conjunto de filtros que les permita a los usuarios conocer información específica con base en ciertos criterios, y que sean totalmente ampliables si se necesitan en el futuro. Cuando creas tableros de control, defines un conjunto de variables relevantes y las introduces en visualizaciones interactivas que los usuarios pueden filtrar a voluntad para explorar las relaciones entre ellas. Aquí puedes ver algunos ejemplos:
+ 
+![image](https://user-images.githubusercontent.com/87950040/205474366-2bfabccc-50de-49e2-bc0a-3cbf1fa14e13.png)
+![image](https://user-images.githubusercontent.com/87950040/205474372-67df42de-84bf-4211-9828-955e1723859e.png)
+![image](https://user-images.githubusercontent.com/87950040/205474402-7db4f77e-9a08-4352-82e2-29a05a118cd2.png)
+
+Los tableros de control funcionan mejor cuando reflejan los procesos del negocio que subyacen a los datos. Siempre es aconsejable que estudies lo mejor que puedas el contexto de negocio para que puedas ponerte en los zapatos de tus usuarios finales (en este caso, la junta directiva) y ofrecer un producto que sea pertinente y fácil de usar.
+ 
+### Particularidades de Simply Music
+ 
+![image](https://user-images.githubusercontent.com/87950040/205474431-5fa5f060-9ca5-4312-92bc-6ef23c4f4b2c.png)
+
+Simply Music es un minorista que vende principalmente a compradores individuales que compran en pequeñas cantidades. Los clientes no se limitan a un solo estado, y de hecho muchos de ellos compran online desde todo el país. Simply Music tiene tres tiendas físicas situadas en el estado de Florida. Estas son las líneas de productos que tiene la tienda:
+
+* Instrumentos musicales
+  * Pianos acústicos
+  * Pianos y teclados digitales
+  * Guitarras (eléctricas y acústicas)
+  * Vientos de madera (flautas, oboes, fagotes, saxofones, etc.)
+  * Metales (trompetas, cornos)
+  * Sintetizadores
+  * Cuerdas (todo tipo de instrumentos con arco: violines, violonchelos, etc.)
+  * Percusión (más que todo baterías)
+* Accesorios
+  * Cuerdas (para guitarras, violines, etc.)
+  * Pedales y amplificadores (para guitarras eléctricas)
+  * Partituras
+ 
+Además, estos son los cuatro canales de venta que utiliza la empresa:
+
+* Tienda física en Fort Lauderdale
+* Tienda física en Tampa
+* Tienda física en West Palm Beach
+* Tienda online
+ 
+Cada transacción se registra en el momento de la compra, tanto si ésta se produce en línea como en un local físico. Los medios de pago aceptados son el efectivo y la tarjeta de crédito. Si el cliente no está satisfecho con su producto, puede presentar una reclamación en los 10 días siguientes a la compra.
+ 
+ ### Mirando los datos
+ 
+El equipo de la tienda que está a cargo de la base de datos nos ha dado acceso a una muestra de 5.000 transacciones y otros datos relevantes.
+
+ La primera tabla, se llama <a href="Excel/transacciones.xlsx">transacciones</a> (aquí y en las siguientes tablas sólo mostramos las primeras filas):
+ 
+ <img width="506" alt="image" src="https://user-images.githubusercontent.com/87950040/205474580-69a0a414-d175-4737-a88a-dc3ee095a55c.png">
+
+Los atributos (representados como columnas) que hacen parte de esta tabla son:
+
+* **LLAVE_TIEMPO:** Una llave que hace referencia al año, mes y día de la compra, en formato AAAAMMDD (por ejemplo, 180122 significa 22 de enero de 2018).
+* **LLAVE_PRODUCTO:** Un número que identifica el producto de forma única.
+* **UNIDADES_VENDIDAS:** El número de unidades vendidas.
+* **DOLARES_VENDIDOS:** La cantidad total en dólares asociados con esta venta. Esta variable es igual a las unidades vendidas por el precio unitario del producto.
+* **CANAL:** Ya sea Fort Lauderdale, Tampa, West Palm Beach o Website.
+* **LLAVE_CLIENTE:** Un número que identifica de forma exclusiva al cliente.
+* **ESTADO_DESTINO:** El estado en el que el cliente quiere que se le entreguen sus productos. Disponible sólo para las transacciones en línea.
+ 
+ Adicionalmente, tenemos también la tabla de <a href="Excel/productos.xlsx">productos</a>:
+ 
+ <img width="517" alt="image" src="https://user-images.githubusercontent.com/87950040/205474650-5bdbeab0-769b-4e4f-97d1-a807c797c3f2.png">
+
+Los atributos son de la tabla de productos son:
+
+* **LLAVE_PRODUCTO:** El identificador único del producto.
+* **LINEA_PRODUCTO:** La línea del producto (ya sea “Instrumentos musicales” o “Accesorios”)
+* **TIPO_PRODUCTO:** El tipo de producto (por ejemplo, “Pianos acústicos”, “Metales”)
+* **DESCRIPCION:** El nombre del producto (por ejemplo, “Piano digital Casio AP650”)
+* **COSTO:** Cuánto estima la empresa que le ha costado el artículo (incluye los costos fijos y variables), también se conoce como costo unitario.
+* **PRECIO_UNITARIO:** El precio unitario.
+ 
+ Inspeccionemos también la tabla de <a href="Excel/tiempo.xlsx">tiempo</a>:
+ 
+<img width="512" alt="image" src="https://user-images.githubusercontent.com/87950040/205474716-8dc5ec29-355c-4ede-9f91-119c97170bf8.png">
+Los atributos de la tabla de tiempo son:
+
+* **LLAVE_TIEMPO:** La llave de tiempo en formato AAAAMMDD (por ejemplo, 20180122 significa 22 de enero de 2018).
+* **AÑO:** El año.
+* **MES:** El mes en formato MM (por ejemplo, febrero significa 02).
+* **DIA:** El día en formato DD.
+* **SEMANA_AÑO:** La semana del año (la semana del 1 de enero cuenta como semana 1).
+* **TRIMESTRE:** El trimestre al que pertenece el mes.
+ 
+Fíjate en que no tenemos datos de horas ni minutos.
+
+ Por último revisemos la tabla de <a href="Excel/clientes.xlsx">clientes</a>:
+ 
+<img width="521" alt="image" src="https://user-images.githubusercontent.com/87950040/205474779-1d98862b-c1f0-4441-b3fa-0b0494bdc909.png">
+ 
+Los atributos de la tabla clientes son:
+
+* **LLAVE_CLIENTE:** El identificador único del cliente (puede ser un número de la seguridad social o cualquier otro número).
+* **NOMBRE_CLIENTE:** El nombre completo del cliente.
+* **EDAD_CLIENTE:** La edad del cliente.
+* **GRUPO_EDAD_CLIENTE:** El grupo de edad del cliente.
+ 
+Quizá te preguntes cómo vamos a unir todos estos datos para crear nuestro tablero de control. La buena noticia es que las herramientas de creación de tableros de control suelen ofrecer formas sencillas de combinar tablas, por lo que en muchos casos no tendrás que preocuparte demasiado por eso. La otra buena noticia es que, en este caso concreto, ya hemos fusionado los datos por ti en el conjunto de datos <a href="Excel/simply_music_es.xlsx">simply_music_es.xlsx</a> (una versión en formato CSV se encuentra <a href="Excel/simply_music_es.csv">acá</a>)
+ 
+
 
 # Módulos de repaso
  
