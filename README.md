@@ -1835,6 +1835,132 @@ Además de estas alternativas, también puedes mostrar valores individuales medi
  
 ![descarga](https://user-images.githubusercontent.com/87950040/205475383-70cd60d9-65e1-4621-a723-439331d1305f.gif)
 
+## Aplicando nuestros conocimientos
+
+Ahora que sabes qué tipos de visualizaciones resultan adecuadas con qué tipos de datos, es el momento de elegir para nuestro caso específico cuáles vamos a utilizar. Aquí tienes una tabla que muestra las variables que la dirección solicitó tener en el tablero de control. ¿Cuáles son sus tipos de datos?
+
+<img width="521" alt="image" src="https://user-images.githubusercontent.com/87950040/205519511-87d8ccc4-c05f-4c80-8cc8-a1062abaf7ac.png">
+
+Estas son las dimensiones de nuestros tableros de control, es decir, las variables que utilizaremos para filtrar los datos.
+
+Las variables numéricas que nuestro informe calculará y mostrará son:
+
+<img width="448" alt="image" src="https://user-images.githubusercontent.com/87950040/205519565-a168d7ee-5baa-46ee-a476-e9a02f814c73.png">
+
+Estas son las llamadas métricas de nuestro tablero de control. Para simplificarlo, podemos decir que las métricas son números que se calculan y las dimensiones son filtros que utilizamos para determinar qué subconjuntos de los datos se utilizan para calcular esas métricas:
+
+<img width="519" alt="image" src="https://user-images.githubusercontent.com/87950040/205519590-3ab85c26-cf23-472a-b8b5-986297b55b9d.png">
+
+Estas son las operaciones matemáticas que suelen realizar los tableros de control para crear las métricas (aunque no son las únicas):
+
+* Suma: suma todos los valores de la columna.
+* Contar: cuenta cuántas filas hay en la columna.
+* Contar Distinto: cuenta cuántas filas no duplicadas hay en la columna.
+* Media: calcula la media aritmética o promedio de la columna.
+* Mínimo: busca el mínimo de la columna.
+* Máximo: encuentra el máximo de la columna.
+
+**Ejercicio 3**
+
+Qué operaciones matemáticas son las más adecuadas para:
+
+* Calcular el número total de artículos vendidos.
+* Calcular el número total de clientes que han realizado al menos una compra en un periodo de tiempo determinado.
+* Calcular la ganancia total.
+* Calcular los ingresos totales.
+
+**Ejercicio 4**
+
+La siguiente es una tabla con todas las posibles combinaciones de dimensiones por pares. Para cada combinación, es posible calcular una o varias métricas. Por ejemplo, con Ubicación y Grupo de edad del cliente podemos calcular cuántos artículos se vendieron por ubicación y grupo de edad, o que ganancias se obtuvo por cada grupo de edad en cada ubicación, o incluso de cuántos clientes de cada grupo de edad compraron en esa ubicación.
+
+Sustituye los ? de esta tabla por opciones de visualización adecuadas (basta con completar la mitad superior, ya que la mitad inferior es igual). Utiliza el archivo de Excel <a href="Excel/ejercicio_visualizacion.xlsx">ejercicio_visualizacion.xlsx</a>para registrar tus respuestas.
+
+<img width="517" alt="image" src="https://user-images.githubusercontent.com/87950040/205519803-0c7fac62-fab7-4c5f-8266-0536c78b6cea.png">
+
+Ejercicio 5
+Supongamos que queremos representar los ingresos, las ganancias y las ventas a lo largo del tiempo. ¿Cuál sería el tipo de visualización adecuada?
+
+## Planificando el diseño de nuestro tablero de control
+
+La tabla anterior no era más que una lista de combinaciones de variables por pares, pero tener un montón de visualizaciones sin ningún orden lógico no será agradable a la vista y, sobre todo, no transmitirá ninguna información útil.
+
+Cuando el usuario final abre el tablero de control, debe ver una hoja de ruta clara y autodescriptiva de lo que ofrece. Un buen tablero de control es como el menú de un restaurante que clasifica las comidas, las ordena en jerarquías según lo que el cliente quiera leer primero, y proporciona sólo la información necesaria para tomar una decisión. Si el cliente quiere saber más sobre un plato (por ejemplo, los ingredientes concretos utilizados o el nombre del chef) tendría que preguntar al camarero o a la camarera. Del mismo modo, tu tablero de control debe presentar primero la información más relevante y mostrar información más detallada sólo si el usuario la solicita.
+
+Una buena forma de organizar nuestro tablero de control es creando páginas. Se trata de pantallas que muestran diferentes aspectos de tus datos, entre las cuales el usuario final puede seleccionar utilizando una barra de menú. Empecemos con un conjunto básico de páginas: una “Vista general” (una vista resumida de las principales métricas) y una “Vista detallada” (con más información y niveles de desagregación con filtros).
+
+Nuestro tablero de control tendrá tres componentes principales de diseño: una barra lateral, un encabezado y un cuerpo:
+
+![image](https://user-images.githubusercontent.com/87950040/205520002-5f1f9163-4cb4-4cfd-8775-40584be5b6cd.png)
+
+La barra lateral contendrá enlaces a las páginas. El encabezado tendrá el título de la página y, opcionalmente, notas, filtros de fecha y cuadros de resultados. El cuerpo de la página contendrá las visualizaciones.
+
+## Diseño de la página de vista general
+Recuerda el problema de negocio original. Los directivos quieren saber:
+
+* ¿Cómo han evolucionado las ventas, ingresos y ganancias a lo largo del tiempo?
+* ¿Cuáles son los lugares con las mayor número de ventas y ganancias?
+* ¿Cuáles son los artículos con mayor número de ventas, ganancias e ingresos en función de: la descripción del producto, el tipo de producto, la línea de producto, la ubicación, el grupo de edad del cliente y el estado de entrega?
+
+La tercera pregunta tiene muchas dimensiones, así que podemos ubicarla en la página “Vista detallada”. Pongamos las dos primeras preguntas en la página “Vista general”.
+
+Sabemos que la primera pregunta puede responderse mediante gráficos de líneas. Como los ingresos y los ganancias se miden en dólares, mostraremos ambos en un único gráfico de líneas utilizando series de colores, así:
+
+![image](https://user-images.githubusercontent.com/87950040/205520107-31c72e31-6c6b-48d1-bc2a-2859b3caa362.png)
+
+Las ventas se miden en número de artículos, por lo cual deberían tener un gráfico de líneas propio. ¿Pero qué ocurre con la segunda pregunta?
+
+Ejercicio 6
+¿Qué visualización sería adecuada para responder a la segunda pregunta?
+
+También estaría bien dar a nuestros usuarios un resumen de toda la página en un pequeño conjunto de agregaciones. Para ello podemos utilizar cuadros de resultados. Creemos un cuadro de resultados para los “Ingresos totales”, otro para las “Ganancias totales” y otro para las “Ventas totales”, ya que son las principales métricas que interesan a la dirección.
+
+Ejercicio 7
+La página de vista general debe contener los siguientes elementos:
+
+El logotipo de la empresa
+Un selector de fechas (para filtrar los datos)
+El gráfico de líneas de ganancias e ingresos
+El gráfico de líneas de ventas
+Los cuadros de resultados
+El gráfico de barras de ganancias e ingresos
+El gráfico de barras de ventas
+Toma un papel (o una herramienta digital de graficación, como prefieras) y dibuja el esquema que creas más apropiado. Luego haz una foto o una captura de pantalla de tu solución y publícala para que toda la clase pueda verla.
+
+## Diseño de la página de vista detallada
+
+Pasemos ahora a la tercera pregunta. Dado que queremos conocer las ventas y la ganancia total de cada artículo, tiene sentido tener dos gráficos diferentes, uno para las ventas (medidas en número de artículos) y otro para la ganancia (medida en dólares). Tanto el número de artículos como la suma en dólares son numéricos (el primero es un número entero, el segundo es un flotante). Como los nombres de los artículos son categóricos, los gráficos de barras serían adecuados en este caso. (Los diagramas de torta podrían no ser fáciles de interpretar pues hay muchos productos y, por lo tanto, los diagramas quedarían bastante saturados).
+
+Si recuerdas la tabla de productos, recordarás que cada producto tiene una línea (“Instrumentos musicales”), un tipo (“Guitarras”) y una descripción (“Fender American Stratocaster”). Para evitar tener que crear un filtro a nivel de página para cada una de estas variables, podemos añadirlas a un único gráfico de “Artículos” como variables drill-down (o para las cuales se desglosa información). El drill-down te permite seleccionar un elemento de un gráfico y pasar a un nivel inferior en la jerarquía. La siguiente imagen puede ser más útil para entender este concepto que su descripción (se trata de un gráfico de barras de ventas por artículos, con drill-down por línea, tipo y descripción):
+
+![image](https://user-images.githubusercontent.com/87950040/205520227-3ca5cf3f-73ca-47cf-b670-2d6b3772c4b5.png)
+
+Podemos tener un gráfico de barras como éste y al lado otro gráfico de barras (sin drill-down esta vez) que muestre la ganancia total de cada artículo. Queremos que nuestro drill-down en el primer gráfico filtre el segundo, de modo que cuando alguien profundice por “Guitarras”, el segundo gráfico sólo muestre guitarras.
+
+**Ejercicio 8**
+
+Ahora que tenemos los dos gráficos principales de la página de vista detallada, vamos a añadir algunos gráficos secundarios (que serán de menor tamaño para reflejar su condición de auxiliares) para las dimensiones con las que la dirección quiere filtrar los datos. Entre ellas están la ubicación (número de artículos vendidos en cada ubicación), el grupo de edad de los clientes (número de clientes en cada grupo de edad) y el estado de entrega (número de artículos entregados). ¿Cuáles serían los 3 tipos de gráficos adecuados para estas dimensiones?
+
+**Ejercicio 9**
+
+Genera un diseño que creas apropiado para la página de vista detallada. Asegúrate de indicar qué tipos de gráficos estarían ubicados en cada lugar, y qué información mostrarían esos gráficos. Haz una foto o una captura de pantalla y compártela con la clase.
+
+Pista: La página de vista detallada también puede incluir algunos cuadros de resultados y un selector de fechas.
+
+## Conclusiones
+
+En este caso, hemos visto diferentes tipos de visualizaciones y hemos estudiado, para cada una de ellas, qué tipos de datos son los más adecuados para presentar. También vimos como la creación de un tablero de control analítico va más allá de elementos técnicos e implica pensar en las preguntas empresariales concretas que los usuarios finales quieren responder con la ayuda del tablero. Por eso es fundamental empezar siempre conociendo el proceso de negocio. Esto nos permitirá entender cuáles son las dimensiones y métricas relevantes, y así definir el mejor diseño, disposición y elección de las visualizaciones.
+
+## Tips para recordar
+La creación de un tablero de control debe comenzar siempre con una sólida comprensión del proceso de negocio y de las preguntas de negocio. También debes estar familiarizado con los diferentes tipos de visualizaciones, sus pros y contras, y tener en cuenta también algunos principios básicos de diseño. Esto te permitirá construir un tablero de control que sea funcional y que no esté saturado. Algunas ideas clave que puedes tener en cuenta para el futuro son:
+
+* Los tableros de control son como los menús de los restaurantes. Deben ser claros, directos y evitar abrumar al usuario con demasiada información. No olvides incluir los detalles más importantes en primer lugar, donde sean más fáciles de leer.
+Tus visualizaciones deben estar organizadas jerárquicamente. Los visuales que responden a las preguntas más importantes van primero. Las visualizaciones dedicadas a responder a preguntas secundarias pueden ubicarse más a la derecha o abajo, y presentarse en un tamaño más pequeño.
+* Cada visualización debe responder a una pregunta de negocio, por lo que siempre es una buena práctica etiquetar el gráfico o la tabla con la pregunta o propósito. También debes añadir texto explicativo cuando creas que tus usuarios les pueda resultar útil. Sin embargo, si te encuentras añadiendo demasiado texto, quizá sea porque tu tablero de control no es lo suficientemente claro por sí mismo y deberías reevaluar tu diseño o visualizaciones.
+
+Además, los drill-down y los gráficos que se duplican como filtros a nivel de página pueden ahorrarte mucho espacio porque no necesitas añadir más controles (como listas desplegables) para que actúen como filtros en la página. Sin embargo, no todos lo elementos debne tener la caracteristica de drill-down, porque el tablero de control debe mantenerse lo más simple posible.
+
+
+
 # Módulos de repaso
  
 ## Módulo de repaso 1 - Fundamentos Analítica de Datos 📈
