@@ -1527,9 +1527,97 @@ La segunda es el $PIPR$, o Porcentaje de Importaciones Potencialmente en Riesgo:
 
 <img width="355" alt="image" src="https://user-images.githubusercontent.com/87950040/205469795-284bdfd9-c8f7-4451-9332-2ccc6df5a670.png">
 
+De acuerdo a la información con la que contaba el supermercado y a tu análisis obtuviste los siguientes resultados para las métricas definidas: 11% en el $PIR$ y un 30,5% en el $PIPR$. Tras mostrar estas cifras al gerente, y asombrado por la cantidad de proveedores que están en riesgo, el gerente reconoce tu preocupación, te agradece ahberle aclarado el problema con esta información clave, y establece el objetivo de reducir el $PIR$ al 5% y el $PIPR$ al 15% en los próximos 3 años para proteger la estabilidad del supermercado. Mediante el seguimiento de estas métricas, durante los tres años siguientes, pudieron establecer relaciones con nuevos proveedores para cumplir su objetivo. 
+ 
+En este caso, el $PIR$ y el $PIPR$  fueron las métricas cuantitativas específicas que se emplearon para dar entendimiento y seguimiento al problema de negocio. Estas métricas se conocen en el contexto de la inteligencia de negocios como Indicadores Clave de Rendimiento o KPIs por sus siglas en inglés: Key Performance Indicators. Para entender mejor cada una de las palabras que componen el concepto de KPI vamos a desglosarlas:
+ 
+* Indicador: Se refiere a la magnitud de la métrica que permite evaluar el rendimiento en relación con el objetivo.
+
+* Clave: Se refiere a que el indicador es muy importante para el negocio.
+
+* Rendimiento: Busca medir qué tan bien o mal está andando el negocio, qué tan buen “rendimiento” tiene (no sólo en términos monetarios, sino en otros aspectos también).
+
+Un $PIR$ y un $PIPR$ más bajos significan que el centro de distribución está comprando alimentos a proveedores con menos riesgo. Estas métricas, que cumplen las 3 características descritas (idicador, clave, y rendimiento) son sin duda un ejemplo concreto de KPIs.
+ 
+ **Ejercicio 1:**
+ 
+¿Cuál de las siguientes es la mejor analogía para un KPI, usando la analogía de un carro?
+
+Un KPI es como el volumen de la música en un carro o la temperatura del aire acondicionado.
+Un KPI es como el indicador de gasolina del carro.
+Un KPI es como la eficiencia del combustible del carro o el indicador de velocidad.
+Un KPI es como el nombre del barrio en el que está el lugar de destino.
+ 
+ 
+**Ejercicio 2:**
+ 
+Selecciona una de las siguientes opciones para calcular el Porcentaje de Importaciones que NO están en Riesgo (un nuevo KPI que podemos llamar $PINR$), teniendo en cuenta la totalidad de proveedores del supermercado:
+ 
+
+ <img width="433" alt="image" src="https://user-images.githubusercontent.com/87950040/205473220-9153e016-c7e3-4229-9cba-98512ba322c7.png">
+
+## KPI vs. métrica
+ 
+Existe una gran cantidad de características que pueden ser medidas en un negocio: la satisfacción de los clientes, los plazos de entrega, el tiempo medio de desplazamiento de los empleados, etc. Las empresas pueden medir innumerables aspectos diferentes. Sin embargo es importante señalar que no todas estas características que se miden y que se convierten en métricas son realmente KPIs. Para entenderlo un poco mejor veamos el siguiente diagrama: 
+ 
+![image](https://user-images.githubusercontent.com/87950040/205473235-a600b5f7-28c3-407f-960f-ddf27b40b025.png)
+
+Este diagrama ilustra que todos los KPIs son métricas, pero no todas las métricas son KPIs.
+
+Las métricas suelen ser datos que al introducirse en una ecuación se convierten en algo medido. A veces, las propias métricas pueden obtenerse de un cálculo que involucra más métricas (por ejemplo, los ingresos y las ganancias: una empresa puede obtener más ingresos disminuyendo sus costos o aumentando sus ganancias). Los KPI siguen el ejemplo de las métricas de esta manera. Volvamos a visualizar el diagrama anterior para entenderlo mejor:
+ 
+![image](https://user-images.githubusercontent.com/87950040/205473292-ecce3ae8-2457-406e-b7fd-5e09281c9fa1.png)
+
+Se puede ver que una métrica y un KPI presentan coincidencias en varios aspectos: pueden estar compuestos por una o varias métricas. Lo que los diferencia es cómo se utilizan en el contexto de la inteligencia de negocios.
+
+Para apoyar nuestra intuición sobre un KPI, definamos tres reglas generales que nos ayuden a identificarlos:
+ 
+* Los KPI están vinculados a objetivos de negocio específicos, las métricas no.
+  * Por ejemplo, el número de entregas puntuales y sin problemas suele ser un buen KPI, ya que las empresas no quieren perder dinero reenviando artículos. Las empresas de logística siempre tienen el objetivo de intentar maximizar esta cifra.
+  * Un ejemplo de métrica sería el número de empleados con experiencia previa en logística. Aunque es bueno tenerlo, no es un objetivo explícito de la empresa + * contratar sólo a personas con una experiencia específica.
+* Los KPI suelen estar motivados y evaluados por plazos.
+  * Los KPI suelen evaluarse semanalmente o en distintos momentos, como las etapas de los proyectos o los ciclos trimestrales, para que la empresa pueda saber si convergen o se alejan de su objetivo.
+* Aunque los KPI no tienen que relacionarse directamente con los ingresos, casi siempre están relacionados indirectamente con ellos.
+  *Un buen ejemplo de un KPI que hace esto es la satisfacción de los empleados. Los empleados más felices tienen más probabilidades de quedarse en la empresa, y suelen ser más productivos, lo que conduce a un mayor ahorro de costos y, por tanto, a mayores ingresos.
+  * Un ejemplo de métrica en este caso sería el tiempo de desplazamiento de los empleados. Los empleados que se desplazan menos pueden no estar tan contentos, pero esto no está relacionado con los ingresos de la empresa y, por tanto, podría no considerarse un problema. Es importante tener este dato como métrica y, en lo posible, reducir los tiempos de desplazamiento. Pero este indicador no llega a ser tan clave para el negocio y por tanto no es un KPI (el KPI sería algo más general, como “felicidad del trabajador”).
+
+**Ejercicio 3:**
+ 
+A partir de las anteriores caracteristicas descritas, discute si los siguientes numerales corresponden con ejemplos de métricas o de KPIs.
+
+* El tiempo medio que un conductor de camión pasa en espera mientras se procesan las recogidas o las entregas.
+* En un almacén de distribución de piezas de carro, se utiliza una métrica basada en la relación:
+ <img width="299" alt="image" src="https://user-images.githubusercontent.com/87950040/205473429-c17c27fd-e61c-4940-9299-560bf6af8d94.png">
+
+* Un fabricante de señales ferroviarias recopila datos sobre qué fenómenos meteorológicos extremos tienen más probabilidades de dañar sus equipos a la intemperie.
+ 
+## Otras cualidades importantes
+ 
+Los KPI no sólo describen el rendimiento en la consecución de un objetivo, sino que ayudan a generar respuestas a preguntas clave. Por ejemplo, si tienes un índice de rotación muy bajo (la frecuencia con la que los empleados permanecen en una empresa antes de renunciar) para un determinado puesto de la empresa, eso puede ayudar al administrador a investigar la pregunta “¿Es el rol X un trabajo terrible para hacer todos los días?” o “¿Qué es lo que hace que este rol sea tan agradable para los que se mantienen allí durante un tiempo prolongado?”.
+ 
+Los KPI suelen estar correlacionados con otros aspectos de la empresa. Esto significa que, a medida que aumentan o disminuyen, también lo hacen otras métricas. Por ejemplo, la tasa de retención de clientes (la frecuencia con la que los clientes vuelven a comprar un producto o servicio) está correlacionada en cierta medida con los ingresos de la empresa. Esto tiene sentido, ya que los clientes que vuelven suelen comprar más productos.
+
+Los KPI y las métricas sin relación se conocen como independientes (sin relación entre sí). Un ejemplo de dos métricas independientes sería la tasa de retención de clientes y el número medio de almendras consumidas por los empleados. Estas dos métricas no deberían cambiar de valor si cambia una u otra. Normalmente, los empresarios saben cómo se relaciona un KPI con otras métricas u otros KPI del negocio. Por tanto, cuando incluyas varios KPI que estén correlacionados entre sí, asegúrate de preguntarte “¿Qué visión adicional o que preguntas adicionales ofrece este KPI?” y “¿Es esta información adicional redundante para la historia que estoy tratando de contar?”
+ 
+**Ejercicio 4:**
+ 
+Aquí hay un KPI:
+
+ <img width="463" alt="image" src="https://user-images.githubusercontent.com/87950040/205473472-3e9064f3-fa1c-4690-9caf-9488d47dbbb6.png">
 
 
+¿Qué preguntas te harías si encontraras que este coeficiente es inferior a 1?
+ 
+## Los KPI son más útiles vistos en conjunto
+ 
+La mejor práctica para relacionarte con los KPIs empleados por una empresa es visualizarlos todos en una sola foto instantánea que presente el estado actual de la empresa hacia sus objetivos. Los KPIs suelen presentarse en tableros de control (o dashboards) para facilitar esta visualización:
+ 
+ ![image](https://user-images.githubusercontent.com/87950040/205473504-58f65a67-7f61-4bdb-a115-cf884519da98.png)
 
+En general, en la industria no se utiliza un único KPI, sino múltiples KPIs. Aunque cada uno de ellos dé respuesta a una pregunta en específico, sabemos que las preguntas generalmente están relacionadas entre sí. Por lo tanto, los KPIs vistos en conjunto nos entregan una visión más amplia e informada del problema de negocio y de las múltiples decisiones que podríamos tomar para alcanzar uno o varios objetivos.
+ 
+## Conclusiones y tips para recordar
+Este caso busca proporcionarte claridad respecto al concepto de KPIs o también llamados Indicadores Clave de Rendimiento. Tras haber finalizado el caso debes estar en capacidad de describir qué son, cuándo utilizarlos y cómo identificarlos.
 
 # Módulos de repaso
  
