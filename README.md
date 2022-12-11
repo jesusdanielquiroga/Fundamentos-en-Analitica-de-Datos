@@ -1960,7 +1960,219 @@ Tus visualizaciones deben estar organizadas jerárquicamente. Los visuales que r
 
 Además, los drill-down y los gráficos que se duplican como filtros a nivel de página pueden ahorrarte mucho espacio porque no necesitas añadir más controles (como listas desplegables) para que actúen como filtros en la página. Sin embargo, no todos lo elementos debne tener la caracteristica de drill-down, porque el tablero de control debe mantenerse lo más simple posible.
 
+## Caso 2: Creación de un tablero de control de ventas en Google Data Studio
 
+### Objetivo
+
+En este caso construirás un tablero de control interactivo utilizando Google Data Studio (también conocido como Looker Studio). Aprenderás a incluir gráficos, deslizadores, cuadros de resultados, filtros, páginas y drill-down para que sea fácil de interpretar y tenga un aspecto profesional.
+
+### Introducción
+**Contexto empresarial**
+
+Asume que eres miembro del equipo de análisis de negocio de Simply Music, una tienda de instrumentos musicales con sede en Florida, Estados Unidos, que ha crecido a gran velocidad en los últimos años. La dirección está interesada en conocer cuáles son los artículos más populares y qué ubicaciones de su tienda son las más rentables. Con ello la dirección desea ajustar sus estrategias de marketing y la logística de existencias con el fin de aumentar sus ventas e ingresos. También quieren conocer el número de entregas realizadas fuera de Florida, ya que están contemplando abrir una nueva sucursal en otro estado.
+
+**Problema de negocio** 
+
+Te han solicitado crear un tablero de control de ventas para uso de la dirección. Asume que ya has diseñado el tablero de control y has elegido los gráficos que se incluirán. Tu tarea ahora es construir el tablero de control utilizando <a href="https://datastudio.google.com/">Google Data Studio</a>, la herramienta gratuita de Inteligencia de Negocios de Google. Recuerda que a los directivos les interesa tener respuesta ágiles y concretas a estas tres grandes preguntas:
+
+¿Cómo han evolucionado las ventas, ingresos y ganancias a lo largo del tiempo?
+¿Cuáles son los lugares con las cifras más altas de ventas y ganancias?
+¿Cuáles son los artículos con mayor número de ventas, ganancias e ingresos en función de: la descripción del producto, el tipo de producto, la línea del producto, la ubicación, el grupo de edad del cliente y el estado de entrega?
+
+**Contexto analítico**
+
+Te han entregado un conjunto de datos de muestra de 5000 registros de ventas de Simply Music, correspondientes a los años 2018 y 2019. El conjunto de datos se encuentra en el archivo <a href="Excel/simply_music_es.csv">simply_music_es.csv</a>. Este es un archivo de texto plano, lo que significa que se puede visualizar usando cualquier editor de texto. Los archivos CSV contienen los datos en filas y separan un dato del otro usando comas.
+
+### El diseño planeado
+
+Para la elaboración de nuestro tablero de control habíamos decidido previamanente tres diseños. En primer lugar, decidimos que ambas páginas, tanto la de vista general como la de vista detallada, tendrían este aspecto:
+
+![image](https://user-images.githubusercontent.com/87950040/206933277-da85ec12-da4f-497c-b9ba-8fbe612d194c.png)
+
+En relación con la página de vista general definimos que tendría el siguiente diseño (el logo de la empresa, los cuadros de resultados y el selector de fechas formarían parte del encabezado):
+
+![image](https://user-images.githubusercontent.com/87950040/206933336-90d382e4-99fb-4902-aaa4-775e7d86c493.png)
+
+
+Y por último este es el diseño de la página de vista detallada:
+
+![image](https://user-images.githubusercontent.com/87950040/206933353-36568bc2-19d2-4642-a58c-d50e1de0f667.png)
+
+### Creando nuestro tablero de control en Google Data Studio
+
+**Cargando nuestros datos**
+
+Abramos inicialmente Google Data Studio.
+
+Nota: Antes de empezar con las instrucciones si no has utilizado nunca antes un servicio de Google (Gmail, Drive, etc.) tomate un tiempo para explorar y familiarizarte con el entorno. ¡Explora sin miedo! ningun click va a hacer que tu computador explote y por el contrario sí te vas a sentir mucho más comodo al momento de trabajar.
+
+Para cargar nuestros datos sigamos las siguientes instrucciones: 
+
+1. Ve a Crear -> Fuente de datos 
+
+2. En la casilla de búsqueda escribe Subida de archivos y has click en la opción que aparece como resultado. 
+
+3. Una vez se despliegue la ventana para subir los archivos dirigete a Haga click para subir los archivos y, efectivamante, has click. Deberás buscar el archivo simply_music_es.csv y seleccionarlo.
+
+La siguiente animación puede guiarte en los 3 primeros pasos:
+
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933462-a6fba8af-87b4-42ff-907e-5826c47abc57.gif)
+
+Una vez haya cargado el archivo, continuaremos con el siguiente grupo de instrucciones:
+
+4. Una vez que hayas subido la tabla desde tu ordenador, edita el nombre de la conexión (por ejemplo utilizado “Simply Music”) en la esquina superior izquierda de la pantalla, y luego haz click en Conectar.
+
+5. A continuación, haz click en Crear informe. Nota: En caso en que te salga alguna ventana emergente que pregunte si quieres adicionar el reporte, haz click en Adicionar reporte. En alguno casos puede ocurrir, y en otros no si es que ya has utilizado el recurso antes.
+
+6.Por último, renombra tu informe si quieres (por ejemplo utilizando “Informe Simply Music 2018-2019”).
+
+La siguiente animación puede guiarte en estos últimos 3 pasos:
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933533-e26efc1f-9c62-4939-9649-f97df87f74c6.gif)
+
+**Nota:** Google Data Studio creará una tabla por defecto y la colocará en el lienzo por defecto. Puedes eliminarla si quieres.
+
+### Creando las páginas
+
+Antes de crear nuestras páginas, primero tenemos que configurar la barra lateral donde estarán. Para ello sigamos las siguientes instruciones:
+
+1. Haz click con el botón derecho del ratón en cualquier espacio en blanco del lienzo y selecciona Tema y diseño. Aparecerá la barra lateral Tema y diseño. Ve a la pestaña Diseño. Selecciona Izquierda en Tipo de navegación:
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933588-38824db0-cdc5-4608-96fc-f8c8cdf1f10d.gif)
+
+2. Ahora ve a Página -> Nueva página, lo cual como su nombre lo indica, creará una nueva página. Debemos repetir esta operación para cada nueva página que queramos crear. Recuerda que tenemos que crear dos páginas: Vista general y Vista detallada, así que hazlo dos veces.
+
+3. Puedes cambiar el nombre de tus páginas (mientras estás en modo Edición) haciendo click en el contador de páginas y ajustando el nombre de la página en la barra lateral que aparece.
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933624-4c38c09b-4ff5-49b2-b837-c806067098fa.gif)
+
+4. Por último, ten en cuenta que existen 2 modos de trabajo con tu tablero: ver en el que visualizas e interactúas con tu tablero y editar en el que trabajas y modificas tu tablero. Se encuentran en el extremo superior derecho de la ventana:
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933660-c5cfb299-df4b-4359-83c4-ead2d1ada656.gif)
+
+### Página de vista general
+
+Si compruebas los datos con atención, verás que no hay ninguna columna de GANANCIA. Como ésta será una de las principales métricas de nuestro tablero de control, tenemos que crearla. Esta es nuestra definición de ganancia:
+
+GANANCIA = DOLARES_VENDIDOS - COSTO_TOTAL
+
+COSTO_TOTAL tampoco existe, así que la crearemos. La fórmula de esta variable es:
+
+COSTO_TOTAL = UNIDADES_VENDIDAS*COSTO
+
+Además tengamos también en cuenta que DOLARES_VENDIDOS = INGRESO
+
+Para agregar un nuevo campo seguiremos las siguientes instrucciones: 
+
+1. Dirígete a la sección de Datos en la barra lateral derecha. En la parte inferior, verás la opción de añadir un campo: haz click en ella.
+
+2. Asigna el nombre que desees a la nueva variable y escribe la ecuación que dará origen a la misma. Por ejemplo COSTO_TOTAL será nuestra nueva variable y UNIDADES_VENDIDAS*COSTO la ecuación que nos permite calcularla.
+
+3. Guarda y observa cómo esta variable se encuentra dentro del conjunto de variables con las que ahora puedes trabajar.
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933717-2b8867ab-ab18-4f0e-b2f7-389e0f0c77f2.gif)
+
+**Ejercicio 1**
+
+Ahora repite el proceso, sólo que esta vez nombra el nuevo campo GANANCIA y pon esto en el cuadro de la fórmula:
+
+DOLARES_VENDIDOS - COSTO_TOTAL
+
+Ahora tenemos nuestra columna GANANCIA y estamos preparados para crear el primer gráfico. Este será un gráfico de líneas según el diseño que hemos planificado.
+
+Para crear este gráfico seguiremos las siguiente instrucción: 
+
+1. Haz click en Añadir un gráfico en la barra de herramientas y selecciona Gráfico de líneas.
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933775-67defc1c-4d1e-480c-b6cd-82552910142e.gif)
+
+Los gráficos en Google Data Studio tienen varias entradas importantes:
+
+* **Dimensión:** La dimensión que se va a representar (las categorías)
+* **Dimensión de periodo:** La dimensión que se utilizará como dimensión temporal. Google Data Studio la encontrará automáticamente por nosotros, así que no la modificaremos. Es el LLAVE_TIEMPO de nuestros datos
+* **Métrica:** El parámetro que se calculará y representará
+* **Drill-down o desglosar información:** Si el gráfico tendrá drill-down o no
+* **Interacciones del gráfico (filtrado cruzado):** Esta casilla se marcará sólo si queremos que nuestro gráfico funcione como gráfico y como filtro a nivel de página a la vez.
+
+**Ejercicio 2**
+
+Explora el panel DATOS hasta que te familiarices con las anteriores opciones.
+
+Ahora vamos a crear nuestro gráfico de líneas. La dimensión será la fecha (ya que es un gráfico de series temporales) y las métricas serán INGRESO y GANANCIA. Arrastra y suelta la columna LLAVE_TIEMPO en la casilla Dimensión de periodo, y las columnas INGRESO y GANANCIA en la casilla Métrica (ten en cuenta que DOLARES_VENDIDOS es lo mismo que INGRESO).
+
+Cambiemos la granularidad de la fecha a Mes. Por lo tanto, arrastra y suelta la variable MES en el campo Dimensión.
+
+Asegúrate de que todas las métricas están establecidas en Suma y cambia sus nombres si es necesario. Para realizar cualquiera de estas dos operaciones, haz click en el pequeño recuadro a la izquierda del nombre de la métrica (si pasas el ratón por encima, aparecerá un icono de un lápiz) y realiza los cambios deseados. Como queremos que nuestros usuarios puedan filtrar la página con sólo hacer click en el gráfico, también marcamos la casilla Multifiltro.
+
+La siguiente animación te servirá como guía:
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933872-ad8f3d55-a487-45f3-8e2b-a88c882b1e29.gif)
+
+Tras completar algunas opciones de edición para cambiar los colores, el tamaño del gráfico y añadir cuadros de texto que sean indicativos del tipo de pregunta de negocio que deseamos responder, deberías obtener un gráfico parecido a este:
+
+![image](https://user-images.githubusercontent.com/87950040/206933885-79ddf42e-8028-443d-ac64-6107c4251cbc.png)
+
+**Ejercicio 3**
+
+Haz lo mismo con tu gráfico de líneas de ventas.
+
+### Añadiendo el resto de los gráficos a la página de vista general
+
+Hagamos lo mismo con el resto de nuestros gráficos (incluidos los cuadros de resultados) y añadamos también el logotipo de la empresa (está en la carpeta data/images como logo.webp). Para insertar una imagen, ve a Insertar -> Imagen y luego súbela desde el botón de la barra lateral derecha.
+
+Para añadir un cuadro de resultados, simplemente ve a Añadir un gráfico de nuevo y selecciona un Cuadro de resultados en el menú. A continuación, actualiza la métrica según sea necesario:
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933942-5b52f31e-f6ed-489b-af2d-f7f08f34058a.gif)
+
+Los colores que mejor van con nuestro logotipo son el salmón y el gris. Por suerte, hay un tema preestablecido en Google Data Studio con exactamente esos colores. Haz click con el botón derecho del ratón en cualquier lugar del lienzo (aunque no en un gráfico) y selecciona Tema y diseño. Ve a Tema en la barra lateral derecha. El tema Datos tiene buen aspecto, así que haz click en él.
+
+![descarga](https://user-images.githubusercontent.com/87950040/206933974-22257067-2f60-4ce7-95ae-0953d4a0729e.gif)
+
+Por último, vamos a añadir el selector de fechas. Para el selector de fechas, ve a Añadir un control (en la barra de herramientas) y luego a Filtro por periodo. Con él, el usuario podrá elegir un rango de fechas y todos los gráficos de la página se actualizarán en consecuencia.
+
+Añadimos algo más de texto explicativo, y nuestra primera página estaría terminada. Deberías obtener una vista con un aspecto similar a este:
+
+![image](https://user-images.githubusercontent.com/87950040/206934008-cc210e8f-ec00-4f7d-b383-d4446ad9c371.png)
+
+**Ejercicio 4**
+
+Completa ahora el procedimiento para la segunda página que debe contener la vista detallada.
+
+**Nota 1:** Hemos dicho que queríamos añadir drill-down al primer gráfico de barras de esta página. Para conseguirlo, sólo tienes que marcar la casilla Desglosar información en la pestaña DATOS de la barra lateral derecha mientras tienes el gráfico seleccionado. A continuación, añade las dimensiones que deseas desglosar, así:
+
+![descarga](https://user-images.githubusercontent.com/87950040/206934060-44ec9455-dc9d-4fae-baa1-47b88fd27e7e.gif)
+
+En el gráfico, tendrás que utilizar las flechas arriba/abajo que hay encima para ver los niveles adicionales (es decir, para desglosar realmente hacia arriba o hacia abajo).
+
+No olvides marcar también la opción Multifiltro, porque queremos que este gráfico sea un filtro:
+
+![image](https://user-images.githubusercontent.com/87950040/206934079-fa7e3bb4-8cb8-47d2-b54e-2dfd893557e1.png)
+
+Ahora, cuando hagas click en una barra, se mostrarán todas las subcategorías y se actualizarán todos los demás gráficos para que sólo incluyan los datos que pertenecen a la categoría representada por esa barra.
+
+**Nota 2:** Para el mapa geográfico, te recomendamos que utilices Google Maps - Mapa de burbujas como tipo de gráfico y no un coropleto, ya que es más fácil de configurar. La configuración de este gráfico debe verse así (fíjate en que la función de agregación de la variable que determina el tamaño de la burbuja es Recuento y no Total):
+
+![image](https://user-images.githubusercontent.com/87950040/206934105-2a4eef8a-724f-46a4-8c74-c5e81a41701e.png)
+
+
+### Publicar tu tablero de control
+
+Ejercicio 5
+Ahora nuestro informe está listo para ser presentado a los usuarios. El último paso es compartirlo. Esto es bastante sencillo. Primero haz click en el botón Compartir:
+
+![image](https://user-images.githubusercontent.com/87950040/206934135-80c61f1d-022d-414c-b771-4d530babbaa9.png)
+
+A continuación, ve a la pestaña Gestionar acceso en el diálogo que aparece:
+
+![image](https://user-images.githubusercontent.com/87950040/206934189-f0a2eab0-fa97-4ac8-a5df-7f7890a08003.png)
+
+
+Para que el tablero de control sea público, tienes que seleccionar Cualquiera que tenga el enlace puede ver. Copia el enlace y compártelo con la clase.
+
+### Conclusiones y tips para recordar
+
+En este caso has aprendido a crear y publicar un tablero de control con Google Data Studio. Has añadido drill-down y varios filtros a los distintos gráficos, y has incluido no sólo gráficos comunes, sino también un gráfico de burbujas georeferenciado y algunos cuadros de resultados.
 
 # Módulos de repaso
  
